@@ -1,0 +1,1 @@
+<?php echo $settings['Setting']['primary_phone']; ?>

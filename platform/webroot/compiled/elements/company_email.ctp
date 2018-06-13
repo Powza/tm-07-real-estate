@@ -1,0 +1,1 @@
+<a href="/contact"><?php echo $settings['Setting']['primary_email']; ?></a>
