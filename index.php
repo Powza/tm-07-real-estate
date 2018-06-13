@@ -21,7 +21,7 @@
     <section class="section hero">
         <div class="hero__media">
             <div class="hero__media__slider">
-                <div class="item" style="background-image: url('img/tm-07/hero/slider/11.jpg');"></div>
+                <div class="item" style="background-image: url('img/tm-07/hero/slider/1.jpg');"></div>
                 <div class="item" style="background-image: url('img/tm-07/hero/slider/2.jpg');"></div>
                 <div class="item" style="background-image: url('img/tm-07/hero/slider/3.jpg');"></div>
                 <div class="item" style="background-image: url('img/tm-07/hero/slider/4.jpg');"></div>
