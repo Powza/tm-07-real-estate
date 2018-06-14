@@ -27,7 +27,7 @@ if(isset($featured_listings) && !empty($featured_listings))
         <?php
             foreach($featured_listings as $listing)
             {
-            /*$fl_img = $property->image($listing['Listing']['mlsid'], $listing['Listing']['class'], array(
+            $fl_img = $property->image($listing['Listing']['mlsid'], $listing['Listing']['class'], array(
                 'img_type'            => $board['Board']['img_type'],
                 'db_field'            => (isset($listing['Listing']['pic_list']) && !empty($listing['Listing']['pic_list'])) ? $listing['Listing']['pic_list'] : null,
                 'listing_image_host'  => $board['BoardXref']['img_host'],
@@ -36,9 +36,10 @@ if(isset($featured_listings) && !empty($featured_listings))
                 'height'              => 300,
                 'link'                => false,
                 'url_data'            => $listing
-            ));*/
+            ));
 
-            $fl_img = $board['BoardXref']['img_host'].$board['Board']['img_prefix'].$listing['Listing']['mlsid'].'_'.$listing['Listing']['pic_list'][0].'.jpg';
+            preg_match( '@src="([^"]+)"@' , $fl_img, $match );
+            $fl_img = array_pop($match);
 
             if(isset($settings['SettingRealestate']['listing_url_scheme']) && !empty($settings['SettingRealestate']['listing_url_scheme'])) {
                 $url_scheme = $property->url_scheme($listing);
