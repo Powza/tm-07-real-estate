@@ -364,8 +364,8 @@ hr {
 	}
 }
 .container-fluid-edge-space {
-	margin-left:80px;
-	margin-right:80px;
+	margin-left:3%;
+	margin-right:3%;
 }
 @include bp_xsm {
 	.container-fluid-edge-space {
@@ -2224,7 +2224,6 @@ hr {
 		&.social {
 			text-align: right;
 			a {
-				font-weight: 700;
 				border-radius: 4px;
 				&:after {
 					font-family: FontAwesome;
@@ -2367,66 +2366,67 @@ hr {
 		margin-top:20px;
 		font-size: 14px;
 		ul {
-			text-align: center;
-			float: right;
+			list-style: none;
 			margin:0;
-			li {
-				float: left;
-				display: block;
-				a {
-					font-weight: 700;
+			padding:0;
+			&.list-sep {
+				float: right;
+				li {
+					display: block;
+					float: left;
+					a {
+						font-weight: 700;
+					}
+					&:after {
+						content: '-';
+						margin:0 8px;
+					}
+					&:last-of-type {
+						&:after {
+							display: none;
+						}
+					}
 				}
-				&:after {
-					content: '-';
-					margin:0 10px;
-				}
-				&:last-of-type {
+			}
+			&.icons {
+				margin-top:5px;
+				float: right;
+				li {
+					display: block;
+					float: left;
+					margin:5px 10px 0 0;
+					svg {
+						fill:$white;
+						height: 25px;
+						width: 25px;
+						&#mls {
+							width: 60px;
+						}
+					}
 					&:after {
 						display: none;
+					}
+					&:last-of-type {
+						margin-right:0;
 					}
 				}
 			}
 		}
-		&.right {
+		&.right-align {
 			text-align: right;
 		}
 		p {
 			margin-bottom:10px;
 			line-height: 20px;
 		}
-		.icons {
-			margin-top:5px;
-			li {
-				margin:5px 10px 0 0;
-				svg {
-					fill:$white;
-					height: 25px;
-					width: 25px;
-					&#mls {
-						width: 60px;
-					}
-				}
-				&:after {
-					display: none;
-				}
-				&:last-of-type {
-					margin-right:0;
-				}
-			}
-		}
 	}
 }
 
 @include bp_xs {
 	.footer {
-		.item {
-			&.social {
-				text-align: left;
-			}
-		}
 		.copyright {
 			ul {
-				float: left;
+				float: left !important;
 			}
 		}
 	}

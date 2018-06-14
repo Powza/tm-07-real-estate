@@ -83,7 +83,7 @@ hr.big-spacer { margin: 40px 0; }
 .container-tight-col .row { margin-right: -5px; margin-left: -5px; }
 .container-tight-col .row div[class*="col-"] { padding-left: 5px; padding-right: 5px; }
 
-.container-fluid-edge-space { margin-left: 80px; margin-right: 80px; }
+.container-fluid-edge-space { margin-left: 3%; margin-right: 3%; }
 
 @media only screen and (max-width: 992px) { .container-fluid-edge-space { margin-left: 0; margin-right: 0; } }
 @media only screen and (min-width: 993px) and (max-width: 1199px) { .container-fluid-edge-space { margin-left: 0; margin-right: 0; } }
@@ -487,7 +487,7 @@ hr.big-spacer { margin: 40px 0; }
 .footer .item address p span { margin-right: 8px; }
 .footer .item address p span:last-of-type { margin-right: 0; }
 .footer .item.social { text-align: right; }
-.footer .item.social a { font-weight: 700; border-radius: 4px; }
+.footer .item.social a { border-radius: 4px; }
 .footer .item.social a:after { font-family: FontAwesome; margin-left: 10px; }
 .footer .item.social a:hover { color: #fff; padding: 3px 8px; }
 .footer .item.social a.social-facebook:after { content: '\f230'; }
@@ -517,22 +517,22 @@ hr.big-spacer { margin: 40px 0; }
 .footer .item.recent-posts li { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .footer .item.recent-posts li small { display: block; font-size: 14px; margin-top: -5px; font-size: 80%; color: #bbb; }
 .footer .copyright { border-top: 2px solid rgba(255, 255, 255, 0.1); padding-top: 20px; margin-top: 20px; font-size: 14px; }
-.footer .copyright ul { text-align: center; float: right; margin: 0; }
-.footer .copyright ul li { float: left; display: block; }
-.footer .copyright ul li a { font-weight: 700; }
-.footer .copyright ul li:after { content: '-'; margin: 0 10px; }
-.footer .copyright ul li:last-of-type:after { display: none; }
-.footer .copyright.right { text-align: right; }
+.footer .copyright ul { list-style: none; margin: 0; padding: 0; }
+.footer .copyright ul.list-sep { float: right; }
+.footer .copyright ul.list-sep li { display: block; float: left; }
+.footer .copyright ul.list-sep li a { font-weight: 700; }
+.footer .copyright ul.list-sep li:after { content: '-'; margin: 0 8px; }
+.footer .copyright ul.list-sep li:last-of-type:after { display: none; }
+.footer .copyright ul.icons { margin-top: 5px; float: right; }
+.footer .copyright ul.icons li { display: block; float: left; margin: 5px 10px 0 0; }
+.footer .copyright ul.icons li svg { fill: #fff; height: 25px; width: 25px; }
+.footer .copyright ul.icons li svg#mls { width: 60px; }
+.footer .copyright ul.icons li:after { display: none; }
+.footer .copyright ul.icons li:last-of-type { margin-right: 0; }
+.footer .copyright.right-align { text-align: right; }
 .footer .copyright p { margin-bottom: 10px; line-height: 20px; }
-.footer .copyright .icons { margin-top: 5px; }
-.footer .copyright .icons li { margin: 5px 10px 0 0; }
-.footer .copyright .icons li svg { fill: #fff; height: 25px; width: 25px; }
-.footer .copyright .icons li svg#mls { width: 60px; }
-.footer .copyright .icons li:after { display: none; }
-.footer .copyright .icons li:last-of-type { margin-right: 0; }
 
-@media only screen and (max-width: 767px) { .footer .item.social { text-align: left; }
-  .footer .copyright ul { float: left; } }
+@media only screen and (max-width: 767px) { .footer .copyright ul { float: left !important; } }
 @media only screen and (max-width: 992px) { .footer .item.social { text-align: left; } }
 /* ========================================================================== Login/Register Modal ========================================================================== */
 #login-modal .modal-dialog { max-width: 600px; margin-bottom: 50px; }

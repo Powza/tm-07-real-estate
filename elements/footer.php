@@ -99,29 +99,31 @@
 					</p>
 				</div>
 				<div class="col-sm-6 col-md-4">
-					<ul>
-						<li><a href="/sitemap.html">Sitemap</a></li>
-						<li><a href="/sitemap.html">Privacy Policy</a></li>
-						<li><a href="/sitemap.html">Terms Of Service</a></li>
-					</ul>
-					<div class="clearfix"></div>
-					<ul class="icons">
-						<li>
-							<svg role="img" title="MLS" id="mls">
-                                <use xlink:href="img/tm-07/icon-pack.svg#mls"></use>
-                            </svg>
-						</li>
-						<li>
-							<svg role="img" title="Realtor">
-                                <use xlink:href="img/tm-07/icon-pack.svg#realtor"></use>
-                            </svg>
-						</li>
-						<li>
-							<svg role="img" title="Equal Housing">
-                                <use xlink:href="img/tm-07/icon-pack.svg#equal-housing"></use>
-                            </svg>
-						</li>
-					</ul>
+					<div class="right-align">
+						<ul class="list-sep">
+							<li><a href="/sitemap.html">Sitemap</a></li>
+							<li><a href="/sitemap.html">Privacy Policy</a></li>
+							<li><a href="/sitemap.html">Terms Of Service</a></li>
+						</ul>
+						<div class="clearfix"></div>
+						<ul class="icons">
+							<li>
+								<svg role="img" title="MLS" id="mls">
+	                                <use xlink:href="img/tm-07/icon-pack.svg#mls"></use>
+	                            </svg>
+							</li>
+							<li>
+								<svg role="img" title="Realtor">
+	                                <use xlink:href="img/tm-07/icon-pack.svg#realtor"></use>
+	                            </svg>
+							</li>
+							<li>
+								<svg role="img" title="Equal Housing">
+	                                <use xlink:href="img/tm-07/icon-pack.svg#equal-housing"></use>
+	                            </svg>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
