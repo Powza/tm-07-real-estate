@@ -112,19 +112,19 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 			$('.footer .social').append('\
 				<ul>\
 					<?php if(!empty($agent_extract['Agent']['facebook_user'])) { ?>
-					<li><a href="https://facebook.com/<?php echo $agent_extract['Agent']['facebook_user']; ?>" class="social-facebook" target="_blank">Facebook<i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>\
+					<li><a href="https://facebook.com/<?php echo $agent_extract['Agent']['facebook_user']; ?>" class="social-facebook" target="_blank">Facebook</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['twitter_user'])) { ?>
-					<li><a href="https://twitter.com/<?php echo $agent_extract['Agent']['twitter_user']; ?>" class="social-twitter" target="_blank">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></a></li>\
+					<li><a href="https://twitter.com/<?php echo $agent_extract['Agent']['twitter_user']; ?>" class="social-twitter" target="_blank">Twitter</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['instagram_user'])) { ?>
-					<li><a href="https://instagram.com/<?php echo $agent_extract['Agent']['instagram_user']; ?>" class="social-instagram" target="_blank">Instagram<i class="fa fa-instagram" aria-hidden="true"></i></a></li>\
+					<li><a href="https://instagram.com/<?php echo $agent_extract['Agent']['instagram_user']; ?>" class="social-instagram" target="_blank">Instagram</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['linkedin_user'])) { ?>
-					<li><a href="http://www.linkedin.com/in/<?php echo $agent_extract['Agent']['linkedin_user']; ?>" class="social-linkedin" target="_blank">LinkedIn<i class="fa fa-linkedin" aria-hidden="true"></i></a></li>\
+					<li><a href="http://www.linkedin.com/in/<?php echo $agent_extract['Agent']['linkedin_user']; ?>" class="social-linkedin" target="_blank">LinkedIn</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['googleplus_user'])) { ?>
-					<li><a href="<?php echo $agent_extract['Agent']['googleplus_user']; ?>" class="social-googleplus" target="_blank">Google Plus<i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>\
+					<li><a href="<?php echo $agent_extract['Agent']['googleplus_user']; ?>" class="social-googleplus" target="_blank">Google Plus</a></li>\
 					<?php } ?>
 				</ul>\
 			');
