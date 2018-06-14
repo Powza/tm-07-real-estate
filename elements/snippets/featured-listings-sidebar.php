@@ -20,10 +20,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -50,10 +70,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -80,10 +120,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -110,10 +170,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -140,10 +220,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -170,10 +270,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -200,10 +320,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -230,10 +370,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -260,10 +420,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -290,10 +470,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
@@ -320,10 +520,30 @@
                         <span class="prop-city">Branson</span>, <span class="prop-state">MO</span> <span class="prop-zip">65616</span>
                     </div>
                     <ul class="prop-common">
-                        <li><img src="img/tm-07/icons/beds-icon.svg">4 bd</li>
-                        <li><img src="img/tm-07/icons/baths-icon.svg">8 ba</li>
-                        <li><img src="img/tm-07/icons/sqft-icon.svg">5,717 sqft</li>
-                        <li><img src="img/tm-07/icons/acres-icon.svg">0.71 acres</li>
+                        <li>
+                            <svg role="img" title="Beds">
+                                <use xlink:href="img/tm-07/icon-pack.svg#beds"></use>
+                            </svg>
+                            4 bd
+                        </li>
+                        <li>
+                            <svg role="img" title="Baths">
+                                <use xlink:href="img/tm-07/icon-pack.svg#baths"></use>
+                            </svg>
+                            8 ba
+                        </li>
+                        <li>
+                            <svg role="img" title="SqFt">
+                                <use xlink:href="img/tm-07/icon-pack.svg#sqft"></use>
+                            </svg>
+                            5,717 sqft
+                        </li>
+                        <li>
+                            <svg role="img" title="Acres">
+                                <use xlink:href="img/tm-07/icon-pack.svg#acres"></use>
+                            </svg>
+                            0.71 acres
+                        </li>
                     </ul>
                     <span class="prop-mls">MLS # 170087544<br><small><time datetime="2018-01-23">01/23/2018</time></small></span>
                     <a href="" class="btn btn__primary__outline">View Listing</a>
