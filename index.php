@@ -19,25 +19,23 @@
 <body>
     <?php include('elements/header.php'); ?>
     <section class="section hero">
-        <div class="hero__media">
+        <div class="hero__media" data-media-type="image">
+
+            <!-- data-media-type="image" -->
             <div class="hero__media__slider">
-                <div class="item" style="background-image: url('img/tm-07/hero/slider/1.jpg');"></div>
-                <div class="item" style="background-image: url('img/tm-07/hero/slider/2.jpg');"></div>
-                <div class="item" style="background-image: url('img/tm-07/hero/slider/3.jpg');"></div>
-                <div class="item" style="background-image: url('img/tm-07/hero/slider/4.jpg');"></div>
+                <div class="slider">
+                    <div class="item" style="background-image: url('img/tm-07/hero/slider/1.jpg');"></div>
+                    <div class="item" style="background-image: url('img/tm-07/hero/slider/2.jpg');"></div>
+                    <div class="item" style="background-image: url('img/tm-07/hero/slider/3.jpg');"></div>
+                    <div class="item" style="background-image: url('img/tm-07/hero/slider/4.jpg');"></div>
+                </div>
             </div>
-            <script>
-                $(document).ready(function() {
-                    $('.hero__media__slider').slick({
-                        fade: true,
-                        autoplay: true,
-                        autoplaySpeed: 10000,
-                        prevArrow: '<button type="button" class="slick-prev"><svg role="img" title="Left Arrow"><use xlink:href="img/tm-07/icon-pack.svg#left-arrow"></use></svg></button>',
-                        nextArrow: '<button type="button" class="slick-next"><svg role="img" title="Right Arrow"><use xlink:href="img/tm-07/icon-pack.svg#right-arrow"></use></svg></button>',
-                        appendArrows: $('<div></div>').addClass('section__slider-arrows hidden-xs').appendTo('.hero__search__links'),
-                    });
-                });
-            </script>
+
+            <!-- data-media-type="video" -->
+            <div class="hero__media__video" style="background-image: url('img/tm-07/hero/video/1.jpg');">
+                <div class="hero__video" data-video-url="https://youtu.be/lGEBmI5uYSg"></div>
+            </div>
+
         </div>
         <div class="hero__container container-fluid container-fluid-fixed">
             <div class="hero__content">
