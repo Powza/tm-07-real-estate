@@ -19,7 +19,7 @@
 <body>
     <?php include('elements/header.php'); ?>
     <section class="section hero">
-        <div class="hero__media" data-media-type="image">
+        <div class="hero__media" data-media-type="video">
 
             <!-- data-media-type="image" -->
             <div class="hero__media__slider">
