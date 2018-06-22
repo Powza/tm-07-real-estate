@@ -3,7 +3,17 @@
    ========================================================================== */
 @import 'compass/css3';
 @import 'partials/_mixins';
-@import 'partials/_variables';
+
+// Blacks
+$black: #484848;
+
+// Whites
+$white: #fff;
+
+// Greys
+$grey: #f8f8f8;
+
+$primary-color: #002A3A;
 
 html, body{
 	height: 100%;

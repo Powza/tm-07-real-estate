@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/frontend.myrsol.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    
     <script type="text/javascript">var controller = "pages"; var action = "view";if (!window.console) window.console = {};if (!window.console.log) window.console.log = function () { };</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -68,48 +69,13 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-3 col-md-3 hidden">
-                                                    <div class="form-group">
-                                                        <script>
-                                                            $(document).ready(function() {
-                                                                $("#qs_status").multiselect({
-                                                                    buttonWidth: "100%",
-                                                                    maxHeight: "100px",
-                                                                    buttonContainer: '<div class="btn-group btn-status hidden-xs hidden-sm" />',
-                                                                    buttonClass: "btn btn-default",
-                                                                    buttonText: function(t, e) {
-                                                                        if (0 == t.length) return "Any Status";
-                                                                        if (1 == t.length) return t.each(function() {
-                                                                            s = $(this).text()
-                                                                        }), s;
-                                                                        if (t.length >= 3) return t.length + " selected statuses";
-                                                                        var s = "";
-                                                                        return t.each(function() {
-                                                                            s += $(this).text() + ", "
-                                                                        }), s.substr(0, s.length - 2)
-                                                                    },
-                                                                    onChange: function(t, e) {}
-                                                                })
-                                                            })
-                                                        </script>
-                                                        <select name="data[Listing][status][]" class="form-control" multiple="multiple" id="qs_status" style="display: none;">
-                                                            <option value="1" data-id="1" data-status="Active">Active</option><option value="2" data-id="2" data-status="active short sale">active short sale</option><option value="3" data-id="3" data-status="active w/contingency">active w/contingency</option><option value="4" data-id="4" data-status="Pending">Pending</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group form-select hidden-md hidden-lg">
-                                                        <select name="data[Listing][status][]" class="form-control" multiple="multiple">
-                                                            <option value="" default="" disabled="" selected="">Any Status</option>
-                                                            <option value="1" data-id="1" data-status="Active">Active</option><option value="2" data-id="2" data-status="active short sale">active short sale</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
 
                                                 <div class="col-sm-3 col-md-3">
                                                     <div class="form-group">
                                                         <select class="form-control multi-select placeholder">
                                                             <option value="" disabled selected hidden>Lot Location</option>
                                                         </select>
-                                                        <select multiple="multiple" class="form-control multi-select" style="display: none;">
+                                                        <select multiple="multiple" class="form-control multi-select" data-placeholder="Lot Location" style="display: none;">
                                                             <option value="1">January</option>
                                                             <option value="12">pending contingent on financing</option>
                                                             <option value="2">January</option>
@@ -117,16 +83,6 @@
                                                             <option value="4">January</option>
                                                             <option value="5">January</option>
                                                         </select>
-                                                        <script>
-                                                            $(function() {
-                                                                $('#qs_form .multi-select.placeholder').remove();
-                                                                $('#qs_form .multi-select').show();
-                                                                $('#qs_form .multi-select').multipleSelect({
-                                                                    minimumCountSelected: 2,
-                                                                    placeholder: "Lot Location"
-                                                                });
-                                                            });
-                                                        </script>
                                                     </div>
                                                 </div>
 
@@ -180,15 +136,6 @@
                                         </div>
                                     </div>
                                 </form>
-                                <script>
-                                    $(function() {
-                                        $('.qs-single-select').selectize({
-                                            create: false,
-                                            hideSelected: true,
-                                            allowEmptyOption: true,
-                                        });
-                                    })
-                                </script>
                             </div>
                             <div class="hero__search__links">
                                 <ul>

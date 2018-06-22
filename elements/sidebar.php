@@ -1,7 +1,4 @@
 <aside class="sidebar">
-    <div class="sidebar__widget sidebar__agent-portal">
-        <?php include('elements/snippets/agent-portal.php'); ?>
-    </div>
 	<div class="sidebar__widget sidebar__quicksearch">
 		<h4>Quick Search</h4>
 
@@ -20,70 +17,16 @@
                 </select>
             </div>
             <div class="form-group">
-	            <script>
-	                $(function() {
-	                    $("#qs_status").multiselect({
-	                        buttonWidth: "100%",
-	                        maxHeight: "100px",
-	                        buttonContainer: '<div class="btn-group btn-status hidden-xs hidden-sm" />',
-	                        buttonClass: "btn btn-default",
-	                        buttonText: function(t, e) {
-	                            if (0 == t.length) return "Any Status";
-	                            if (1 == t.length) return t.each(function() {
-	                                s = $(this).text()
-	                            }), s;
-	                            if (t.length >= 3) return t.length + " selected statuses";
-	                            var s = "";
-	                            return t.each(function() {
-	                                s += $(this).text() + ", "
-	                            }), s.substr(0, s.length - 2)
-	                        },
-	                        onChange: function(t, e) {}
-	                    });
-	                });
-	            </script>
-	            <select name="data[Listing][status][]" class="form-control" multiple="multiple" id="qs_status" style="display: none;">
-	                <option value="1" data-id="1" data-status="Active">Active</option><option value="2" data-id="2" data-status="active short sale">active short sale</option><option value="3" data-id="3" data-status="active w/contingency">active w/contingency</option><option value="4" data-id="4" data-status="Pending">Pending</option>
-	            </select>
-	        </div>
-            <div class="form-group hidden-md hidden-lg">
-                <select name="data[Listing][status][]" class="form-control" multiple="multiple">
-                    <option value="" default="" disabled="" selected="">Any Status</option>
-                    <option value="1" data-id="1" data-status="Active">Active</option><option value="2" data-id="2" data-status="active short sale">active short sale</option>
+                <select class="form-control multi-select placeholder">
+                    <option value="" disabled selected hidden>Lot Location</option>
                 </select>
-            </div>
-
-            <div class="form-group">
-                <script>
-                    $(function() {
-                        $("#qs_lot").multiselect({
-                            buttonWidth: "100%",
-                            maxHeight: "100px",
-                            buttonContainer: '<div class="btn-group btn-status hidden-xs hidden-sm" />',
-                            buttonClass: "btn btn-default",
-                            includeSelectAllOption: true,
-                            buttonText: function(t, e) {
-                                if (0 == t.length) return "Any Status";
-                                if (1 == t.length) return t.each(function() {
-                                    s = $(this).text()
-                                }), s;
-                                if (t.length >= 3) return t.length + " selected statuses";
-                                var s = "";
-                                return t.each(function() {
-                                    s += $(this).text() + ", "
-                                }), s.substr(0, s.length - 2)
-                            },
-                            onChange: function(t, e) {}
-                        });
-                    });
-                </script>
-                <select name="data[Listing][status][]" class="form-control" multiple="multiple" id="qs_lot" style="display: none;">
-                    <option value="5366">Adult Community 55+</option>
-                    <option value="5354">Channel</option>
-                    <option value="5881">East Of Business 17</option>
-                    <option value="5362">Floating Dock</option>
-                    <option value="5362">Floating Dock</option>
-                    <option value="5362">Floating Dock</option>
+                <select multiple="multiple" class="form-control multi-select" data-placeholder="Lot Location" style="display: none;">
+                    <option value="1">January</option>
+                    <option value="12">pending contingent on financing</option>
+                    <option value="2">January</option>
+                    <option value="13">December</option>
+                    <option value="4">January</option>
+                    <option value="5">January</option>
                 </select>
             </div>
 
@@ -127,15 +70,6 @@
                 </div>
             </div>
         </form>
-        <script>
-            $(function() {
-                $('.qs-single-select').selectize({
-                    create: false,
-                    hideSelected: true,
-                    allowEmptyOption: true,
-                });
-            })
-        </script>
 	</div>
     
     <div class="sidebar__widget sidebar__featured-listing">
@@ -145,35 +79,33 @@
     <div class="sidebar__widget sidebar__featured-areas">
         <h4>Featured Areas</h4>
         <div class="featured-areas-slider">
-            <div class="item"><a href="">Andrews</a></div>
-            <div class="item"><a href="">Conway</a></div>
-            <div class="item"><a href="">Galivants Ferry</a></div>
-            <div class="item"><a href="">Garden City</a></div>
-            <div class="item"><a href="">Georgetown</a></div>
-            <div class="item"><a href="">Little River</a></div>
-            <div class="item"><a href="">Longs</a></div>
-            <div class="item"><a href="">Loris</a></div>
-            <div class="item"><a href="">Murrells Inlet</a></div>
-            <div class="item"><a href="">Myrtle Beach</a></div>
-            <div class="item"><a href="">North Myrtle Beach</a></div>
-            <div class="item"><a href="">Pawleys Island</a></div>
-            <div class="item"><a href="">Surfside Beach</a></div>
+            <ul>
+                <li><a href="">Andrews</a></li>
+                <li><a href="">Conway</a></li>
+                <li><a href="">Galivants Ferry</a></li>
+                <li><a href="">Garden City</a></li>
+                <li><a href="">Georgetown</a></li>
+                <li><a href="">Little River</a></li>
+                <li><a href="">Longs</a></li>
+                <li><a href="">Loris</a></li>
+                <li><a href="">Murrells Inlet</a></li>
+                <li><a href="">Myrtle Beach</a></li>
+                <li><a href="">North Myrtle Beach</a></li>
+                <li><a href="">Pawleys Island</a></li>
+                <li><a href="">Surfside Beach</a></li>
+            </ul>
         </div>
         <script>
             $(document).ready(function() {
-                $('.sidebar .featured-areas-slider').html($('.sidebar .featured-areas-slider .item').sort(function(){
+                $(".sidebar .featured-areas-slider ul").html($(".sidebar .featured-areas-slider ul li").sort(function(){
                     return Math.random()-0.5;
                 }));
-                $('.sidebar .featured-areas-slider').slick({
+                $('.sidebar .featured-areas-slider ul').slick({
+                    slide: 'li',
                     vertical: true,
                     verticalSwiping: true,
-                    dots: false,
-                    infinite: true,
-                    speed: 500,
                     slidesToShow: 6,
                     slidesToScroll: 6,
-                    rows:1,
-                    arrows: true,
                     prevArrow: '<button type="button" class="slick-prev btn btn__light__outline"><i class="fa fa-angle-up"></i></button>',
                     nextArrow: '<button type="button" class="slick-next btn btn__light__outline"><i class="fa fa-angle-down"></i></button>',
                     appendArrows: $('<div></div>').addClass('section__slider-arrows').appendTo('.sidebar__featured-areas h4'),

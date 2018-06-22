@@ -153,19 +153,9 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
 	<select class="form-control multi-select placeholder">
 		<option value="" disabled selected hidden>Any Status</option>
     </select>
-    <select name="data[Listing][status][]" multiple="multiple" class="form-control multi-select" style="display: none;">
+    <select name="data[Listing][status][]" multiple="multiple" class="form-control multi-select" data-placeholder="Any Status" style="display: none;">
     	<?php echo $statusHolder; ?>
     </select>
-    <script>
-        $(function() {
-            $('#qs_form .multi-select.placeholder').remove();
-            $('#qs_form .multi-select').show();
-            $('#qs_form .multi-select').multipleSelect({
-                minimumCountSelected: 2,
-                placeholder: "Any Status"
-            });
-        });
-    </script>
 </div>
 <div class="form-group hidden-md hidden-lg">
 	<select name="data[Listing][status][]" class="form-control" multiple="multiple">
@@ -276,13 +266,3 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
     </div>
 </div>
 </form>
-
-<script>
-    $(function() {
-        $('.qs-single-select').selectize({
-            create: false,
-            hideSelected: true,
-            allowEmptyOption: true,
-        });
-    })
-</script>

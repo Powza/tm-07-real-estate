@@ -41,7 +41,7 @@ if(isset($agentTestimonials) && !empty($agentTestimonials))
 </div>
 
 <script>
-    $(document).ready(function() {
+    $(function() {
         $('.testimonials-slider .slider-wrap').html($('.testimonials-slider blockquote').sort(function(){
             return Math.random()-0.5;
         }));
@@ -54,5 +54,7 @@ if(isset($agentTestimonials) && !empty($agentTestimonials))
     });
 </script>
 <?php
+} else {
+    echo '<p>No testominials found</p>';
 }
 ?>

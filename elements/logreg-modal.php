@@ -198,3 +198,4 @@ $(document).ready(function() {
   </div>
 </div>
 </div>
+<div class="modal-backdrop fade in"></div>
