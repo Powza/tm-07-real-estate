@@ -7,8 +7,8 @@
 
 		<form id="qs_form" class="form-quicksearch" name="qs_form" method="post" action="/property-search.html">
             <fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
-            <div class="form-group form-select">
-                <select class="form-control" id="qs_propclass" name="data[Listing][class][]" onchange="qsClassSelect();">
+            <div class="form-group">
+                <select class="form-control qs-single-select" id="qs_propclass" name="data[Listing][class][]" onchange="qsClassSelect();">
                     <option value="">All Property Types</option>
                     <option value="1">Residential</option><option value="3">Multifamily</option><option value="2">Land</option><option value="4">Commercial Industrial</option><option value="5">Farm</option>
                 </select>
@@ -127,6 +127,15 @@
                 </div>
             </div>
         </form>
+        <script>
+            $(function() {
+                $('.qs-single-select').selectize({
+                    create: false,
+                    hideSelected: true,
+                    allowEmptyOption: true,
+                });
+            })
+        </script>
 	</div>
     
     <div class="sidebar__widget sidebar__featured-listing">

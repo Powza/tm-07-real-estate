@@ -8,8 +8,29 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
 	<div class="col-md-10">
 		<div class="row">
         	<div class="col-sm-3 col-md-4">
-        		<div class="form-group form-select">
+        		<div class="form-group form-select hidden-md hidden-lg">
 	        		<select id="qs_propclass" class="form-control" name="data[Listing][class][]">
+					    <option value="">Property Class</option>
+						<?php 
+							$sess_cl = explode(',', @$qscriteria['class']);
+							foreach($parent_classes as $propertyClass) {
+								if(!empty($included_classes)) {
+									if(!in_array($propertyClass['ListingClass']['search_id'], $included_classes)) {
+										continue;
+									}
+								}
+								if(isset($qscriteria['class']) && !empty($qscriteria['class'])) {
+									$cls_sel = in_array($propertyClass['ListingClass']['search_id'], $sess_cl) ? ' selected="selected"' : null;
+								} else {
+									$cls_sel = null;
+								}
+								echo '<option '.$cls_sel.' value="'.$propertyClass['ListingClass']['search_id'].'">'.$propertyClass['ListingClass']['class_name'].'</option>';
+							}
+						?>
+					</select>
+				</div>
+				<div class="form-group hidden-xs hidden-sm">
+					<select id="qs_propclass" class="form-control qs-single-select" name="data[Listing][class][]">
 					    <option value="">Property Class</option>
 						<?php 
 							$sess_cl = explode(',', @$qscriteria['class']);
@@ -31,7 +52,7 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
 				</div>
         	</div>
 			<div class="col-sm-3 col-md-3">
-				<div class="form-group form-select">
+				<div class="form-group form-select hidden-md hidden-lg">
 					<?php
 						App::import('Controller', 'App');
 						$app = new AppController;
@@ -40,6 +61,37 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
 						unset($app);
 					?>
 				    <select class="form-control" id="qs_propcity" name="data[Listing][city][]">
+				    	<option value="">All Cities</option>
+		                <?php
+		                    if(isset($cities) && !empty($cities)) {
+								$included_cities = unserialize($settings['SettingRealestate']['included_cities']);
+
+								if(!empty($included_cities) && is_array($included_cities)) {
+									foreach($included_cities as $key => $value) {
+										foreach($cities as $keysub => $valuesub) {
+											if(strtolower($value) === strtolower($valuesub)) {
+												echo '<option value="'.$keysub.'">'.$valuesub.'</option>';
+											}
+										}
+									}
+								} else {
+									foreach($cities as $k => $v) {
+										echo '<option value="'.$k.'">'.$v.'</option>';
+									}
+								}
+							}
+		                ?>
+				    </select>
+				</div>
+				<div class="form-group hidden-xs hidden-sm">
+					<?php
+						App::import('Controller', 'App');
+						$app = new AppController;
+						$app->settings = $settings;
+						$cities = $app->lookup_cities();
+						unset($app);
+					?>
+				    <select class="form-control qs-single-select" id="qs_propcity" name="data[Listing][city][]">
 				    	<option value="">All Cities</option>
 		                <?php
 		                    if(isset($cities) && !empty($cities)) {
@@ -161,7 +213,7 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                            <div class="form-group form-select">
+                            <div class="form-group form-select hidden-md hidden-lg">
                                 <?php 
 									$sess_br = isset($qscriteria['br']) ? $qscriteria['br'] : null;
 									echo $form->select('br', array(
@@ -174,9 +226,22 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
 										'6'		=>'6+'), $sess_br, array('id'=>'qs_beds','class'=>'form-control'), false);
 								?>
                             </div>
+                            <div class="form-group hidden-xs hidden-sm">
+                                <?php 
+									$sess_br = isset($qscriteria['br']) ? $qscriteria['br'] : null;
+									echo $form->select('br', array(
+										'0'		=>'All Beds',
+										'1'		=>'1+',
+										'2'		=>'2+',
+										'3'		=>'3+',
+										'4'		=>'4+',
+										'5'		=>'5+',
+										'6'		=>'6+'), $sess_br, array('id'=>'qs_beds','class'=>'form-control qs-single-select'), false);
+								?>
+                            </div>
                         </div>
                         <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                            <div class="form-group form-select">
+                            <div class="form-group form-select hidden-md hidden-lg">
                                 <?php 
 									$sess_fba = isset($qscriteria['fba']) ? $qscriteria['fba'] : null;
 									echo $form->select('fba', array(
@@ -187,6 +252,19 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
 										'4' 	=>'4+',
 										'5' 	=>'5+',
 										'6' 	=>'6+'), $sess_fba, array('id'=>'qs_baths','class'=>'form-control'), false);
+								?>
+                            </div>
+                            <div class="form-group hidden-xs hidden-sm">
+                                <?php 
+									$sess_fba = isset($qscriteria['fba']) ? $qscriteria['fba'] : null;
+									echo $form->select('fba', array(
+										'0' 	=>'All Baths',
+										'1' 	=>'1+',
+										'2' 	=>'2+',
+										'3' 	=>'3+',
+										'4' 	=>'4+',
+										'5' 	=>'5+',
+										'6' 	=>'6+'), $sess_fba, array('id'=>'qs_baths','class'=>'form-control qs-single-select'), false);
 								?>
                             </div>
                         </div>
@@ -207,3 +285,12 @@ echo $form->create('Listing', array('id'=>'qs_form', 'class'=>'form-quicksearch'
     </div>
 </div>
 </form>
+<script>
+    $(function() {
+        $('.qs-single-select').selectize({
+            create: false,
+            hideSelected: true,
+            allowEmptyOption: true,
+        });
+    })
+</script>

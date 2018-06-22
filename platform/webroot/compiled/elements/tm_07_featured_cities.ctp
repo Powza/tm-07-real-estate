@@ -6,33 +6,36 @@
 	unset($app);
 ?>
 <div class="featured-areas-slider">
-	<?php 
-		if(isset($cities) && !empty($cities)) {
-			$included_cities = unserialize($settings['SettingRealestate']['included_cities']);
+	<ul>
+		<?php 
+			if(isset($cities) && !empty($cities)) {
+				$included_cities = unserialize($settings['SettingRealestate']['included_cities']);
 
-			if(!empty($included_cities) && is_array($included_cities)) {
-				foreach($included_cities as $key => $value) {
-					foreach($cities as $keysub => $valuesub) {
-						if(strtolower($value) === strtolower($valuesub)) {
-							echo '<div class="item"><a href="/listings/index/city:'.$keysub.'">'.$valuesub.'</a></div>';
+				if(!empty($included_cities) && is_array($included_cities)) {
+					foreach($included_cities as $key => $value) {
+						foreach($cities as $keysub => $valuesub) {
+							if(strtolower($value) === strtolower($valuesub)) {
+								echo '<li><a href="/listings/index/city:'.$keysub.'">'.$valuesub.'</a></li>';
+							}
 						}
 					}
-				}
-			} else {
-				foreach($cities as $k => $v) {
-					echo '<div class="item"><a href="/listings/index/city:'.$k.'">'.$v.'</a></div>';
+				} else {
+					foreach($cities as $k => $v) {
+						echo '<li><a href="/listings/index/city:'.$k.'">'.$v.'</a></li>';
+					}
 				}
 			}
-		}
-	?>
+		?>
+	</ul>
  </div>
 
- <script>
+<script>
     $(document).ready(function() {
-        $(".sidebar .featured-areas-slider").html($(".sidebar .featured-areas-slider .item").sort(function(){
+        $(".sidebar .featured-areas-slider ul").html($(".sidebar .featured-areas-slider ul li").sort(function(){
             return Math.random()-0.5;
         }));
-        $('.sidebar .featured-areas-slider').slick({
+        $('.sidebar .featured-areas-slider ul').slick({
+            slide: 'li',
             vertical: true,
             verticalSwiping: true,
             slidesToShow: 6,

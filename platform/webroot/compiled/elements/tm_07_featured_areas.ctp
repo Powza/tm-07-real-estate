@@ -6,33 +6,36 @@
 	unset($app);
 ?>
 <div class="featured-areas-slider">
-	<?php 
-		if(isset($areas) && !empty($areas)) {
-			$included_areas = unserialize($settings['SettingRealestate']['included_areas']);
+	<ul>
+		<?php 
+			if(isset($areas) && !empty($areas)) {
+				$included_areas = unserialize($settings['SettingRealestate']['included_areas']);
 
-			if(!empty($included_areas) && is_array($included_areas)) {
-				foreach($included_areas as $key => $value) {
-					foreach($areas as $keysub => $valuesub) {
-						if(strtolower($value) === strtolower($valuesub)) {
-							echo '<div class="item"><a href="/listings/index/area:'.$keysub.'">'.$valuesub.'</a></div>';
+				if(!empty($included_areas) && is_array($included_areas)) {
+					foreach($included_areas as $key => $value) {
+						foreach($areas as $keysub => $valuesub) {
+							if(strtolower($value) === strtolower($valuesub)) {
+								echo '<li><a href="/listings/index/area:'.$keysub.'">'.$valuesub.'</a></li>';
+							}
 						}
 					}
-				}
-			} else {
-				foreach($areas as $k => $v) {
-					echo '<div class="item"><a href="/listings/index/area:'.$k.'">'.$v.'</a></div>';
+				} else {
+					foreach($areas as $k => $v) {
+						echo '<li><a href="/listings/index/area:'.$k.'">'.$v.'</a></li>';
+					}
 				}
 			}
-		}
-	?>
+		?>
+	</ul>
  </div>
 
- <script>
+<script>
     $(document).ready(function() {
-        $(".sidebar .featured-areas-slider").html($(".sidebar .featured-areas-slider .item").sort(function(){
+        $(".sidebar .featured-areas-slider ul").html($(".sidebar .featured-areas-slider ul li").sort(function(){
             return Math.random()-0.5;
         }));
-        $('.sidebar .featured-areas-slider').slick({
+        $('.sidebar .featured-areas-slider ul').slick({
+            slide: 'li',
             vertical: true,
             verticalSwiping: true,
             slidesToShow: 6,

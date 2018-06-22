@@ -53,8 +53,8 @@
                                         <div class="col-md-10">
                                             <div class="row">
                                                 <div class="col-sm-3 col-md-4">
-                                                    <div class="form-group form-select">
-                                                        <select class="form-control" id="qs_propclass" name="data[Listing][class][]" onchange="qsClassSelect();">
+                                                    <div class="form-group">
+                                                        <select class="form-control qs-single-select" id="qs_propclass" name="data[Listing][class][]" onchange="qsClassSelect();">
                                                             <option value="">All Property Types</option>
                                                             <option value="1">Residential</option><option value="3">Multifamily</option><option value="2">Land</option><option value="4">Commercial Industrial</option><option value="5">Farm</option>
                                                         </select>
@@ -180,6 +180,15 @@
                                         </div>
                                     </div>
                                 </form>
+                                <script>
+                                    $(function() {
+                                        $('.qs-single-select').selectize({
+                                            create: false,
+                                            hideSelected: true,
+                                            allowEmptyOption: true,
+                                        });
+                                    })
+                                </script>
                             </div>
                             <div class="hero__search__links">
                                 <ul>
@@ -256,26 +265,29 @@
                         <div class="sidebar__widget sidebar__featured-areas">
                             <h4>Featured Areas</h4>
                             <div class="featured-areas-slider">
-                                <div class="item"><a href="">Andrews</a></div>
-                                <div class="item"><a href="">Conway</a></div>
-                                <div class="item"><a href="">Galivants Ferry</a></div>
-                                <div class="item"><a href="">Garden City</a></div>
-                                <div class="item"><a href="">Georgetown</a></div>
-                                <div class="item"><a href="">Little River</a></div>
-                                <div class="item"><a href="">Longs</a></div>
-                                <div class="item"><a href="">Loris</a></div>
-                                <div class="item"><a href="">Murrells Inlet</a></div>
-                                <div class="item"><a href="">Myrtle Beach</a></div>
-                                <div class="item"><a href="">North Myrtle Beach</a></div>
-                                <div class="item"><a href="">Pawleys Island</a></div>
-                                <div class="item"><a href="">Surfside Beach</a></div>
+                                <ul>
+                                    <li><a href="">Andrews</a></li>
+                                    <li><a href="">Conway</a></li>
+                                    <li><a href="">Galivants Ferry</a></li>
+                                    <li><a href="">Garden City</a></li>
+                                    <li><a href="">Georgetown</a></li>
+                                    <li><a href="">Little River</a></li>
+                                    <li><a href="">Longs</a></li>
+                                    <li><a href="">Loris</a></li>
+                                    <li><a href="">Murrells Inlet</a></li>
+                                    <li><a href="">Myrtle Beach</a></li>
+                                    <li><a href="">North Myrtle Beach</a></li>
+                                    <li><a href="">Pawleys Island</a></li>
+                                    <li><a href="">Surfside Beach</a></li>
+                                </ul>
                             </div>
                             <script>
                                 $(document).ready(function() {
-                                    $(".sidebar .featured-areas-slider").html($(".sidebar .featured-areas-slider .item").sort(function(){
+                                    $(".sidebar .featured-areas-slider ul").html($(".sidebar .featured-areas-slider ul li").sort(function(){
                                         return Math.random()-0.5;
                                     }));
-                                    $('.sidebar .featured-areas-slider').slick({
+                                    $('.sidebar .featured-areas-slider ul').slick({
+                                        slide: 'li',
                                         vertical: true,
                                         verticalSwiping: true,
                                         slidesToShow: 6,
