@@ -54,8 +54,7 @@
                                             <div class="row">
                                                 <div class="col-sm-3 col-md-4">
                                                     <div class="form-group">
-                                                        <select class="form-control qs-single-select" id="qs_propclass" name="data[Listing][class][]" onchange="qsClassSelect();">
-                                                            <option value="">All Property Types</option>
+                                                        <select class="form-control qs-single-select" id="qs_propclass" data-placeholder="All Property Types" name="data[Listing][class][]">
                                                             <option value="1">Residential</option><option value="3">Multifamily</option><option value="2">Land</option><option value="4">Commercial Industrial</option><option value="5">Farm</option>
                                                         </select>
                                                     </div>

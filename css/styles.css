@@ -147,7 +147,7 @@ hr.big-spacer { margin: 40px 0; }
   .sm-clean li a .sub-arrow:after { font-family: FontAwesome; content: '\f107'; }
   .sm-clean li a.highlighted .sub-arrow { background: rgba(72, 72, 72, 0.05); }
   .sm-clean li a.highlighted .sub-arrow:after { content: '\f106'; } }
-.mobile-menu { position: fixed; z-index: 9999; top: 50px; width: 100%; bottom: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); overflow: auto; background: #fff; padding: 15px; -webkit-transition: 0.3s; transition: 0.3s; }
+.mobile-menu { position: fixed; z-index: 999; top: 50px; width: 100%; bottom: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); overflow: auto; background: #fff; padding: 15px; -webkit-transition: 0.3s; transition: 0.3s; }
 .mobile-menu__open { -webkit-transform: translateX(0); transform: translateX(0); -webkit-transition: 0.3s; transition: 0.3s; display: block; }
 .mobile-menu:before { background: rgba(80, 198, 219, 0.5); content: ''; top: 0; width: 100%; bottom: 0; left: 0; }
 .mobile-menu__menu-container { position: relative; }
@@ -655,7 +655,8 @@ hr.big-spacer { margin: 40px 0; }
 #login-modal .modal-content p { display: none; }
 #login-modal .modal-content .users-signin-help { display: none; }
 
-@media only screen and (max-width: 767px) { #login-modal .modal-content div[class*='col-'] { width: 100% !important; } }
+@media only screen and (max-width: 767px) { #login-modal .modal-dialog { max-width: 100%; }
+  #login-modal .modal-content div[class*='col-'] { width: 100% !important; } }
 @media only screen and (max-width: 992px) { #login-modal .modal-dialog { margin-top: 50px; }
   #login-modal .modal-content .modal-header .close { display: block; position: absolute; top: -35px; width: 100%; margin: 0; text-shadow: none; font-weight: 600; font-size: 16px; overflow: hidden; opacity: 1; color: #fff; }
   #login-modal .modal-content .modal-header .close:after { content: 'Close'; margin-left: 3px; }

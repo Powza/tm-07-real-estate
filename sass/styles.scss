@@ -558,7 +558,7 @@ hr {
 
 .mobile-menu {
 	position: fixed;
-	z-index: 9999;
+	z-index: 999;
 	top:50px;
 	width: 100%;
 	bottom:0;
@@ -2688,6 +2688,9 @@ hr {
 }
 @include bp_xs {
 	#login-modal {
+		.modal-dialog {
+			max-width: 100%;
+		}
 		.modal-content {
 			div[class*='col-'] {
 				width: 100% !important;
