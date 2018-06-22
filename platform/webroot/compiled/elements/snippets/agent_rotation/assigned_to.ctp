@@ -34,7 +34,7 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 		$agentNameLower = str_replace(' ', '-', strtolower($fullname));
 	?>
     
-	 <script>
+	<script>
 		$(function() {
 			$('.agent-portal').remove();
 
@@ -83,7 +83,7 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 						</dt>\
 						<dd>\
 							<?php echo $agent_extract['Agent']['address1']; ?><br>\
-							<?php echo if(!empty($agent_extract['Agent']['address2'])) { echo $agent_extract['Agent']['address2'].'<br>'; }; ?>
+							<?php if(!empty($agent_extract['Agent']['address2'])) { echo $agent_extract['Agent']['address2'].'<br>'; }; ?>
 							<?php echo $agent_extract['Agent']['city']; ?>, <?php echo $agent_extract['Agent']['state']; ?> <?php echo $agent_extract['Agent']['zip']; ?>
 						</dd>\
 						<?php if(empty($agent_extract['Agent']['office_phone']) && empty($agent_extract['Agent']['cell_phone'])) { ?>
