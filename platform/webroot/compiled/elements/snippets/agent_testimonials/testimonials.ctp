@@ -55,6 +55,6 @@ if(isset($agentTestimonials) && !empty($agentTestimonials))
 </script>
 <?php
 } else {
-    echo '<p>No testominials found</p>';
+    echo '<p>No agent testominials found</p>';
 }
 ?>
