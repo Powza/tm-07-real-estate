@@ -121,6 +121,6 @@
 	</script>
 	<?php
 	} else {
-		echo '<p>No agents found</p>';
+		echo '<p>No agents found or setup</p>';
 	}
 ?>
