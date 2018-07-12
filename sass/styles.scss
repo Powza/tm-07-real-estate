@@ -1827,8 +1827,12 @@ hr {
 	}
 	&__featured-listing {
 		.properties-slider {
+			.section__slider-arrows {
+				margin-top:30px;
+			}
 			.prop-wrap {
 				box-shadow: none;
+				margin:0;
 			}
 			.prop-content {
 				background: $grey;
