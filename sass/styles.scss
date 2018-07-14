@@ -1497,6 +1497,8 @@ hr {
 		border-radius: 0;
 		box-shadow: none;
 		appearance: none;
+		position: relative;
+		z-index: 1;
 		&:focus {
 			box-shadow: none;
 		}
@@ -1514,7 +1516,6 @@ hr {
 		&.form-select {
 			&:after {
 				position: absolute;
-				z-index: 2;
 				right:15px;
 				top:calc(50% - 15px);
 				transform: translate(0, calc(-50% + 15px));
