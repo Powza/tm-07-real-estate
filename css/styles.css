@@ -482,15 +482,15 @@ hr.big-spacer { margin: 40px 0; }
 .sidebar__featured-listing .properties-slider .prop-content ul li img, .sidebar__featured-listing .properties-slider .prop-content ul li svg { height: 16px; width: 16px; margin-right: 6px; }
 .sidebar__featured-listing .properties-slider .prop-content ul li:after { margin: 0 6px; }
 .sidebar__featured-listing .properties-slider .prop-content .btn { padding: 4px 10px; font-size: 12px; }
-.sidebar__featured-areas { background: #50c6db; padding: 20px; -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); border-radius: 4px; }
-.sidebar__featured-areas h4 { position: relative; display: block; color: #fff; margin: 0; padding-bottom: 20px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding-right: 70px; }
-.sidebar__featured-areas h4 .section__slider-arrows { position: absolute; top: 0; right: 0; }
-.sidebar__featured-areas ul { list-style: none; margin: 0; padding: 0; display: none; }
-.sidebar__featured-areas ul.slick-initialized { display: block; opacity: 1; -webkit-transition: opacity .3s ease-out; transition: opacity .3s ease-out; }
-.sidebar__featured-areas ul li { border: 0; border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
-.sidebar__featured-areas ul li a { outline: none; display: block; padding: 8px 0; color: #fff; }
-.sidebar__featured-areas ul li a:hover { background: rgba(255, 255, 255, 0.1); padding: 8px 12px; }
-.sidebar__featured-areas .section__slider-arrows button { border: 0; padding: 0 8px; font-size: 20px; }
+.sidebar__list-scroll { background: #50c6db; padding: 20px; -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); border-radius: 4px; }
+.sidebar__list-scroll h4 { position: relative; display: block; color: #fff; margin: 0; padding-bottom: 20px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding-right: 70px; }
+.sidebar__list-scroll h4 .section__slider-arrows { position: absolute; top: 0; right: 0; }
+.sidebar__list-scroll ul { list-style: none; margin: 0; padding: 0; display: none; }
+.sidebar__list-scroll ul.slick-initialized { display: block; opacity: 1; -webkit-transition: opacity .3s ease-out; transition: opacity .3s ease-out; }
+.sidebar__list-scroll ul li { border: 0; border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+.sidebar__list-scroll ul li a { outline: none; display: block; padding: 8px 0; color: #fff; }
+.sidebar__list-scroll ul li a:hover { background: rgba(255, 255, 255, 0.1); padding: 8px 12px; }
+.sidebar__list-scroll .section__slider-arrows button { border: 0; padding: 0 8px; font-size: 20px; }
 .sidebar__quicksearch .form-quicksearch .form-group { -webkit-box-shadow: none; box-shadow: none; }
 .sidebar__quicksearch .form-quicksearch .form-group.form-select, .sidebar__quicksearch .form-quicksearch .form-group.form-input, .sidebar__quicksearch .form-quicksearch .form-group select.placeholder, .sidebar__quicksearch .form-quicksearch .form-group select[multiple], .sidebar__quicksearch .form-quicksearch .form-group .qs-single-select .selectize-input { border: 2px solid #ddd; }
 .sidebar__quicksearch .form-quicksearch .form-group .qs-single-select .selectize-dropdown-content, .sidebar__quicksearch .form-quicksearch .form-group .multi-select .ms-drop { border-style: solid; border-width: 0 2px 2px 2px; border-color: #ddd; }
