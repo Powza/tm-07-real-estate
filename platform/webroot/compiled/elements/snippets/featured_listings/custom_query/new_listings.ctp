@@ -22,7 +22,7 @@ if(isset($featured_listings) && !empty($featured_listings))
 {
     $total_listings = count($featured_listings);
 ?>
-<div class="properties-slider new-listings-slider">
+<div class="properties-slider new-listings-slider property-slider">
     <div class="row slider-wrap">
         <?php
             foreach($featured_listings as $listing)
@@ -114,43 +114,6 @@ if(isset($featured_listings) && !empty($featured_listings))
         ?>
     </div>
 </div> <!-- properties-slider -->
-<script>
-    $(function() {
-        $('.new-listings-slider .prop-img').Lazy({
-            scrollDirection: 'vertical'
-        });
-        $('.new-listings-slider .slider-wrap').slick({
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            prevArrow: '<button type="button" class="slick-prev btn btn__primary__outline"><i class="fa fa-angle-left"></i> Prev</button>',
-            nextArrow: '<button type="button" class="slick-next btn btn__primary__outline">Next <i class="fa fa-angle-right"></i></button>',
-            appendArrows: $('<div></div>').addClass('section__slider-arrows').appendTo('.new-listings-slider'),
-            responsive: [
-            {
-                breakpoint: 1680,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-              }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-              }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-              }
-            }
-            ]
-        });
-    });
-</script>
 <?php
 } else {
     echo '<p>No listings found</p>';
