@@ -79,7 +79,11 @@ if(isset($featured_listings) && !empty($featured_listings))
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
+                        <?php if(strpos($fl_img, 'holder.js') !== false) { ?>
+                        <div class="prop-img" data-src="//assets.myrsol.com/listing_images/listings-noimage.gif"></div>
+                        <?php } else { ?>
                         <div class="prop-img" data-src="<?php echo $fl_img; ?>"></div>
+                        <?php } ?>
                         <ul class="prop-meta">
                             <li class="prop-class"><?php echo $class; ?></li>
                         </ul>
