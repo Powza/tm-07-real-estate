@@ -194,7 +194,7 @@ hr.big-spacer { margin: 40px 0; }
 .header__logo { width: 100%; margin-right: 30px; line-height: 0.1; }
 .header__logo a { display: inline-block; color: #fff; }
 .header__logo img, .header__logo svg { width: auto; max-width: 100%; max-height: 60px; margin-right: 15px; }
-.header__logo svg { display: block; fill: #fff; height: auto; }
+.header__logo svg { display: inline-block; fill: #fff; height: auto; width: 100%; }
 .header__search-mls-address { width: 100%; }
 .header__search-mls-address form { position: relative; }
 .header__search-mls-address form .row { margin-left: -5px; margin-right: -5px; }

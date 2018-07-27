@@ -775,9 +775,10 @@ hr {
 		    margin-right:15px;
 		}
 		svg {
-			display: block;
+			display: inline-block;
 			fill:$white;
 			height: auto;
+			width: 100%;
 		}
 	}
 	&__search-mls-address {
@@ -1052,7 +1053,6 @@ hr {
 		}
 	}
 }
-
 
 /* ==========================================================================
    Homepage hero
