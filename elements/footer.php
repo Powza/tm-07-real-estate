@@ -77,15 +77,17 @@
 			<div class="col-sm-6 col-md-2">
 				<div class="item social">
 					<h4>Connect</h4>
-					<ul>
-						<li><a href="" class="social-facebook">Facebook</a></li>
-						<li><a href="" class="social-twitter">Twitter</a></li>
-						<li><a href="" class="social-youtube">YouTube</a></li>
-						<li><a href="" class="social-linkedin">LinkedIn</a></li>
-						<li><a href="" class="social-googleplus">Google Plus</a></li>
-						<li><a href="" class="social-pinterest">Pinterest</a></li>
-						<li><a href="" class="social-houzz">Houzz</a></li>
-					</ul>
+					<div class="agent-portal">
+						<ul>
+							<li><a href="" class="social-facebook">Facebook</a></li>
+							<li><a href="" class="social-twitter">Twitter</a></li>
+							<li><a href="" class="social-youtube">YouTube</a></li>
+							<li><a href="" class="social-linkedin">LinkedIn</a></li>
+							<li><a href="" class="social-googleplus">Google Plus</a></li>
+							<li><a href="" class="social-pinterest">Pinterest</a></li>
+							<li><a href="" class="social-houzz">Houzz</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
