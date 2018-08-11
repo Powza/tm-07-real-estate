@@ -34,10 +34,10 @@ body {
 	}
 }
 a, button {
-	color:$black;
+	color:$primary-color;
 	transition:0.2s;
 	&:hover {
-		color:$primary-color;
+		color:shade($primary-color,30%);
 		text-decoration: none;
 	}
 }
@@ -640,6 +640,10 @@ hr {
 	background:$white;
 	a {
 		text-decoration: none;
+		color:$black;
+		&:hover {
+			color:$primary-color;
+		}
 	}
 	&__meta {
 		transition: 0.3s;
@@ -1008,7 +1012,9 @@ hr {
 		}
 		&__logo {
 			margin-right:-15px;
-
+			img[src$=".svg"] {
+				height: 40px;
+			}
 			img {
 				height: 40px;
 			}
@@ -1343,6 +1349,8 @@ hr {
 		overflow: hidden;
 		background-color: #eee;
 		a {
+			color:$black;
+			text-decoration: none;
 			&:before {
 				font-weight: 700;
 				position: absolute;
@@ -1352,6 +1360,7 @@ hr {
 				content: 'Loading...';
 			}
 			&:hover {
+				color:$primary-color;
 				.prop-img {
 					transform: scale(1.05);
 				}
@@ -1784,6 +1793,11 @@ hr {
 		ul {
 			li {
 				a {
+					color:$black;
+					text-decoration: none;
+					&:hover {
+						color:$primary-color;
+					}
 					&:before {
 						content: '\f105';
 						font-family: fontAwesome;
@@ -1973,6 +1987,8 @@ hr {
 		position: relative;
 		overflow: hidden;
 		a {
+			text-decoration: none;
+			color:$black;
 			&:before {
 				font-weight: 700;
 				position: absolute;
@@ -1982,6 +1998,7 @@ hr {
 				content: 'Loading...';
 			}
 			&:hover {
+				color:$primary-color;
 				.agent-img {
 					transform: scale(1.05);
 				}
@@ -2025,6 +2042,8 @@ hr {
 			@include clearfix;
 			li {
 			    a {
+			    	color:$black;
+			    	text-decoration: none;
 			    	display: flex;
 					align-items:center;
 					svg {
@@ -2033,6 +2052,9 @@ hr {
 					    width: 18px;
 					    fill: $primary-color;
 					    margin-right: 8px;
+					}
+					&:hover {
+						color:$primary-color;
 					}
 				}
 			}
@@ -2776,5 +2798,52 @@ hr {
 				border-bottom: 0;
 			}
 		}
+	}
+}
+
+.dynidx-map-container {
+	&.expanded-map {
+		.map-view {
+			width: 100% !important;
+		}
+		.list-view {
+			width: 0 !important;
+			margin-left: calc(100vw) !important;
+			.dynidx-map-list-block {
+				position: absolute !important;
+				top: 0 !important;
+			}
+		}
+	}
+	.map-view {
+		transition: width 0.2s;
+		a[data-toggle="map-expand"] {
+			background-repeat: none;
+			background-position: center center;
+			background-size: 36px 36px;
+			position: absolute;
+			z-index: 99;
+			top:0;
+			right:0;
+			margin:10px;
+			border:0;
+			border-radius: 2px;
+			box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+			height: 40px;
+			width: 40px;
+			background: $white;
+			&:hover {
+				background-color:#ebebeb;
+			}
+		}
+		a[data-state="closed"] {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m31.81 80.16h23.25v-50h-23.25m-6.81 25.05 11.61 12.02m-11.61-12.02 11.57-11.98m38.43 29.58h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11' fill='none' stroke='%23231f20' stroke-linecap='round' stroke-linejoin='round' stroke-width='5'/%3e%3c/svg%3e");
+		}
+		a[data-state="open"] {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m68.19 25h-23.25v50h23.25m6.81-25.04-11.61-12.02m11.61 12.02-11.57 11.97m-38.43-29.58h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11' fill='none' stroke='%23231f20' stroke-linecap='round' stroke-linejoin='round' stroke-width='5'/%3e%3c/svg%3e");
+		}
+	}
+	.list-view {
+		transition: width 0.2s;
 	}
 }
