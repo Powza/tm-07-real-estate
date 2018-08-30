@@ -75,6 +75,8 @@ hr.big-spacer { margin: 40px 0; }
   .section__slider-arrows { text-align: center; } }
 @media only screen and (max-width: 992px) { .section__background { background-attachment: scroll; } }
 @media only screen and (min-width: 1500px) { .section__spacer { padding: 120px 0; } }
+.main-content { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
 /* ========================================================================== Container ========================================================================== */
 .container-fluid { position: relative; z-index: 1; }
 
@@ -161,10 +163,10 @@ hr.big-spacer { margin: 40px 0; }
 .mobile-menu__account ul li.account-admin { width: 100%; margin-bottom: 6px; }
 
 /* ========================================================================== Header ========================================================================== */
-.header { position: absolute; top: 0; left: 0; right: 0; z-index: 9; background: #fff; }
+.header { position: absolute; z-index: 9; top: 0; left: 0; right: 0; background: #fff; }
 .header a { text-decoration: none; color: #484848; }
 .header a:hover { color: #50c6db; }
-.header__meta { -webkit-transition: 0.3s; transition: 0.3s; position: relative; z-index: 9999; *zoom: 1; background: #f8f8f8; }
+.header__meta { -webkit-transition: 0.3s; transition: 0.3s; position: relative; *zoom: 1; background: #f8f8f8; z-index: 9; }
 .header__meta:before, .header__meta:after { content: " "; display: table; }
 .header__meta:after { clear: both; }
 .header__meta.fixed { -webkit-transform: translateY(0); transform: translateY(0); position: fixed; left: 0; right: 0; background: rgba(72, 72, 72, 0.97); }
@@ -384,6 +386,7 @@ hr.big-spacer { margin: 40px 0; }
 .banner h1 { margin: 0; }
 
 /* ========================================================================== Property slider ========================================================================== */
+/* Original */
 .properties-slider .slick-slide { outline: none; }
 .properties-slider .item { outline: none; padding-left: 15px; padding-right: 15px; }
 .properties-slider .prop-wrap { -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); margin: 0 0 30px 0; border-radius: 4px; overflow: hidden; background: #fff; }
@@ -480,13 +483,13 @@ hr.big-spacer { margin: 40px 0; }
 .sidebar__agent-portal .agent-slider .agent-content .btn { padding: 4px 10px; font-size: 12px; }
 .sidebar__featured-listing .properties-slider .section__slider-arrows { margin-top: 30px; }
 .sidebar__featured-listing .properties-slider .prop-wrap { -webkit-box-shadow: none; box-shadow: none; margin: 0; }
-.sidebar__featured-listing .properties-slider .prop-content { background: #f8f8f8; font-size: 14px; }
-.sidebar__featured-listing .properties-slider .prop-content .prop-address { line-height: 20px; }
-.sidebar__featured-listing .properties-slider .prop-content .prop-street { font-size: 16px; }
-.sidebar__featured-listing .properties-slider .prop-content .prop-mls { font-size: 12px; }
-.sidebar__featured-listing .properties-slider .prop-content ul li img, .sidebar__featured-listing .properties-slider .prop-content ul li svg { height: 16px; width: 16px; margin-right: 6px; }
-.sidebar__featured-listing .properties-slider .prop-content ul li:after { margin: 0 6px; }
-.sidebar__featured-listing .properties-slider .prop-content .btn { padding: 4px 10px; font-size: 12px; }
+.sidebar__featured-listing .properties-slider .prop-content .top { top: 0; right: 0; }
+.sidebar__featured-listing .properties-slider .prop-content .top .prop-class { padding: 0 8px; }
+.sidebar__featured-listing .properties-slider .prop-content .top .prop-listing-date { padding: 0 8px; }
+.sidebar__featured-listing .properties-slider .prop-content .bottom { bottom: 5px; left: 10px; }
+.sidebar__featured-listing .properties-slider .prop-content .bottom .prop-price { font-size: 18px; }
+.sidebar__featured-listing .properties-slider .prop-content .bottom .prop-address { font-size: 12px; margin: 0 0 5px 0; }
+.sidebar__featured-listing .properties-slider .prop-content .bottom .prop-common li { font-size: 11px; }
 .sidebar__list-scroll { background: #50c6db; padding: 20px; -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); border-radius: 4px; }
 .sidebar__list-scroll h4 { position: relative; display: block; color: #fff; margin: 0; padding-bottom: 20px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding-right: 70px; }
 .sidebar__list-scroll h4 .section__slider-arrows { position: absolute; top: 0; right: 0; }
@@ -595,7 +598,7 @@ hr.big-spacer { margin: 40px 0; }
 .footer .item.social a.social-houzz:after { content: '\f27c'; }
 .footer .item.social a.social-houzz:hover { background: #7ac142; }
 .footer .item.quick-links ul { -webkit-column-count: 2; column-count: 2; }
-.footer .item.quick-links ul li { margin: 0; -webkit-column-break-inside: avoid; /* Chrome, Safari */ page-break-inside: avoid; /* Theoretically FF 20+ */ break-inside: avoid-column; /* IE 11 */ display: table; }
+.footer .item.quick-links ul li { margin: 0; -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; display: table; }
 .footer .item.new-listings li a { display: block; }
 .footer .item.new-listings li a:hover .badge { background: #50c6db; }
 .footer .item.new-listings li .badge { -webkit-transition: 0.1s; transition: 0.1s; float: right; display: block; border-radius: 25px; padding: 4px 8px; margin: 3px 0; }
@@ -714,13 +717,3 @@ hr.big-spacer { margin: 40px 0; }
 .listings_view .details-onecol-grouped p { font-size: 14px; }
 .listings_view .details-onecol-grouped p strong { color: #484848; }
 .listings_view .mortgage-embed h4.mortgage-title { border-bottom: 0; }
-
-.dynidx-map-container.expanded-map .map-view { width: 100% !important; }
-.dynidx-map-container.expanded-map .list-view { width: 0 !important; margin-left: calc(100vw) !important; }
-.dynidx-map-container.expanded-map .list-view .dynidx-map-list-block { position: absolute !important; top: 0 !important; }
-.dynidx-map-container .map-view { -webkit-transition: width 0.2s; transition: width 0.2s; }
-.dynidx-map-container .map-view a[data-toggle="map-expand"] { background-repeat: none; background-position: center center; background-size: 36px 36px; position: absolute; z-index: 99; top: 0; right: 0; margin: 10px; border: 0; border-radius: 2px; -webkit-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3); box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3); height: 40px; width: 40px; background: #fff; }
-.dynidx-map-container .map-view a[data-toggle="map-expand"]:hover { background-color: #ebebeb; }
-.dynidx-map-container .map-view a[data-state="closed"] { background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m31.81 80.16h23.25v-50h-23.25m-6.81 25.05 11.61 12.02m-11.61-12.02 11.57-11.98m38.43 29.58h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11' fill='none' stroke='%23231f20' stroke-linecap='round' stroke-linejoin='round' stroke-width='5'/%3e%3c/svg%3e"); }
-.dynidx-map-container .map-view a[data-state="open"] { background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m68.19 25h-23.25v50h23.25m6.81-25.04-11.61-12.02m11.61 12.02-11.57 11.97m-38.43-29.58h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11' fill='none' stroke='%23231f20' stroke-linecap='round' stroke-linejoin='round' stroke-width='5'/%3e%3c/svg%3e"); }
-.dynidx-map-container .list-view { -webkit-transition: width 0.2s; transition: width 0.2s; }

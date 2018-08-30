@@ -343,6 +343,10 @@ hr {
 	}
 }
 
+.main-content {
+	flex: 1;
+}
+
 /* ==========================================================================
    Container
    ========================================================================== */
@@ -633,10 +637,10 @@ hr {
    ========================================================================== */
 .header {
 	position: absolute;
+	z-index: 9;
 	top:0;
 	left:0;
 	right:0;
-	z-index: 9;
 	background:$white;
 	a {
 		text-decoration: none;
@@ -648,9 +652,9 @@ hr {
 	&__meta {
 		transition: 0.3s;
 		position: relative;
-		z-index: 9999;
 		@include clearfix;
 		background:$grey;
+		z-index: 9;
 		&.fixed {
 			transform: translateY(0);
 			position: fixed;
@@ -1320,6 +1324,7 @@ hr {
 /* ==========================================================================
    Property slider
    ========================================================================== */
+   /* Original */
 .properties-slider {
 	.slick-slide {
 		outline: none;
@@ -1481,6 +1486,7 @@ hr {
 		}
 	}
 }
+
 
 /* ==========================================================================
    Quicksearch
@@ -1846,32 +1852,31 @@ hr {
 				margin:0;
 			}
 			.prop-content {
-				background: $grey;
-				font-size: 14px;
-				.prop-address {
-					line-height: 20px;
-				}
-				.prop-street {
-					font-size: 16px;
-				}
-				.prop-mls {
-					font-size: 12px;
-				}
-				ul {
-					li {
-						img,svg {
-							height: 16px;
-							width: 16px;
-							margin-right:6px;
-						}
-						&:after {
-							margin:0 6px;
-						}
+				.top {
+					top:0;
+					right:0;
+					.prop-class {
+						padding:0 8px;
+					}
+					.prop-listing-date {
+						padding:0 8px;
 					}
 				}
-				.btn {
-					padding:4px 10px;
-					font-size: 12px;
+				.bottom {
+					bottom: 5px;
+					left:10px;
+					.prop-price {
+						font-size: 18px;
+					}
+					.prop-address {
+						font-size: 12px;
+						margin:0 0 5px 0;
+					}
+					.prop-common {
+						li {
+							font-size: 11px;
+						}
+					}
 				}
 			}
 		}
@@ -2333,9 +2338,9 @@ hr {
 			    column-count: 2;
 			    li {
 	  				margin: 0;
-				    -webkit-column-break-inside: avoid; /* Chrome, Safari */
-				    page-break-inside: avoid;           /* Theoretically FF 20+ */
-				    break-inside: avoid-column;         /* IE 11 */
+				    -webkit-column-break-inside: avoid;
+				    page-break-inside: avoid;
+				    break-inside: avoid-column;
 				    display:table;  
 	  			}
 			}
@@ -2762,6 +2767,9 @@ hr {
 /* Slick Slider JS */
 .slick-list,.slick-slider,.slick-track{position:relative;display:block}.slick-loading .slick-slide,.slick-loading .slick-track{visibility:hidden}.slick-slider{box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{top:0;left:0;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
 
+
+
+
 /* ==========================================================================
    Dynamic IDX
    ========================================================================== */
@@ -2798,52 +2806,5 @@ hr {
 				border-bottom: 0;
 			}
 		}
-	}
-}
-
-.dynidx-map-container {
-	&.expanded-map {
-		.map-view {
-			width: 100% !important;
-		}
-		.list-view {
-			width: 0 !important;
-			margin-left: calc(100vw) !important;
-			.dynidx-map-list-block {
-				position: absolute !important;
-				top: 0 !important;
-			}
-		}
-	}
-	.map-view {
-		transition: width 0.2s;
-		a[data-toggle="map-expand"] {
-			background-repeat: none;
-			background-position: center center;
-			background-size: 36px 36px;
-			position: absolute;
-			z-index: 99;
-			top:0;
-			right:0;
-			margin:10px;
-			border:0;
-			border-radius: 2px;
-			box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-			height: 40px;
-			width: 40px;
-			background: $white;
-			&:hover {
-				background-color:#ebebeb;
-			}
-		}
-		a[data-state="closed"] {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m31.81 80.16h23.25v-50h-23.25m-6.81 25.05 11.61 12.02m-11.61-12.02 11.57-11.98m38.43 29.58h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11m14.11-9.5h-14.11' fill='none' stroke='%23231f20' stroke-linecap='round' stroke-linejoin='round' stroke-width='5'/%3e%3c/svg%3e");
-		}
-		a[data-state="open"] {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m68.19 25h-23.25v50h23.25m6.81-25.04-11.61-12.02m11.61 12.02-11.57 11.97m-38.43-29.58h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11m-14.11 9.5h14.11' fill='none' stroke='%23231f20' stroke-linecap='round' stroke-linejoin='round' stroke-width='5'/%3e%3c/svg%3e");
-		}
-	}
-	.list-view {
-		transition: width 0.2s;
 	}
 }

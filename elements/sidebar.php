@@ -73,7 +73,7 @@
 	</div>
     
     <div class="sidebar__widget sidebar__featured-listing">
-        <?php include('elements/snippets/featured-listings-sidebar.php'); ?>
+        <?php include('elements/snippets/featured-listings-sidebar-tm-06.php'); ?>
     </div>
 
     <div class="sidebar__widget sidebar__list-scroll">
