@@ -196,7 +196,10 @@ hr {
 		margin:40px 0;
 	}
 }
-
+.wrap-inner {
+	position: relative;
+	z-index: 1;
+}
 /* ==========================================================================
    Section
    ========================================================================== */
@@ -350,10 +353,6 @@ hr {
 /* ==========================================================================
    Container
    ========================================================================== */
-.container-fluid {
-	position: relative;
-	z-index: 1;
-}
 .container-fluid-fixed {
 	max-width: 1170px;
 }
@@ -641,7 +640,6 @@ hr {
 	top:0;
 	left:0;
 	right:0;
-	background:$white;
 	a {
 		text-decoration: none;
 		color:$black;
@@ -680,6 +678,10 @@ hr {
 				}
 			}
 		}
+	}
+	&__company {
+		position: relative;
+		background: $white;
 	}
 	&__account {
 		float: right;
@@ -802,6 +804,9 @@ hr {
 			.form-group {
 				position: relative;
 				margin:0;
+			}
+			.form-control {
+				background:none;
 			}
 			#mlsSearch {
 				font-size: 16px;
@@ -1324,7 +1329,6 @@ hr {
 /* ==========================================================================
    Property slider
    ========================================================================== */
-   /* Original */
 .properties-slider {
 	.slick-slide {
 		outline: none;

@@ -233,17 +233,19 @@
         </div>
     </main>
     <section class="section section__spacer section__center section__background section__lazyload" data-src="img/tm-07/team.jpg">
-        <div class="container-fluid container-fluid-fixed">
-            <div class="section__title">
-                <h2>We are Ready to Help You Buy or Sell a Home</h2>
-                <p class="lead">Ready to get started? Give us a call today at <a href="">(860) 388-7721</a></p>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <ul class="section__links">
-                        <li><a href="" class="btn btn__light__outline btn-lg">What's My Home Worth</a></li>
-                        <li><a href="" class="btn btn__primary btn-lg">Find My New Home</a></li>
-                    </ul>
+        <div class="wrap-inner">
+            <div class="container-fluid container-fluid-fixed">
+                <div class="section__title">
+                    <h2>We are Ready to Help You Buy or Sell a Home</h2>
+                    <p class="lead">Ready to get started? Give us a call today at <a href="tel:">(860) 388-7721</a></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <ul class="section__links">
+                            <li><a href="" class="btn btn__light__outline btn-lg">What's My Home Worth</a></li>
+                            <li><a href="" class="btn btn__primary btn-lg">Find My New Home</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -258,54 +260,56 @@
         </div>
     </section>
     <section class="section services section__spacer section__center section__background section__lazyload" data-src="img/tm-07/office.jpg">
-        <div class="container-fluid container-fluid-edge-space">
-            <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <div class="services__item">
-                        <div class="services__icon">
-                            <svg role="img" title="Map Search">
-                                <use xlink:href="img/tm-07/icon-pack.svg#map-search"></use>
-                            </svg>
+        <div class="wrap-inner">
+            <div class="container-fluid container-fluid-edge-space">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="services__item">
+                            <div class="services__icon">
+                                <svg role="img" title="Map Search">
+                                    <use xlink:href="img/tm-07/icon-pack.svg#map-search"></use>
+                                </svg>
+                            </div>
+                            <h3>Map Search</h3>
+                            <p>Search by map to find homes for sale and houses for sale by location.</p>
+                            <a class="btn btn__light__outline" href="">View Map</a>
                         </div>
-                        <h3>Map Search</h3>
-                        <p>Search by map to find homes for sale and houses for sale by location.</p>
-                        <a class="btn btn__light__outline" href="">View Map</a>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <div class="services__item">
-                        <div class="services__icon">
-                            <svg role="img" title="Latest Listings">
-                                <use xlink:href="img/tm-07/icon-pack.svg#subdivision"></use>
-                            </svg>
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="services__item">
+                            <div class="services__icon">
+                                <svg role="img" title="Latest Listings">
+                                    <use xlink:href="img/tm-07/icon-pack.svg#subdivision"></use>
+                                </svg>
+                            </div>
+                            <h3>Latest Listings</h3>
+                            <p>View all the newest homes and properties recently posted on our site.</p>
+                            <a class="btn btn__light__outline" href="">See Latest</a>
                         </div>
-                        <h3>Latest Listings</h3>
-                        <p>View all the newest homes and properties recently posted on our site.</p>
-                        <a class="btn btn__light__outline" href="">See Latest</a>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <div class="services__item">
-                        <div class="services__icon">
-                            <svg role="img" title="Listings Alerts">
-                                <use xlink:href="img/tm-07/icon-pack.svg#email"></use>
-                            </svg>
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="services__item">
+                            <div class="services__icon">
+                                <svg role="img" title="Listings Alerts">
+                                    <use xlink:href="img/tm-07/icon-pack.svg#email"></use>
+                                </svg>
+                            </div>
+                            <h3>Listings Alerts</h3>
+                            <p>Receive email updates when listings fall within your saved search criteria.</p>
+                            <a class="btn btn__light__outline" href="">Subscribe</a>
                         </div>
-                        <h3>Listings Alerts</h3>
-                        <p>Receive email updates when listings fall within your saved search criteria.</p>
-                        <a class="btn btn__light__outline" href="">Subscribe</a>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <div class="services__item">
-                        <div class="services__icon">
-                            <svg role="img" title="Search MLS">
-                                <use xlink:href="img/tm-07/icon-pack.svg#advanced-search"></use>
-                            </svg>
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="services__item">
+                            <div class="services__icon">
+                                <svg role="img" title="Search MLS">
+                                    <use xlink:href="img/tm-07/icon-pack.svg#advanced-search"></use>
+                                </svg>
+                            </div>
+                            <h3>Search MLS</h3>
+                            <p>Find the perfect home using our detailed property search options.</p>
+                            <a class="btn btn__light__outline" href="">Detailed Search</a>
                         </div>
-                        <h3>Search MLS</h3>
-                        <p>Find the perfect home using our detailed property search options.</p>
-                        <a class="btn btn__light__outline" href="">Detailed Search</a>
                     </div>
                 </div>
             </div>

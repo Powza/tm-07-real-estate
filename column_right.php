@@ -19,8 +19,10 @@
 <body class="int">
     <?php include('elements/header.php'); ?>
     <section class="section banner section__spacer__slim section__background" style="background-image: url('img/tm-07/banner-int.jpg');">
-        <div class="section__title container-fluid container-fluid-fixed">
-            <h1>We are the best real estate business ever</h1>
+        <div class="wrap-inner">
+            <div class="section__title container-fluid container-fluid-fixed">
+                <h1>We are the best real estate business ever</h1>
+            </div>
         </div>
     </section>
     <main class="section main-content section__spacer">
