@@ -163,7 +163,7 @@ hr.big-spacer { margin: 40px 0; }
 .mobile-menu__account ul li.account-admin { width: 100%; margin-bottom: 6px; }
 
 /* ========================================================================== Header ========================================================================== */
-.header { position: absolute; z-index: 9; top: 0; left: 0; right: 0; }
+.header { position: absolute; z-index: 9; top: 0; left: 0; right: 0; -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); }
 .header a { text-decoration: none; color: #484848; }
 .header a:hover { color: #50c6db; }
 .header__meta { -webkit-transition: 0.3s; transition: 0.3s; position: relative; *zoom: 1; background: #f8f8f8; z-index: 9; }
@@ -241,7 +241,7 @@ hr.big-spacer { margin: 40px 0; }
 .header__mobile-menu-btn.open .bar { opacity: 0; height: 0; width: 0; }
 .header__mobile-menu-btn.open:after { top: 50%; -webkit-transform: translateY(-50%) rotate(-45deg); transform: translateY(-50%) rotate(-45deg); }
 
-@media only screen and (max-width: 992px) { .header { height: 50px; position: fixed; z-index: 999; -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); }
+@media only screen and (max-width: 992px) { .header { height: 50px; position: fixed; z-index: 999; }
   .header__wrap { padding: 5px 0; }
   .header__flex { min-height: initial; }
   .header__logo { margin-right: -15px; }
@@ -711,6 +711,7 @@ hr.big-spacer { margin: 40px 0; }
 .slick-arrow.slick-hidden { display: none; }
 
 /* ========================================================================== Dynamic IDX ========================================================================== */
+/* Listing Detail View */
 .listings_view .myrsol-idx-common span { font-size: 18px; }
 .listings_view .remarks p { color: #484848; }
 .listings_view .remarks strong { font-size: 18px; }
@@ -718,3 +719,20 @@ hr.big-spacer { margin: 40px 0; }
 .listings_view .details-onecol-grouped p { font-size: 14px; }
 .listings_view .details-onecol-grouped p strong { color: #484848; }
 .listings_view .mortgage-embed h4.mortgage-title { border-bottom: 0; }
+
+/* Map Search */
+.dynidx-map-container .map-view { width: calc(100% - 375px); }
+.dynidx-map-container .list-view { width: 375px; }
+.dynidx-map-container .list-view .br-logo { height: 14px; }
+.dynidx-map-container .list-view .dynidx-map-results .well { margin-left: 5px; }
+.dynidx-map-container .list-view .dynidx-map-results .well .fa { font-size: inherit; }
+
+@media only screen and (max-width: 767px) { .dynidx-map-container .list-view .dynidx-map-summary .marker-summary { margin-top: 30%; } }
+.dynidx-map-fullscreen { position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100%; min-height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+.dynidx-map-fullscreen .dynidx-map-container { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-height: 1px; }
+.dynidx-map-fullscreen #prop_display { padding: 0; }
+.dynidx-map-fullscreen .header { position: -webkit-sticky; position: sticky; }
+
+@media only screen and (min-width: 1680px) { .dynidx-map-fullscreen .dynidx-map-container .map-view { width: calc(100% - 35%); }
+  .dynidx-map-fullscreen .dynidx-map-container .list-view { width: 35%; }
+  .dynidx-map-fullscreen .dynidx-map-container .list-view .dynidx-map-summary { width: 50%; float: left; } }

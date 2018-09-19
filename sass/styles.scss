@@ -640,6 +640,7 @@ hr {
 	top:0;
 	left:0;
 	right:0;
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 	a {
 		text-decoration: none;
 		color:$black;
@@ -1012,7 +1013,6 @@ hr {
 		height: 50px;
 		position: fixed;
 		z-index: 999;
-		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 		&__wrap {
 			padding:5px 0;
 		}
@@ -2777,6 +2777,7 @@ hr {
 /* ==========================================================================
    Dynamic IDX
    ========================================================================== */
+/* Listing Detail View */
 .listings_view {
 	.myrsol-idx-common {
 		span {
@@ -2808,6 +2809,75 @@ hr {
 		h4 {
 			&.mortgage-title {
 				border-bottom: 0;
+			}
+		}
+	}
+}
+
+/* Map Search */
+.dynidx-map-container {
+	.map-view {
+		width: calc(100% - 375px);
+	}
+	.list-view {
+		width: 375px;
+		.br-logo {
+			height: 14px;
+		}
+		.dynidx-map-results {
+			.well {
+				margin-left:5px;
+				.fa {
+					font-size: inherit;
+				}
+			}
+		}
+	}
+}
+@include bp_xs {
+	.dynidx-map-container {
+		.list-view {
+			.dynidx-map-summary {
+				.marker-summary {
+					margin-top:30%;
+				}
+			}
+		}
+	}
+}
+.dynidx-map-fullscreen {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+	min-height:100%;
+	display: flex;
+  	flex-direction: column;
+	.dynidx-map-container {
+		flex: 1;
+		min-height: 1px;
+	}
+	#prop_display {
+		padding: 0;
+	}
+	.header {
+		position: sticky;
+	}
+}
+@media only screen and (min-width: 1680px) {
+	.dynidx-map-fullscreen {
+		.dynidx-map-container {
+			.map-view {
+				width: calc(100% - 35%);
+			}
+			.list-view {
+				width: 35%;
+				.dynidx-map-summary {
+					width: 50%;
+					float: left;
+				}
 			}
 		}
 	}
