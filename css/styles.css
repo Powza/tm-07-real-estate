@@ -482,8 +482,8 @@ hr.big-spacer { margin: 40px 0; }
 .sidebar__agent-portal .agent-slider .agent-content { background: #f8f8f8; font-size: 14px; }
 .sidebar__agent-portal .agent-slider .agent-content ul li img, .sidebar__agent-portal .agent-slider .agent-content ul li svg { height: 16px; width: 16px; margin-right: 6px; }
 .sidebar__agent-portal .agent-slider .agent-content .btn { padding: 4px 10px; font-size: 12px; }
-.sidebar__featured-listing .properties-slider .section__slider-arrows { margin-top: 30px; }
 .sidebar__featured-listing .properties-slider .prop-wrap { box-shadow: none; margin: 0; }
+.sidebar__featured-listing .properties-slider .prop-content { background: #f8f8f8; }
 .sidebar__featured-listing .properties-slider .prop-content .top { top: 0; right: 0; }
 .sidebar__featured-listing .properties-slider .prop-content .top .prop-class { padding: 0 8px; }
 .sidebar__featured-listing .properties-slider .prop-content .top .prop-listing-date { padding: 0 8px; }
