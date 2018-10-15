@@ -87,6 +87,7 @@ a, button {
 		border-color: $primary-color;
 		background: $primary-color;
 		&:hover, &:focus {
+			color:$white;
 			border-color: shade($primary-color, 10%);
 			background-color: shade($primary-color, 10%);
 		}
@@ -99,6 +100,7 @@ a, button {
 		border-color: $black;
 		background: $black;
 		&:hover, &:focus {
+			color:$white;
 			border-color: shade($black, 25%);
 			background-color: shade($black, 25%);
 		}
