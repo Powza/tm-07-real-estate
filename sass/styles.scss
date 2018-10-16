@@ -759,6 +759,73 @@ hr {
 			}
 		}
 	}
+	&__agent {
+		float: right;
+		&__info {
+			float: left;
+			font-size: 14px;
+			line-height: 20px;
+			a {
+				display: block;
+				justify-content: center;
+				align-items:center;
+				border-radius: 4px;
+				line-height: 1.42857143;
+				font-weight: 700;
+				font-size: inherit;
+				text-align: right;
+				padding:2px 12px;
+				span {
+					margin-left:8px;
+				}
+				svg {
+					display: inline-block;
+					height: 14px;
+					width: 14px;
+					fill:$primary-color;
+				}
+			}
+		}
+		&__pic {
+			float: right;
+			a {
+				border-radius: 4px;
+				width: 60px;
+				height: 72px;
+				display: block;
+				background-size: cover;
+				background-position: top center;
+			}
+		}
+		@include bp_xsm {
+			margin-left:-20px;
+			&__info {
+				margin-top:3px;
+				a {
+					float: left;
+					padding:2px 8px;
+					span {
+						display: none;
+					}
+					svg {
+						height: 26px;
+						width: 26px;
+					}
+				}
+			}
+			&__pic {
+				margin-left:5px;
+				a {
+					position: relative;
+					top:5px;
+					border-radius: 0;
+					height: 50px;
+					width: 40px;
+					margin-top:-10px;
+				}
+			}
+		}
+	}
 	&__flex__row__content {
 		display: flex;
 	}

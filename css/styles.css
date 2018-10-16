@@ -189,6 +189,20 @@ hr.big-spacer { margin: 40px 0; }
 .header__contact ul li a { justify-content: center; display: flex; align-items: center; padding: 6px 12px; border: 2px solid transparent; border-radius: 4px; line-height: 1.42857143; font-weight: 700; font-size: inherit; }
 .header__contact ul li a span { margin-left: 8px; }
 .header__contact ul li a svg { display: inline-block; height: 18px; width: 18px; fill: #50c6db; }
+.header__agent { float: right; }
+.header__agent__info { float: left; font-size: 14px; line-height: 20px; }
+.header__agent__info a { display: block; justify-content: center; align-items: center; border-radius: 4px; line-height: 1.42857143; font-weight: 700; font-size: inherit; text-align: right; padding: 2px 12px; }
+.header__agent__info a span { margin-left: 8px; }
+.header__agent__info a svg { display: inline-block; height: 14px; width: 14px; fill: #50c6db; }
+.header__agent__pic { float: right; }
+.header__agent__pic a { border-radius: 4px; width: 60px; height: 72px; display: block; background-size: cover; background-position: top center; }
+@media only screen and (max-width: 992px) { .header__agent { margin-left: -20px; }
+  .header__agent__info { margin-top: 3px; }
+  .header__agent__info a { float: left; padding: 2px 8px; }
+  .header__agent__info a span { display: none; }
+  .header__agent__info a svg { height: 26px; width: 26px; }
+  .header__agent__pic { margin-left: 5px; }
+  .header__agent__pic a { position: relative; top: 5px; border-radius: 0; height: 50px; width: 40px; margin-top: -10px; } }
 .header__flex__row__content { display: flex; }
 .header__flex { display: flex; min-height: 50px; }
 .header__flex__center { align-self: center; }
