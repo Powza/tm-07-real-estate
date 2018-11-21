@@ -32,12 +32,7 @@ if(isset($featured_listings) && !empty($featured_listings))
       		$prop_url = $html->url(array('controller' => 'listings', 'action'=>'view', Inflector::slug(strtolower($listing['Listing']['class'])), $listing['Listing']['mlsid']));
     	}
 
-    	//$price = $property->propprice($listing['Listing']['asking_price']);
 		$short_address = $property->buildAddress($listing['Listing']);
-
-		//$beds = !empty($listing['Listing']['beds']) ? $listing['Listing']['beds'] : 'N/A';
-		//$fullbaths = !empty($listing['Listing']['fullbaths']) ? $listing['Listing']['fullbaths'] : 'N/A';
-		//$sqft = !empty($listing['Listing']['sqft']) ? $listing['Listing']['sqft'] : 'N/A';
 
 		$city = $listing['Listing']['city'];
 		$state = $listing['Listing']['state'];
@@ -52,8 +47,13 @@ if(isset($featured_listings) && !empty($featured_listings))
 		if (!empty($listing['Listing']['sqft'])) {
 			$sqft = '<strong>'.$listing['Listing']['sqft'].'</strong> SqFt';
 		}
+        if (!empty($listing['Listing']['beds']) || !empty($listing['Listing']['fullbaths']) || !empty($listing['Listing']['sqft'])) {
+            $seperator = ' / ';
+        }
   	?>
-  	<p><span>New Listing <?php echo date("m/d/Y", strtotime($listing['Listing']['listing_date'])); ?></span> <?php echo $short_address; ?>, <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip; ?>&nbsp; / &nbsp;<?php echo $beds; ?> <?php echo $fullbaths; ?> <?php echo $sqft; ?> <a href="<?php echo $prop_url; ?>" class="btn btn__light__outline">View Listing</a></p>
+  	<p>
+        <span>New Listing <?php echo date("m/d/Y", strtotime($listing['Listing']['listing_date'])); ?></span> <?php echo $short_address; ?>, <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip; ?> <?php echo $seperator; ?> <?php echo $beds; ?> <?php echo $fullbaths; ?> <?php echo $sqft; ?> <a href="<?php echo $prop_url; ?>" class="btn btn__light__outline">View Listing</a>
+    </p>
 
 <?php
 }

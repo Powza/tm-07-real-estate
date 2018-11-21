@@ -24,17 +24,3 @@
         </blockquote>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {
-        $('.testimonials-slider .slider-wrap').html($('.testimonials-slider blockquote').sort(function(){
-            return Math.random()-0.5;
-        }));
-        $('.testimonials-slider .slider-wrap').slick({
-            adaptiveHeight: true,
-            prevArrow: '<button type="button" class="slick-prev btn btn__primary__outline"><i class="fa fa-angle-left"></i> Prev</button>',
-            nextArrow: '<button type="button" class="slick-next btn btn__primary__outline">Next <i class="fa fa-angle-right"></i></button>',
-            appendArrows: $('<div></div>').addClass('section__slider-arrows').appendTo('.testimonials-slider'),
-        });
-    });
-</script>

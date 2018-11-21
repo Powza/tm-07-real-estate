@@ -232,7 +232,7 @@
             </div>
         </div>
     </main>
-    <section class="section section__spacer section__center section__background section__lazyload" data-src="img/tm-07/team.jpg">
+    <section class="section section__spacer section__center section__background lazy" data-src="img/tm-07/team.jpg">
         <div class="wrap-inner">
             <div class="container-fluid container-fluid-fixed">
                 <div class="section__title">
@@ -259,7 +259,7 @@
             <?php include('elements/snippets/agents.php'); ?>
         </div>
     </section>
-    <section class="section services section__spacer section__center section__background section__lazyload" data-src="img/tm-07/office.jpg">
+    <section class="section services section__spacer section__center section__background lazy" data-src="img/tm-07/office.jpg">
         <div class="wrap-inner">
             <div class="container-fluid container-fluid-edge-space">
                 <div class="row">

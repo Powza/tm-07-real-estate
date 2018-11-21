@@ -659,6 +659,7 @@ hr {
 		&.fixed {
 			transform: translateY(0);
 			position: fixed;
+			top:0;
 			left:0;
 			right:0;
 			background:rgba($black,0.97);
@@ -1917,37 +1918,25 @@ hr {
 	}
 	&__featured-listing {
 		.properties-slider {
-			.prop-wrap {
-				box-shadow: none;
-				margin:0;
+			.prop-pic {
+				.prop-status {
+					display: none;
+				}
+				.prop-price {
+					font-size: 20px;
+				}
 			}
 			.prop-content {
+				font-size: 14px;
 				background: $grey;
-				.top {
-					top:0;
-					right:0;
-					.prop-class {
-						padding:0 8px;
-					}
-					.prop-listing-date {
-						padding:0 8px;
-					}
+				.prop-street {
+					font-size: 16px;
 				}
-				.bottom {
-					bottom: 5px;
-					left:10px;
-					.prop-price {
-						font-size: 18px;
-					}
-					.prop-address {
-						font-size: 12px;
-						margin:0 0 5px 0;
-					}
-					.prop-common {
-						li {
-							font-size: 11px;
-						}
-					}
+				.btn {
+					padding:3px 8px;
+				}
+				.prop-mls {
+					font-size: 12px;
 				}
 			}
 		}
@@ -2252,6 +2241,12 @@ hr {
 		color: $white;
 		&:last-of-type {
 			margin:0;
+		}
+		a {
+			color:$white;
+			&:hover {
+				color:$primary-color;
+			}
 		}
 	}
 	a {
