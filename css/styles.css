@@ -125,7 +125,7 @@ hr.big-spacer { margin: 40px 0; }
   .sm-clean { float: left; }
   .sm-clean .sub-arrow { position: absolute; right: 14px; margin-left: 5px; text-align: center; }
   .sm-clean .sub-arrow:after { font-family: FontAwesome; content: '\f107'; }
-  .sm-clean ul { position: absolute; z-index: 999; width: 12em; box-shadow: 1px 1px 2px rgba(72, 72, 72, 0.1); *zoom: 1; background: #fff; }
+  .sm-clean ul { position: absolute; z-index: 999; width: 12em; box-shadow: 1px 1px 2px rgba(72, 72, 72, 0.1); *zoom: 1; background: #fff; border: 2px solid #f8f8f8; }
   .sm-clean ul:before, .sm-clean ul:after { content: " "; display: table; }
   .sm-clean ul:after { clear: both; }
   .sm-clean ul li { float: none; }
@@ -169,11 +169,13 @@ hr.big-spacer { margin: 40px 0; }
 .header__meta { transition: 0.3s; position: relative; *zoom: 1; background: #f8f8f8; z-index: 9; }
 .header__meta:before, .header__meta:after { content: " "; display: table; }
 .header__meta:after { clear: both; }
-.header__meta.fixed { -webkit-transform: translateY(0); transform: translateY(0); position: fixed; top: 0; left: 0; right: 0; background: rgba(72, 72, 72, 0.97); }
-.header__meta.fixed a { color: #fff; }
-.header__meta.fixed a svg { fill: #fff; }
-.header__meta.fixed ul ul { background: rgba(72, 72, 72, 0.97); }
-.header__meta.fixed ul ul > li > a:before { background: rgba(255, 255, 255, 0.1); }
+.header__meta.headroom--not-top { position: fixed; top: 0; left: 0; right: 0; background: rgba(72, 72, 72, 0.97); }
+.header__meta.headroom--not-top a { color: #fff; }
+.header__meta.headroom--not-top a svg { fill: #fff; }
+.header__meta.headroom--not-top ul ul { background: rgba(72, 72, 72, 0.97); }
+.header__meta.headroom--not-top ul ul > li > a:before { background: rgba(255, 255, 255, 0.1); }
+.header__meta.headroom--not-top.headroom--unpinned { -webkit-transform: translateY(-100%); transform: translateY(-100%); opacity: 0; }
+.header__meta.headroom--not-top.headroom--pinned { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
 .header__company { position: relative; background: #fff; }
 .header__account { float: right; }
 .header__account ul { list-style: none; margin: 0; padding: 0; }
