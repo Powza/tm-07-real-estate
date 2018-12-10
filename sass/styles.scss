@@ -860,11 +860,16 @@ hr {
     		max-height: 60px;
 		}
 		img[src$=".svg"] {
-			height: 60px;
+			max-height: 60px;
 			width: 100%;
 			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 				max-height: 100%;
 				height: auto;
+			}
+		}
+		@-moz-document url-prefix() {
+			img, img[src$=".svg"] {
+				height: 60px;
 			}
 		}
 	}
@@ -1099,11 +1104,14 @@ hr {
 		}
 		&__logo {
 			margin-right:-15px;
-			img[src$=".svg"] {
-				height: 40px;
+			img, img[src$=".svg"]  {
+				max-height: 40px;
+				height: auto;
 			}
-			img {
-				height: 40px;
+			@-moz-document url-prefix() {
+				img, img[src$=".svg"] {
+					height: 40px;
+				}
 			}
 		}
 		&__contact {

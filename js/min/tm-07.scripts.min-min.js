@@ -11,55 +11,7 @@ function r(){$(".sidebar .property-slider").each(function(e){$(this).attr("id","
 function s(){$(".agent-slider .slider-wrap").html($(".agent-slider .slider-wrap .agent").sort(function(){return Math.random()-.5})),$(".agent-slider .agent-img").Lazy({scrollDirection:"vertical"}),$(".agent-slider .slider-wrap").slick({slidesToShow:5,slidesToScroll:5,prevArrow:'<button type="button" class="slick-prev btn btn__primary__outline"><i class="fa fa-angle-left"></i> Prev</button>',nextArrow:'<button type="button" class="slick-next btn btn__primary__outline">Next <i class="fa fa-angle-right"></i></button>',appendArrows:$("<div></div>").addClass("section__slider-arrows").appendTo(".agent-slider"),responsive:[{breakpoint:1680,settings:{slidesToShow:4,slidesToScroll:4}},{breakpoint:1440,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:1100,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}}]})}
 // RoyalSlider Fullscreen Hide Header
 function o(){if($(".listings_view .royalSlider").length){var e=$(".royalSlider").data("royalSlider");e.ev.on("rsEnterFullscreen",function(){$(".header").hide()}),e.ev.on("rsExitFullscreen",function(){$(".header").show()})}}
-// Scroll Navigation Menu
-/*$(window).scroll(function () {
-        var scroll = $(this).scrollTop();
-        var topDist = $(".start-scroll").position();
-        if (scroll > $('header').outerHeight()) {
-            $('.header__meta').addClass('fixed');
-        } else {
-            $('.header__meta').removeClass('fixed');
-        }
-    });*/
-// Hide Header on scroll down
-/*function headerMenuScroll() {
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 46;
-        var navbarHeight = $('header').outerHeight();
-
-        $(window).scroll(function(event){
-            didScroll = true;
-        });
-
-        setInterval(function() {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 0);
-
-        function hasScrolled() {
-            var st = $(this).scrollTop();
-            
-            // Make sure they scroll more than delta
-            if(Math.abs(lastScrollTop - st) <= delta)
-                return;
-            
-            if (st > lastScrollTop && st > navbarHeight){
-                // Scroll Down
-                $('.header__meta').css({'opacity':'0', 'transform':'translateY(-100%)'});
-            } else {
-                // Scroll Up
-                if(st + $(window).height() < $(document).height()) {
-                    $('.header__meta').css({'opacity':'1', 'transform':'translateY(0)'});
-                }
-            }
-            
-            lastScrollTop = st;
-        }
-    }
-    headerMenuScroll();*/
+// Navbar Scroll
 function l(){var e=document.querySelector(".header .header__meta"),i;window.location.hash&&e.classList.add("headroom--unpinned"),new Headroom(e,{tolerance:{down:10,up:20},offset:$(".admin-navbar").outerHeight()+$(".header").outerHeight()}).init()}
 // Header padding
 function a(){$("body.int").css("padding-top",$(".header").height()+"px")}
