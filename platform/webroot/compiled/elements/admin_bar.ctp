@@ -22,7 +22,7 @@
                         <li><a href="/admin/forms">Forms</a></li>
                     	<li><a href="/admin/blogs">Posts</a></li>
                         <li><a href="/admin/menu_lookups">Menus</a></li>
-                    	<li><a href="/admin/file_manager">Media</a></li>
+                    	<li><a href="/admin/file_manager">File Manager</a></li>
                     	<li><a href="/admin/subdivisions">Subdivisions</a></li>
                         <li><a href="/admin/custom_listings">Custom Listings</a></li>
                     </ul>
@@ -34,7 +34,7 @@
                   	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
                   	<ul class="dropdown-menu">
                         <li><a href="/admin/pages/add">Page</a></li>
-                        <li><a href="/admin/forms/add">Forms</a></li>
+                        <li><a href="/admin/forms/add">Form</a></li>
                     	<li><a href="/admin/blogs/add">Post</a></li>
                         <li><a href="/admin/menu_lookups/add">Menu</a></li>
                     	<li><a href="/admin/subdivisions/add">Subdivision</a></li>
