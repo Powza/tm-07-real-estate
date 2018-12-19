@@ -1,4 +1,46 @@
 <aside class="sidebar">
+    <div class="sidebar__widget sidebar__agentid">
+        <div class="agent-slider">
+            <div class="row">
+                <div class="agent">
+                    <div class="agent-wrap">
+                        <div class="agent-pic">
+                            <a href="<?php echo $prop_url; ?>">
+                                <div class="agent-img" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                                <div class="agent-meta">
+                                    <div class="agent-name">John Smith</div>
+                                    <div class="agent-title">Realtor</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="agent-content">
+                            <div class="pull-left">
+                                <ul>
+                                    <li>
+                                        <a href="/agents/view/charlie-gerken.html#contact">
+                                            <svg role="img" title="Email">
+                                                <use xlink:href="img/tm-07/icon-pack.svg#email"></use>
+                                            </svg>
+                                            Email Me
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg role="img" title="Phone">
+                                                <use xlink:href="img/tm-07/icon-pack.svg#phone"></use>
+                                            </svg>
+                                            (860) 388-7721
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" class="btn btn__primary__outline">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	<div class="sidebar__widget sidebar__quicksearch">
 		<h4>Quick Search</h4>
 
@@ -97,25 +139,36 @@
         </div>
     </div>
 
-    <div class="sidebar__widget sidebar__list-scroll">
-        <h4>Featured Areas</h4>
-        <div class="list-slider">
-            <ul>
-                <li><a href="">Andrews</a></li>
-                <li><a href="">Conway</a></li>
-                <li><a href="">Galivants Ferry</a></li>
-                <li><a href="">Garden City</a></li>
-                <li><a href="">Georgetown</a></li>
-                <li><a href="">Little River</a></li>
-                <li><a href="">Longs</a></li>
-                <li><a href="">Loris</a></li>
-                <li><a href="">Murrells Inlet</a></li>
-                <li><a href="">Myrtle Beach</a></li>
-                <li><a href="">North Myrtle Beach</a></li>
-                <li><a href="">Pawleys Island</a></li>
-                <li><a href="">Surfside Beach</a></li>
-            </ul>
-        </div>
+    <div class="sidebar__widget sidebar__multilevel-list">
+        <h4>Multi Level</h4>
+        <ul>
+            <li><a href="/">Andrews</a></li>
+            <li><a href="/">Conway</a></li>
+            <li>
+                <a href="/">Galivants Ferry</a>
+                <ul>
+                    <li><a href="/">Georgetown</a></li>
+                    <li>
+                        <a href="/">Little River</a>
+                        <ul>
+                            <li><a href="/">Georgetown</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Longs</a></li>
+                </ul>
+            </li>
+            <li><a href="/">Garden City</a></li>
+            <li><a href="/">Georgetown</a></li>
+            <li><a href="/">Little River</a></li>
+            <li>
+                <a href="/">Galivants Ferry</a>
+                <ul>
+                    <li><a href="/">Georgetown</a></li>
+                </ul>
+            </li>
+            <li><a href="">Loris</a></li>
+            <li><a href="">Murrells Inlet</a></li>
+        </ul>
     </div>
 
     <div class="sidebar__widget sidebar__list">

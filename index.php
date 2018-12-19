@@ -32,7 +32,7 @@
             </div>
 
             <!-- data-media-type="video" -->
-            <div class="hero__media__video" style="background-image: url('img/tm-07/hero/video/1.jpg');">
+            <div class="hero__media__video lazy" data-src="img/tm-07/hero/video/1.jpg">
                 <div class="hero__video" data-video-url="https://youtu.be/lGEBmI5uYSg"></div>
             </div>
 

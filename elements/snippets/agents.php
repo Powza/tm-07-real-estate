@@ -4,7 +4,7 @@
             <div class="agent-wrap">
                 <div class="agent-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="agent-img" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
                             <div class="agent-name">John Smith</div>
                             <div class="agent-title">Realtor</div>
@@ -40,7 +40,7 @@
             <div class="agent-wrap">
                 <div class="agent-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="agent-img" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
                             <div class="agent-name">John Smith</div>
                             <div class="agent-title">Realtor</div>
@@ -76,7 +76,7 @@
             <div class="agent-wrap">
                 <div class="agent-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="agent-img" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
                             <div class="agent-name">John Smith</div>
                             <div class="agent-title">Realtor</div>
@@ -112,7 +112,7 @@
             <div class="agent-wrap">
                 <div class="agent-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="agent-img" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
                             <div class="agent-name">John Smith</div>
                             <div class="agent-title">Realtor</div>
@@ -148,7 +148,7 @@
             <div class="agent-wrap">
                 <div class="agent-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="agent-img" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
                             <div class="agent-name">John Smith</div>
                             <div class="agent-title">Realtor</div>

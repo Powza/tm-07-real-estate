@@ -74,6 +74,13 @@ a, button {
 	}
 }
 
+:target {
+  	display: block;
+  	position: relative;
+  	top: -100px; 
+  	visibility: hidden;
+}
+
 /* Buttons
    ========================================================================== */
 .btn {
@@ -435,10 +442,10 @@ hr {
 			position: absolute;
 			z-index: 999;
 			width: 12em;
-			box-shadow: 1px 1px 2px rgba($black,0.1);
+			box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 			@include clearfix;
 			background: $white;
-			border:2px solid $grey;
+			border-radius: 4px;
 			li {
 				float: none;
 				a {
@@ -452,10 +459,10 @@ hr {
 						content: '';
 						position: absolute;
 						bottom:0;
-						left:14px;
-						right:14px;
+						left:0;
+						right:0;
 						height: 1px;
-						background: rgba($black,0.1);
+						background: $grey;
 					}
 					.sub-arrow {
 						&:after {
@@ -655,32 +662,15 @@ hr {
 		transition: 0.3s;
 		position: relative;
 		@include clearfix;
-		background:$grey;
+		background:$white;
+		border-bottom: 1px solid $grey;
 		z-index: 9;
 		&.headroom--not-top {
 			position: fixed;
 			top:0;
 			left:0;
 			right:0;
-			background:rgba($black,0.97);
-			a {
-				color:$white;
-				svg {
-					fill:$white;
-				}
-			}
-			ul {
-				ul {
-					background:rgba($black,0.97);
-					> li {
-						> a {
-							&:before {
-								background: rgba($white,0.1);
-							}
-						}
-					}
-				}
-			}
+			box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 		}
 		&.headroom--not-top.headroom--unpinned {
 			transform:translateY(-100%);
@@ -1166,6 +1156,15 @@ hr {
 		bottom:0;
 		left:0;
 		background-color:$black;
+		&:after {
+			content: '';
+			position: absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			z-index: 1;
+		}
 		&__slider {
 			display: none;
 			overflow: hidden;
@@ -1873,6 +1872,7 @@ hr {
 /* ==========================================================================
    Sidebar
    ========================================================================== */
+
 .sidebar {
 	img {
 		margin-bottom: 10px;
@@ -1932,6 +1932,20 @@ hr {
 			}
 		}
 	}
+	&__agentid {
+		.agent-slider {
+			.agent-wrap {
+				margin-bottom: 0;
+			}
+			.agent-content {
+				font-size: 14px;
+				background: $grey;
+				.btn {
+					padding:3px 8px;
+				}
+			}
+		}
+	}
 	&__featured-listing {
 		.properties-slider {
 			.prop-pic {
@@ -1954,6 +1968,65 @@ hr {
 				.prop-mls {
 					font-size: 12px;
 				}
+			}
+		}
+	}
+	&__multilevel-list {
+		background:$primary-color;
+		padding:20px;
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
+		border-radius: 4px;
+		h4 {
+			position: relative;
+			display: block;
+			color:$white;
+			margin:0;
+			padding-bottom: 20px;
+			border-bottom:2px solid rgba($white,0.1);
+			padding-right:70px;
+		}
+		.sm-vertical-list {
+			z-index: 1;
+			ul {
+				background:rgba($white,0.1);
+				padding:8px 12px;
+			}
+			li {
+				float: none;
+				a {
+					text-decoration: none;
+					padding:8px 0;
+					color:$white;
+					outline: none;
+					&:hover {
+						background:rgba($white,0.1);
+						padding:8px 12px;
+					}
+					.sub-arrow {
+						font-size: 20px;
+						position: absolute;
+						top:0;
+						right:0;
+						bottom:0;
+						text-align: center;
+						padding:0 8px;
+						line-height: 42px;
+						color:$white;
+						&:after {
+							font-family: FontAwesome;
+				    		content: '\f107';
+						}
+					}
+					&.highlighted {
+						.sub-arrow {
+							background:rgba($white,0.1);
+							&:after {
+					    		content: '\f106';
+							}
+						}
+					}
+				}
+
 			}
 		}
 	}
@@ -1988,7 +2061,6 @@ hr {
 			}
 			li {
 				border:0;
-				border-bottom:2px solid rgba($white,0.1);
 				a {
 					outline: none;
 					display: block;
