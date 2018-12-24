@@ -120,7 +120,7 @@
 
     <div class="sidebar__widget sidebar__list-scroll">
         <h4>Featured Areas</h4>
-        <div class="list-slider">
+        <div class="list-slider" data-list-items="3">
             <ul>
                 <li><a href="">Andrews</a></li>
                 <li><a href="">Conway</a></li>
@@ -145,13 +145,19 @@
             <li><a href="/">Andrews</a></li>
             <li><a href="/">Conway</a></li>
             <li>
-                <a href="/">Galivants Ferry</a>
+                <a href="">Galivants Ferry</a>
                 <ul>
-                    <li><a href="/">Georgetown</a></li>
+                    <li><a href="">Georgetown</a></li>
                     <li>
-                        <a href="/">Little River</a>
+                        <a href="">Little River</a>
                         <ul>
-                            <li><a href="/">Georgetown</a></li>
+                            <li><a href="">Georgetown</a></li>
+                            <li>
+                                <a href="/">Little River Long text what happens</a>
+                                <ul>
+                                    <li><a href="/">Georgetown</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="/">Longs</a></li>
@@ -159,14 +165,6 @@
             </li>
             <li><a href="/">Garden City</a></li>
             <li><a href="/">Georgetown</a></li>
-            <li><a href="/">Little River</a></li>
-            <li>
-                <a href="/">Galivants Ferry</a>
-                <ul>
-                    <li><a href="/">Georgetown</a></li>
-                </ul>
-            </li>
-            <li><a href="">Loris</a></li>
             <li><a href="">Murrells Inlet</a></li>
         </ul>
     </div>
