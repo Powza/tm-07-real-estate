@@ -1,7 +1,7 @@
-<?php if($othAuth->sessionValid() && $othAuth->group('level') == 100 || $othAuth->group('level') == 200 || $othAuth->group('level') == 250) { ?>
+<?php $group = null; if($othAuth->sessionValid() && $othAuth->group('name') == "admins") { ?>
 <?php
-	$full_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	$portal_agent = $session->read('AgentPortal.assigned');
+    $full_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $portal_agent = $session->read('AgentPortal.assigned');
     $pg_folder = $this->params['pass'][0];
     $agentPortals = ClassRegistry::init('Agent')->getPortalAgents();
 ?>
@@ -15,15 +15,15 @@
                 
 
                 <!-- Manage -->
-				<li class="dropdown">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-files-o" aria-hidden="true"></i> Manage</a>
                     <ul class="dropdown-menu">
                         <li><a href="/admin/pages">Pages</a></li>
                         <li><a href="/admin/forms">Forms</a></li>
-                    	<li><a href="/admin/blogs">Posts</a></li>
+                        <li><a href="/admin/blogs">Posts</a></li>
                         <li><a href="/admin/menu_lookups">Menus</a></li>
-                    	<li><a href="/admin/file_manager">File Manager</a></li>
-                    	<li><a href="/admin/subdivisions">Subdivisions</a></li>
+                        <li><a href="/admin/file_manager">File Manager</a></li>
+                        <li><a href="/admin/subdivisions">Subdivisions</a></li>
                         <li><a href="/admin/custom_listings">Custom Listings</a></li>
                     </ul>
                 </li>
@@ -31,15 +31,15 @@
 
                 <!-- New -->
                 <li class="dropdown">
-                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
-                  	<ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+                    <ul class="dropdown-menu">
                         <li><a href="/admin/pages/add">Page</a></li>
                         <li><a href="/admin/forms/add">Form</a></li>
-                    	<li><a href="/admin/blogs/add">Post</a></li>
+                        <li><a href="/admin/blogs/add">Post</a></li>
                         <li><a href="/admin/menu_lookups/add">Menu</a></li>
-                    	<li><a href="/admin/subdivisions/add">Subdivision</a></li>
+                        <li><a href="/admin/subdivisions/add">Subdivision</a></li>
                         <li><a href="/admin/custom_listings/add">Custom Listing</a></li>
-                  	</ul>
+                    </ul>
                 </li>
                 
 
@@ -84,8 +84,12 @@
                 
 
                 <!-- Subdivisions -->
-                <?php if($full_url == FULL_BASE_URL.'/subdivisions' || $full_url == FULL_BASE_URL.'/subdivisions/index.html'): ?>
+                <?php if($full_url == FULL_BASE_URL.'/subdivisions' || $full_url == FULL_BASE_URL.'/subdivisions/' || $full_url == FULL_BASE_URL.'/subdivisions/index.html'): ?>
                 <li><a href="/admin/subdivisions"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Subdivisions</a></li>
+                <?php endif; ?>
+
+                <?php if(isset($cat['SubdivisionCategory']) && !empty($cat['SubdivisionCategory'])): ?>
+                <li><a href="/admin/subdivision_category/edit/<?php echo $cat['SubdivisionCategory']['id']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Subdivision</a></li>
                 <?php endif; ?>
 
                 <?php if(isset($projects['Subdivision']) && !empty($projects['Subdivision'])): ?>
@@ -191,10 +195,10 @@
 
                 <!-- User -->
                 <li class="dropdown">
-                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $othAuth->user('firstname') .' '. $othAuth->user('lastname'); ?>! <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                  	<ul class="dropdown-menu">
-        	            <li><a href="/logout.html">Logout</a></li>
-                  	</ul>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $othAuth->user('firstname') .' '. $othAuth->user('lastname'); ?>! <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/logout.html">Logout</a></li>
+                    </ul>
                 </li>
 
             </ul>

@@ -16,7 +16,7 @@
     		<svg role="img" title="Profile">
 				<use xlink:href="/img/tm-07/icon-pack.svg#profile"></use>
 			</svg>
-	    	My Profile
+	    	My Account
 	    </a>
 	</li>
     <li>
