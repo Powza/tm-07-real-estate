@@ -64,8 +64,14 @@
                 <li><a href="/admin/blogs/edit/<?php echo $blog['Blog']['id']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Post</a></li>
                 <?php endif; ?>
 
-                <?php if(strpos($_SERVER['REQUEST_URI'], 'post_category') !== false):?>
-                <li><a href="/admin/blog_categories"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Categories</a></li>
+                <?php if(isset($category['BlogCategory']) && !empty($category['BlogCategory'])): ?>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-pencil"></i> Edit Category</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/blog_categories/edit/<?php echo $category['BlogCategory']['id']; ?>">Current Category</a></li>
+                        <li><a href="/admin/blog_categories">All Categories</a></li>
+                    </ul>
+                </li>
                 <?php endif; ?>
 
                 <?php if(strpos($_SERVER['REQUEST_URI'], 'tag') !== false):?>
@@ -89,7 +95,7 @@
                 <?php endif; ?>
 
                 <?php if(isset($cat['SubdivisionCategory']) && !empty($cat['SubdivisionCategory'])): ?>
-                <li><a href="/admin/subdivision_category/edit/<?php echo $cat['SubdivisionCategory']['id']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Subdivision</a></li>
+                <li><a href="/admin/subdivision_category/edit/<?php echo $cat['SubdivisionCategory']['id']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Category</a></li>
                 <?php endif; ?>
 
                 <?php if(isset($projects['Subdivision']) && !empty($projects['Subdivision'])): ?>
