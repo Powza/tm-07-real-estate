@@ -1253,7 +1253,8 @@ hr {
 				a {
 					text-shadow:1px 1px 5px rgba($black,0.5);
 					display: block;
-					font-size: 16px;
+                    font-size: 16px;
+                    font-weight:700;
 					display: flex;
 					align-items: center;
 					padding:6px 0;
@@ -1262,7 +1263,7 @@ hr {
 						display: inline-block;
 						height: 18px;
 						width: 18px;
-						fill:$primary-color;
+						fill:$white;
 						margin-right:8px;
 						filter: drop-shadow(1px 1px 5px rgba($black, 0.5));
 					}

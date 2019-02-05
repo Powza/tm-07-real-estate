@@ -293,8 +293,8 @@ hr.big-spacer { margin: 40px 0; }
 .hero__search__links:after { clear: both; }
 .hero__search__links ul { list-style: none; margin: 0; padding: 0; }
 .hero__search__links ul li { display: inline-block; margin-right: 20px; }
-.hero__search__links ul li a { text-shadow: 1px 1px 5px rgba(72, 72, 72, 0.5); display: block; font-size: 16px; display: flex; align-items: center; padding: 6px 0; color: #fff; }
-.hero__search__links ul li a svg { display: inline-block; height: 18px; width: 18px; fill: #50c6db; margin-right: 8px; -webkit-filter: drop-shadow(1px 1px 5px rgba(72, 72, 72, 0.5)); filter: drop-shadow(1px 1px 5px rgba(72, 72, 72, 0.5)); }
+.hero__search__links ul li a { text-shadow: 1px 1px 5px rgba(72, 72, 72, 0.5); display: block; font-size: 16px; font-weight: 700; display: flex; align-items: center; padding: 6px 0; color: #fff; }
+.hero__search__links ul li a svg { display: inline-block; height: 18px; width: 18px; fill: #fff; margin-right: 8px; -webkit-filter: drop-shadow(1px 1px 5px rgba(72, 72, 72, 0.5)); filter: drop-shadow(1px 1px 5px rgba(72, 72, 72, 0.5)); }
 .hero__search__links ul li a:hover { text-decoration: underline; }
 .hero__search__links ul li:last-of-type { margin-right: 0; }
 .hero__search__links .section__slider-arrows { position: absolute; bottom: -100px; }
