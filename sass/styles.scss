@@ -900,7 +900,7 @@ hr {
 					color:$black;
 				}
 			}
-			#qs_suggest {
+			[id^="qs_suggest"] {
 				padding: 0 60px 0 10px;
 				width: 100% !important;
 				border: 2px solid #ddd;

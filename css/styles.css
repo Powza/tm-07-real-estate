@@ -223,7 +223,7 @@ hr.big-spacer { margin: 40px 0; }
 .header__search-mls-address form .form-control { background: none; }
 .header__search-mls-address form #mlsSearch { font-size: 16px; border-radius: 0; border: 0; display: block; color: #50c6db; text-align: center; padding: 0 20px; height: 50px; line-height: 50px; position: absolute; right: 0; top: 0; background: none; }
 .header__search-mls-address form #mlsSearch:hover { color: #484848; }
-.header__search-mls-address form #qs_suggest { padding: 0 60px 0 10px; width: 100% !important; border: 2px solid #ddd; margin: 0; height: 50px !important; border-radius: 4px; box-shadow: none; }
+.header__search-mls-address form [id^="qs_suggest"] { padding: 0 60px 0 10px; width: 100% !important; border: 2px solid #ddd; margin: 0; height: 50px !important; border-radius: 4px; box-shadow: none; }
 .header__search-mls-address form .mls-results { position: absolute; left: -30px; top: 50%; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
 .header__search-mls-address form .mls-results .fa { font-size: 20px; }
 .header__search-mls-address form .ms-ctn input { margin: 0; background: none; }

@@ -105,47 +105,12 @@
 						<div class="header__search-mls-address header__flex__center">
 							<form id="search_mls" method="post" action="/listings/search_by_mls_address">
 								<fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<div class="mls-results"><span class="mls-loading"><i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i></span></div>
-											<div class="ms-ctn form-control  ms-no-trigger ms-ctn-focus" style="" id="qs_suggest"><span class="ms-helper " style="display: none;">Please type 2 more characters</span><div class="ms-sel-ctn"><input type="text" class="" placeholder="Search by MLS # or Address" autocomplete="off" style="width: 469px;"><div style="display: none;"></div></div></div>
-											<button id="mlsSearch" type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-										</div>
-									</div>
+								<div class="form-group">
+									<div class="mls-results"><span class="mls-loading"><i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i></span></div>
+									<div class="ms-ctn form-control ms-no-trigger ms-ctn-focus" id="qs_suggest"><span class="ms-helper " style="display: none;">Please type 2 more characters</span><div class="ms-sel-ctn"><input type="text" class="" placeholder="Search by MLS # or Address" autocomplete="off" style="width: 469px;"><div style="display: none;"></div></div></div>
+									<button id="mlsSearch" type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
 								</div>
 							</form>
-							<script type="text/javascript">
-							$(document).ready(function() {
-
-								$('.mls-results').hide();
-								
-								var qs_suggest = $('.header__search-mls-address #qs_suggest').magicSuggest({
-									hideTrigger: true,
-									minChars: 2,
-									maxSuggestions: 100,
-									allowFreeEntries: true,
-									placeholder: 'Search by MLS # or Address',
-									maxSelection: 15,
-									inputCfg: {'autocomplete':'true'},
-									name: 'data[Listing][mlsnumbers]',
-									//data: '/listings/ajax_mlsdata',
-									data: ['New York','Los Angeles','Chicago','Houston','Philadelphia','Phoenix','San Antonio','San Diego','Dallas','San Jose','Jacksonville'],
-									displayField: 'name',
-									renderer: function (a){ if(typeof(a.display) == 'undefined' || a.display == '') { return a.id; /*var mlsids = a.id; console.log(mlsids); return mlsids.split(",");*/ } else { return a.display; } },
-									selectionRenderer: function (a){ if(typeof(a.display) == 'undefined' || a.display == '') { return a.id; /*var mlsids = a.id; console.log(mlsids); return mlsids.split(",");*/ } else { return a.display; } },
-								});
-								
-								$(qs_suggest).on('beforeload', function() {
-									$(".mls-results").show().spin({ lines: 9, length: 1, width: 4, radius: 4, speed: 1.3, left: '0px' });
-								});
-								
-								$(qs_suggest).on('load', function() {
-									$(".mls-results").hide().spin(false);
-								});
-								
-							});
-							</script>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-8 col-md-4 col-lg-3 header__flex">
