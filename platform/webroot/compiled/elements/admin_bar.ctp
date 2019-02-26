@@ -1,4 +1,4 @@
-<?php $group = null; if($othAuth->sessionValid() && $othAuth->group('name') == "admins") { ?>
+<?php if($othAuth->sessionValid() && $othAuth->user('user_group_id') == 1 || $othAuth->user('user_group_id') == 2 ) { ?>
 <?php
     $full_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     $portal_agent = $session->read('AgentPortal.assigned');
