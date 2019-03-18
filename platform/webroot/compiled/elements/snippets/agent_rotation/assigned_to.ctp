@@ -30,10 +30,6 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 	if(!empty($agent_extract))
 	{
 		$fullname = $agent_extract['Agent']['firstname'].' '. $agent_extract['Agent']['lastname'];
-		$agentbio = substr($agent_extract['Agent']['bio'], 0, 150);
-		$agentNameLower = str_replace(' ', '-', strtolower($fullname));
-		$lastname = strtolower($agent_extract['Agent']['lastname']);
-		$first_letter_lastname = substr($lastname, 0, 1); 
 	?>
     
 	 <script>
@@ -41,9 +37,7 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 			$('.agent-portal').remove();
 
 			// Header
-
-			// OLD - Phone and Email
-			$('.header__contact1').append('\
+			$('.header__contact').append('\
 				<ul>\
 					<?php if(!empty($agent_extract['Agent']['office_phone']) && empty($agent_extract['Agent']['cell_phone']) || !empty($agent_extract['Agent']['office_phone']) && !empty($agent_extract['Agent']['cell_phone'])) { ?>
                     <li>\
@@ -74,64 +68,6 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 						</a>\
 					</li>\
 				</ul>\
-			');
-
-			// NEW - Name, Phone, Email, Agent Pic
-			$('.header__contact').append('\
-				<div class="header__agent">\
-					<div class="header__agent__info">\
-						<a href="/agent" class="hidden-xs hidden-sm">\
-							<span class="hidden-xs"><?php echo $fullname; ?></span>\
-						</a>\
-						<?php if(!empty($agent_extract['Agent']['office_phone']) && empty($agent_extract['Agent']['cell_phone']) || !empty($agent_extract['Agent']['office_phone']) && !empty($agent_extract['Agent']['cell_phone'])) { ?>
-						<a href="tel:<?php echo $agent_extract['Agent']['office_phone']; ?>">\
-							<svg role="img" title="phone">\
-								<use xlink:href="img/tm-07/icon-pack.svg#phone"></use>\
-							</svg>\
-							<span class="hidden-xs"><?php echo $agent_extract['Agent']['office_phone']; ?></span>\
-						</a>\
-						<?php } ?>
-						<?php if(empty($agent_extract['Agent']['office_phone']) && !empty($agent_extract['Agent']['cell_phone'])) { ?>
-							<a href="tel:<?php echo $agent_extract['Agent']['cell_phone']; ?>">\
-							<svg role="img" title="phone">\
-								<use xlink:href="img/tm-07/icon-pack.svg#phone"></use>\
-							</svg>\
-							<span class="hidden-xs"><?php echo $agent_extract['Agent']['cell_phone']; ?></span>\
-						</a>\
-						<?php } ?>
-						<a href="<?php echo $html->url(array('controller'=>'agents','action'=>'view', $agent_extract['Agent']['slug'])); ?>#contact">\
-							<svg role="img" title="Email">\
-								<use xlink:href="img/tm-07/icon-pack.svg#email"></use>\
-							</svg>\
-							<span class="hidden-xs">Send Email</span>\
-						</a>\
-					</div>\
-					<?php if(!empty($agent_extract['Agent']['image'])) { ?>
-					<div class="header__agent__pic">\
-						<a href="<?php echo $html->url(array('controller'=>'agents','action'=>'view', $agent_extract['Agent']['slug'])); ?>" style="background-image:url(\'/files/images/agents/<?php echo $first_letter_lastname .'/'. $agent_extract['Agent']['id'] .'/thumb.small.'. $agent_extract['Agent']['image']; ?>\')"></a>\
-					</div>\
-					<?php } ?>
-				</div>\
-			');
-
-			// Sidebar
-			$('.sidebar').prepend('\
-				<div class="sidebar__widget sidebar__agent">\
-					<h4><?php echo $fullname; ?></h4>\
-					<?php if(!empty($agent_extract['Agent']['image'])) { ?>
-					<a href="<?php echo $html->url(array('controller'=>'agents','action'=>'view', $agent_extract['Agent']['slug'])); ?>"><img class="section__lazyload" alt="<?php echo $agent_extract['Agent']['firstname'] .' '. $agent_extract['Agent']['lastname']; ?>" data-src="/files/images/agents/<?php echo $first_letter_lastname .'/'. $agent_extract['Agent']['id'] .'/'. $agent_extract['Agent']['image']; ?>"></a>\
-					<p>\
-					<?php } ?>
-					<?php if(!empty($agent_extract['Agent']['office_phone'])) { ?>
-					<a href="tel:<?php echo $agent_extract['Agent']['office_phone']; ?>"><?php echo $agent_extract['Agent']['office_phone']; ?> Office</a><br>\
-					<?php } ?>
-					<?php if(!empty($agent_extract['Agent']['cell_phone'])) { ?>
-					<a href="tel:<?php echo $agent_extract['Agent']['cell_phone']; ?>"><?php echo $agent_extract['Agent']['cell_phone']; ?> Cell</a><br>\
-					<?php } ?>
-					<a href="<?php echo $html->url(array('controller'=>'agents','action'=>'view', $agent_extract['Agent']['slug'])); ?>#contact"><?php echo $agent_extract['Agent']['email']; ?></a>\
-					</p>\
-					<a href="<?php echo $html->url(array('controller'=>'agents','action'=>'view', $agent_extract['Agent']['slug'])); ?>" class="btn btn-primary">View My Profile</a>\
-				</div>\
 			');
 
 			// Footer
@@ -184,19 +120,22 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 			$('.footer .social').append('\
 				<ul>\
 					<?php if(!empty($agent_extract['Agent']['facebook_user'])) { ?>
-					<li><a href="https://facebook.com/<?php echo $agent_extract['Agent']['facebook_user']; ?>" class="social-facebook" target="_blank">Facebook</a></li>\
+					<li><a href="<?php echo $agent_extract['Agent']['facebook_user']; ?>" class="social-facebook" target="_blank">Facebook</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['twitter_user'])) { ?>
-					<li><a href="https://twitter.com/<?php echo $agent_extract['Agent']['twitter_user']; ?>" class="social-twitter" target="_blank">Twitter</a></li>\
+					<li><a href="<?php echo $agent_extract['Agent']['twitter_user']; ?>" class="social-twitter" target="_blank">Twitter</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['instagram_user'])) { ?>
-					<li><a href="https://instagram.com/<?php echo $agent_extract['Agent']['instagram_user']; ?>" class="social-instagram" target="_blank">Instagram</a></li>\
+					<li><a href="<?php echo $agent_extract['Agent']['instagram_user']; ?>" class="social-instagram" target="_blank">Instagram</a></li>\
 					<?php } ?>
 					<?php if(!empty($agent_extract['Agent']['linkedin_user'])) { ?>
-					<li><a href="http://www.linkedin.com/in/<?php echo $agent_extract['Agent']['linkedin_user']; ?>" class="social-linkedin" target="_blank">LinkedIn</a></li>\
+					<li><a href="<?php echo $agent_extract['Agent']['linkedin_user']; ?>" class="social-linkedin" target="_blank">LinkedIn</a></li>\
 					<?php } ?>
-					<?php if(!empty($agent_extract['Agent']['googleplus_user'])) { ?>
-					<li><a href="<?php echo $agent_extract['Agent']['googleplus_user']; ?>" class="social-googleplus" target="_blank">Google Plus</a></li>\
+					<?php if(!empty($agent_extract['Agent']['youtube_user'])) { ?>
+					<li><a href="<?php echo $agent_extract['Agent']['youtube_user']; ?>" class="social-youtube" target="_blank">YouTube</a></li>\
+					<?php } ?>
+					<?php if(!empty($agent_extract['Agent']['pinterest_user'])) { ?>
+					<li><a href="<?php echo $agent_extract['Agent']['pinterest_user']; ?>" class="social-pinterest" target="_blank">Pinterest</a></li>\
 					<?php } ?>
 				</ul>\
 			');

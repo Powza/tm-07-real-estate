@@ -16,7 +16,7 @@ if($this->params['controller'] == 'listings' && $this->params['action'] == 'view
     $fields = array(
       'id', 'agent_id', 'firstname', 'lastname', 'slug', 'image', 'address1', 'address2', 'city', 'state', 'zip',
       'tollfree_phone', 'office_phone', 'cell_phone', 'fax', 'email', 'title', 'designations', 'personal_url',
-      'twitter_user', 'facebook_user', 'linkedin_user', 'googleplus_user', 'instagram_user', 'migrated_images'
+      'twitter_user', 'facebook_user', 'linkedin_user', 'youtube_user', 'pinterest_user', 'instagram_user', 'migrated_images'
     );
 
     // do NOT add anymore named parameters to this, agent_id is the only 1 needed.
