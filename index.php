@@ -207,6 +207,9 @@
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <aside class="sidebar">
+                        <div class="sidebar__widget sidebar__agents">
+                            <?php include('elements/snippets/agents.php'); ?>
+                        </div>
                         <div class="sidebar__widget sidebar__list-scroll">
                             <h4>Featured Areas</h4>
                             <div class="list-slider">

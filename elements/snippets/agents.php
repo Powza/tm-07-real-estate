@@ -6,7 +6,7 @@
                     <a href="<?php echo $prop_url; ?>">
                         <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
-                            <div class="agent-name">John Smith</div>
+                            <div class="agent-name">John 1 Smith</div>
                             <div class="agent-title">Realtor</div>
                         </div>
                     </a>
@@ -42,7 +42,7 @@
                     <a href="<?php echo $prop_url; ?>">
                         <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
-                            <div class="agent-name">John Smith</div>
+                            <div class="agent-name">John 2 Smith</div>
                             <div class="agent-title">Realtor</div>
                         </div>
                     </a>
@@ -78,7 +78,7 @@
                     <a href="<?php echo $prop_url; ?>">
                         <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
-                            <div class="agent-name">John Smith</div>
+                            <div class="agent-name">John 3 Smith</div>
                             <div class="agent-title">Realtor</div>
                         </div>
                     </a>
@@ -114,7 +114,7 @@
                     <a href="<?php echo $prop_url; ?>">
                         <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
-                            <div class="agent-name">John Smith</div>
+                            <div class="agent-name">John 4 Smith</div>
                             <div class="agent-title">Realtor</div>
                         </div>
                     </a>
@@ -150,7 +150,7 @@
                     <a href="<?php echo $prop_url; ?>">
                         <div class="agent-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
                         <div class="agent-meta">
-                            <div class="agent-name">John Smith</div>
+                            <div class="agent-name">John 5 Smith</div>
                             <div class="agent-title">Realtor</div>
                         </div>
                     </a>

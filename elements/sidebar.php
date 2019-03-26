@@ -113,6 +113,10 @@
             </div>
         </form>
 	</div>
+
+    <div class="sidebar__widget sidebar__agents">
+        <?php include('elements/snippets/agents.php'); ?>
+    </div>
     
     <div class="sidebar__widget sidebar__featured-listing">
         <?php include('elements/snippets/featured-listings.php'); ?>

@@ -1944,10 +1944,10 @@ hr {
 			}
 		}
 	}
-	&__agentid {
+	&__agentid, &__agents {
 		.agent-slider {
 			.agent-wrap {
-				margin-bottom: 0;
+                margin-bottom: 10px;
 			}
 			.agent-content {
 				font-size: 14px;
@@ -1955,11 +1955,17 @@ hr {
 				.btn {
 					padding:3px 8px;
 				}
-			}
+            }
+            .section__slider-arrows {
+                margin-top:20px;
+            }
 		}
-	}
+    }
 	&__featured-listing {
 		.properties-slider {
+            .prop-wrap {
+                margin-bottom: 10px;
+			}
 			.prop-pic {
 				.prop-status {
 					display: none;
@@ -1980,7 +1986,10 @@ hr {
 				.prop-mls {
 					font-size: 12px;
 				}
-			}
+            }
+            .section__slider-arrows {
+                margin-top:20px;
+            }
 		}
 	}
 	&__multilevel-list {
