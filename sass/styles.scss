@@ -2134,6 +2134,36 @@ hr {
 	}
 }
 
+.agent-listing {
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
+    margin:0 0 30px 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background:#f4f4f4;
+    position: relative;
+    &__pic {
+        width:110px;
+        background-size: cover;
+        background-position: top center;
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+    }
+    &__info {
+        margin-left:120px;
+        padding:20px;
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        small {
+            font-weight:400;
+            font-size: 14px;
+        }
+    }
+}
+
 /* ==========================================================================
    Agent slider
    ========================================================================== */
@@ -2141,22 +2171,22 @@ hr {
 	.agent {
 		outline: none;
 		padding-left:15px;
-		padding-right:15px;
+        padding-right:15px;
 	}
 	.slider-wrap {
 		display: none;
 		&.slick-initialized {
-			display: block;
+            display: block;
 		    opacity:1;
 		    transition:opacity .3s ease-out;
 		}
-	}
+    }
 	.agent-wrap {
 		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 		margin:0 0 30px 0;
 		border-radius: 4px;
 		overflow: hidden;
-		background:$white;
+        background:$white;
 	}
 	.agent-pic {
 		position: relative;
@@ -2209,10 +2239,10 @@ hr {
 	}
 	.agent-content {
 		padding:20px;
-		@include clearfix;
+        @include clearfix;
 		ul {
 			list-style: none;
-			margin:0;
+			margin:0 0 10px 0;
 			padding:0;
 			@include clearfix;
 			li {
@@ -2233,9 +2263,6 @@ hr {
 					}
 				}
 			}
-		}
-		.btn {
-			float: right;
 		}
 	}
 }

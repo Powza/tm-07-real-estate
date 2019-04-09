@@ -207,9 +207,6 @@
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <aside class="sidebar">
-                        <div class="sidebar__widget sidebar__agents">
-                            <?php include('elements/snippets/agents.php'); ?>
-                        </div>
                         <div class="sidebar__widget sidebar__list-scroll">
                             <h4>Featured Areas</h4>
                             <div class="list-slider">
@@ -259,7 +256,9 @@
             <a class="btn btn__secondary__outline section__title__link" href="">View All</a>
         </div>
         <div class="container-fluid container-fluid-edge-space">
-            <?php include('elements/snippets/agents.php'); ?>
+            <div class="agent-slider" data-agent-primary="123" data-agent-sort="random">
+                <?php include('elements/snippets/agents.php'); ?>
+            </div>
         </div>
     </section>
     <section class="section services section__spacer section__center section__background lazy" data-src="img/tm-07/office.jpg">

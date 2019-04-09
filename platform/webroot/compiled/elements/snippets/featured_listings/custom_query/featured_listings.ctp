@@ -10,7 +10,7 @@ if($settings['SettingRealestate']['featured_listings_type'] == 'a') {
     $agentsArr = @unserialize($settings['SettingRealestate']['featured_listings_agents']);
     if(!empty($agentsArr)) {
         $fl_cond['conditions']['Listing.agent_id'] = $agentsArr;
-  }
+    }
 }
 
 $mlsid = null;
@@ -59,7 +59,7 @@ if(isset($featured_listings) && !empty($featured_listings))
             }
 
             $price = $property->propprice($listing['Listing']['asking_price']);
-            $status = ucfirst($listing['Listing']['status']);
+            $status = $listing['Listing']['status'];
             $status_class = 'status-'.Inflector::slug(strtolower($listing['Listing']['status_id']));
             $class = $listing['Listing']['class'];
             $mlsNum = $listing['Listing']['mlsid'];
@@ -80,14 +80,14 @@ if(isset($featured_listings) && !empty($featured_listings))
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
                         <?php if(strpos($fl_img, 'holder.js') !== false) { ?>
-                        <div class="prop-img" data-src="//assets.myrsol.com/listing_images/listings-noimage.gif"></div>
+                        <div class="prop-img lazy" data-src="//assets.myrsol.com/listing_images/listings-noimage.gif"></div>
                         <?php } else { ?>
-                        <div class="prop-img" data-src="<?php echo $fl_img; ?>"></div>
+                        <div class="prop-img lazy" data-src="<?php echo $fl_img; ?>"></div>
                         <?php } ?>
                         <ul class="prop-meta">
                             <li class="prop-class"><?php echo $class; ?></li>
-                            <?php if($status != 'Active') { ?>
-                                <li class="prop-status <?php echo $status_class; ?>"><?php echo $status; ?></li>
+                            <?php if(strtolower($status) != 'active') { ?>
+                                <li class="prop-status <?php echo $status_class; ?>"><?php echo ucwords(strtolower($status)); ?></li>
                             <?php } ?>
                         </ul>
                         <div class="prop-bottom">
@@ -111,7 +111,7 @@ if(isset($featured_listings) && !empty($featured_listings))
                             if(!empty($sqft)) {
                                 echo '<li><svg role="img" title="SqFt"><use xlink:href="/img/tm-07/icon-pack.svg#sqft"></use></svg>'.$sqft.' sqft</li>';
                             }
-                            if($class == 'Land' || $class == 'Commercial') {
+                            if(strtolower($class) == 'land' || strtolower($class) == 'commercial/industrial') {
                                 if(!empty($acres)) {
                                     echo '<li><svg role="img" title="Acres"><use xlink:href="/img/tm-07/icon-pack.svg#acres"></use></svg>'.$acres.' acres</li>';
                                 }

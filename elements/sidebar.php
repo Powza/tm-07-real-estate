@@ -115,7 +115,9 @@
 	</div>
 
     <div class="sidebar__widget sidebar__agents">
-        <?php include('elements/snippets/agents.php'); ?>
+        <div class="agent-slider">
+            <?php include('elements/snippets/agents.php'); ?>
+        </div>
     </div>
     
     <div class="sidebar__widget sidebar__featured-listing">
