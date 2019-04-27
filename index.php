@@ -135,7 +135,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="hero__search__links">
+                            <div class="hero__search__links hidden">
                                 <ul>
                                     <li>
                                         <a href="">
@@ -168,7 +168,7 @@
                 </div>
             </div>
         </div>
-        <section class="section hero__callout hidden-xs">
+        <section class="section hero__callout">
             <div class="container-fluid">
                 <p><span>New Listing 5/20/2018</span> 7288 Catena Ln, Myrtle Beach, SC 29572&nbsp; / &nbsp;<strong>3</strong> Bed, <strong>3</strong> Bath, <strong>3700</strong> SqFt <a class="btn btn__light__outline">View Listing</a></p>
             </div>
