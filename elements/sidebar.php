@@ -124,12 +124,30 @@
         <?php include('elements/snippets/featured-listings.php'); ?>
     </div>
 
-    <div class="sidebar__widget sidebar__list-scroll">
+    <div class="sidebar__widget sidebar__menu-box sidebar__list-scroll">
         <h4>Featured Areas</h4>
         <div class="list-slider" data-list-items="3">
             <ul>
                 <li><a href="">Andrews</a></li>
-                <li><a href="">Conway</a></li>
+                <li>
+                    <a href="">Conway</a>
+                    <ul>
+                        <li><a href="">Georgetown</a></li>
+                        <li>
+                            <a href="">Little River</a>
+                            <ul>
+                                <li><a href="">Georgetown</a></li>
+                                <li>
+                                    <a href="/">Little River Long text what happens</a>
+                                    <ul>
+                                        <li><a href="/">Georgetown</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/">Longs</a></li>
+                    </ul>
+                </li>
                 <li><a href="">Galivants Ferry</a></li>
                 <li><a href="">Garden City</a></li>
                 <li><a href="">Georgetown</a></li>
@@ -145,7 +163,7 @@
         </div>
     </div>
 
-    <div class="sidebar__widget sidebar__multilevel-list">
+    <div class="sidebar__widget sidebar__menu-box sidebar__multilevel sidebar__multilevel-list">
         <h4>Multi Level</h4>
         <ul>
             <li><a href="/">Andrews</a></li>
@@ -175,12 +193,96 @@
         </ul>
     </div>
 
-    <div class="sidebar__widget sidebar__list">
+    <div class="sidebar__widget sidebar__menu-box sidebar__no-title sidebar__multilevel sidebar__multilevelmenus-list">
+        <h4 class="hidden">Multi Level Menus</h4>
+        <div class="panel-group" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse">
+                            Popular Searches
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" role="tabpanel">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="/">Andrews</a></li>
+                            <li><a href="/">Long text what happens sdada</a></li>
+                            <li>
+                                <a href="">Galivants Ferry</a>
+                                <ul>
+                                    <li><a href="">Georgetown</a></li>
+                                    <li>
+                                        <a href="">Little River</a>
+                                        <ul>
+                                            <li><a href="">Georgetown</a></li>
+                                            <li>
+                                                <a href="/">Little River Long text what happens</a>
+                                                <ul>
+                                                    <li><a href="/">Georgetown</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/">Longs</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/">Garden City</a></li>
+                            <li><a href="/">Georgetown</a></li>
+                            <li><a href="">Murrells Inlet</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse">
+                            Popular Searches
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" role="tabpanel">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="/">Andrews</a></li>
+                            <li><a href="/">Conway</a></li>
+                            <li>
+                                <a href="">Galivants Ferry</a>
+                                <ul>
+                                    <li><a href="">Georgetown</a></li>
+                                    <li>
+                                        <a href="">Little River</a>
+                                        <ul>
+                                            <li><a href="">Georgetown</a></li>
+                                            <li>
+                                                <a href="/">Little River Long text what happens</a>
+                                                <ul>
+                                                    <li><a href="/">Georgetown</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/">Longs</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/">Garden City</a></li>
+                            <li><a href="/">Georgetown</a></li>
+                            <li><a href="">Murrells Inlet</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar__widget sidebar__list sidebar__new-listings">
     	<h4>Quick Links</h4>
     	<ul>
-    		<li><a href="">Venenatis Vulputate Sit</a></li>
-    		<li><a href="">Porta Tristique Tellus</a></li>
-    		<li><a href="">Risus Aenean Elit</a></li>
+    		<li><a href="">Venenatis Vulputate Sit <span class="badge pull-right">12</span></a></li>
+    		<li><a href="">Porta Tristique Tellus <span class="badge pull-right">12</span></a></li>
+    		<li><a href="">Risus Aenean Elit <span class="badge pull-right">12</span></a></li>
     	</ul>
     </div>
 
@@ -189,5 +291,15 @@
     	<img src="img/tm-07/banner-int.jpg">
     	<p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
     	<a href="" class="btn btn-primary">Example Link</a>
+    </div>
+
+    <div class="sidebar__widget">
+    	<h4>Sign Up For Our Email Newsletter</h4>
+    	<div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter your email address">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go</button>
+            </span>
+        </div>
     </div>
 </aside>

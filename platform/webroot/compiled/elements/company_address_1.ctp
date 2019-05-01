@@ -1,1 +1,0 @@
-<?php echo $settings['Setting']['address1']; ?>

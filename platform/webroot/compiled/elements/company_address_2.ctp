@@ -1,1 +1,0 @@
-<?php if(!empty($settings['Setting']['address2'])) { echo $settings['Setting']['address2'].'<br>'; } ?>

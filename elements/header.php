@@ -106,7 +106,7 @@
 							<form id="search_mls" method="post" action="/listings/search_by_mls_address">
 								<fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
 								<div class="form-group">
-									<div class="mls-results"><span class="mls-loading"><i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i></span></div>
+									<div class="mls-loading-results"><i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i></div>
 									<div class="ms-ctn form-control ms-no-trigger ms-ctn-focus" id="qs_suggest"><span class="ms-helper" style="display: none;">Please type 2 more characters</span><div class="ms-sel-ctn"><input type="text" class="" placeholder="Search by MLS # or Address" autocomplete="off" style="width: 469px;"><div style="display: none;"></div></div></div>
 									<button id="mlsSearch" type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
 								</div>

@@ -1,21 +1,9 @@
 <?php
 	if($page['Page']['is_home'] == 1) {
-		if(isset($page['Page']['featured_image']) && !empty($page['Page']['featured_image'])) {
-			echo '<div class="item" style="background-image: url('. FULL_BASE_URL.$page['Page']['featured_image'] .');"></div>';
-		} else {
-			$root = $_SERVER['DOCUMENT_ROOT'] . '/webroot';
-			$path = '/img/tm-07/hero/slider/';
-			$files = glob($root . $path . "*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}", GLOB_BRACE);
-			$sorted_files = array();
-			foreach ($files as $file) {
-			    $sorted_files[$file] = $file;
-			}
-			sort($sorted_files);
-			foreach ($sorted_files as $image) {    
-			    $image = preg_replace('/^' . preg_quote($root, '/') . '/', '', $image);
-			    echo '<div class="item" style="background-image: url('. $image .');"></div>';
-			}
-		}
+        if(isset($page['Page']['featured_image']) && !empty($page['Page']['featured_image'])) {
+            $image = FULL_BASE_URL.$page['Page']['featured_image'];
+		    echo '<div class="item" style="background-image: url('. $image .');"></div>';
+        }
 	} elseif(isset($page['Page']['featured_image']) && !empty($page['Page']['featured_image'])) {
 		echo FULL_BASE_URL.$page['Page']['featured_image'];
 	} elseif(isset($blog['Blog']['featured_image']) && !empty($blog['Blog']['featured_image'])) {
