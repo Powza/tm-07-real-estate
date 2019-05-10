@@ -17,8 +17,7 @@ if($posts) {
 	$result = 0;
 	foreach($posts as $post) {
 		echo '<li>';
-		echo '<a data-toggle="tooltip" data-placement="top" title="'.$post['Blog']['title'].'" href="'.$html->url(array('controller' => 'blogs', 'action' => 'view', 'slug' => $post['Blog']['slug'])).'">'.$post['Blog']['title'].'</a>';
-		echo '<small>'.$time->friendlyDate($post['Blog']['start_date']).'</small>';
+		echo '<a data-toggle="tooltip" data-placement="top" title="'.$post['Blog']['title'].'" href="'.$html->url(array('controller' => 'blogs', 'action' => 'view', 'slug' => $post['Blog']['slug'])).'">'.$post['Blog']['title'].' <br><small>'.$time->friendlyDate($post['Blog']['start_date']).'</small></a>';
 		echo '</li>';
 		$result++;
 		if ($result == 3) break;

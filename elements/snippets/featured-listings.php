@@ -4,7 +4,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -54,7 +54,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -104,7 +104,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -154,7 +154,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -204,7 +204,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -254,7 +254,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -304,7 +304,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -354,7 +354,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -404,7 +404,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -454,7 +454,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>
@@ -504,7 +504,7 @@
             <div class="prop-wrap">
                 <div class="prop-pic">
                     <a href="<?php echo $prop_url; ?>">
-                        <div class="prop-img lazy" data-src="img/tm-07/hero/slider/4.jpg"></div>
+                        <div class="prop-img lazy" data-bg="url(img/tm-07/hero/slider/4.jpg)"></div>
                         <ul class="prop-meta">
                             <li class="prop-class">Residential</li>
                             <li class="prop-status status-5">Pending contingent on financing</li>

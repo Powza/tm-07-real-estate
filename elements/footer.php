@@ -68,9 +68,9 @@
 					<h4>News</h4>
 					<div class="item recent-posts">
 						<ul>
-							<li><a href="" data-toggle="tooltip" data-placement="top" title="Why Have Interest Rates Jumped to a 7-Year High?">Why Have Interest Rates Jumped to a 7-Year High?</a><small>May 18, 2018</small></li>
-							<li><a href="" data-toggle="tooltip" data-placement="top" title="What to Expect When You Are Inspecting...">What to Expect When You Are Inspecting...</a><small>May 17, 2018</small></li>
-							<li><a href="" data-toggle="tooltip" data-placement="top" title="10 Questions to Ask a Potential Listing Agent">10 Questions to Ask a Potential Listing Agent</a><small>May 16, 2018</small></li>
+							<li><a href="" data-toggle="tooltip" data-placement="top" title="Why Have Interest Rates Jumped to a 7-Year High?">Why Have Interest Rates Jumped to a 7-Year High? <small>May 18, 2018</small></a></li>
+							<li><a href="" data-toggle="tooltip" data-placement="top" title="What to Expect When You Are Inspecting...">What to Expect When You Are Inspecting... <small>May 17, 2018</small></a></li>
+							<li><a href="" data-toggle="tooltip" data-placement="top" title="10 Questions to Ask a Potential Listing Agent">10 Questions to Ask a Potential Listing Agent <small>May 16, 2018</small></a></li>
 							<li><a href="">View More</a></li>
 						</ul>
 					</div>
