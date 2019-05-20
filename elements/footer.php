@@ -84,7 +84,7 @@
 								<li><a href="" class="social-twitter">Twitter</a></li>
 								<li><a href="" class="social-youtube">YouTube</a></li>
 								<li><a href="" class="social-linkedin">LinkedIn</a></li>
-								<li><a href="" class="social-googleplus">Google Plus</a></li>
+								<li><a href="" class="social-instagram">Instagram</a></li>
 								<li><a href="" class="social-pinterest">Pinterest</a></li>
 								<li><a href="" class="social-houzz">Houzz</a></li>
 							</ul>

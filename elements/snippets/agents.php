@@ -11,7 +11,7 @@
                 </a>
             </div>
             <div class="agent-content">
-                <ul data-mh="agent-mh">
+                <ul>
                     <li class="contact-agent">
                         <a href="/agents/view/charlie-gerken.html#contact">
                             <svg role="img" title="Email">
@@ -61,7 +61,7 @@
                 </a>
             </div>
             <div class="agent-content">
-                <ul data-mh="agent-mh">
+                <ul>
                     <li>
                         <a href="/agents/view/charlie-gerken.html#contact">
                             <svg role="img" title="Email">
@@ -95,7 +95,7 @@
                 </a>
             </div>
             <div class="agent-content">
-                <ul data-mh="agent-mh">
+                <ul>
                     <li>
                         <a href="/agents/view/charlie-gerken.html#contact">
                             <svg role="img" title="Email">
@@ -129,7 +129,7 @@
                 </a>
             </div>
             <div class="agent-content">
-                <ul data-mh="agent-mh">
+                <ul>
                     <li>
                         <a href="/agents/view/charlie-gerken.html#contact">
                             <svg role="img" title="Email">
@@ -163,7 +163,7 @@
                 </a>
             </div>
             <div class="agent-content">
-                <ul data-mh="agent-mh">
+                <ul>
                     <li>
                         <a href="/agents/view/charlie-gerken.html#contact">
                             <svg role="img" title="Email">

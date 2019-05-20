@@ -14,7 +14,6 @@ body {
 	font-family: 'Cabin', sans-serif;
 	color:$black;
 	font-size:16px;
-	line-height: 26px;
 	-webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     min-height: 100%;
@@ -25,7 +24,7 @@ body {
 	flex-shrink: 0;
     flex-direction: column;
     &.int {
-    	padding-top:136px;
+    	padding-top:130px;
     }
     @include bp_xsm {
         padding-top:90px !important;
@@ -73,12 +72,12 @@ a, button {
 	}
 }
 
-:target {
+/*:target {
   	display: block;
   	position: relative;
   	top: -100px; 
   	visibility: hidden;
-}
+}*/
 
 /* Buttons
    ========================================================================== */
@@ -213,7 +212,13 @@ hr {
    ========================================================================== */
 .section {
 	&__spacer {
-		padding:8% 0;
+        padding:8% 0;
+        @include bp_xs {
+            padding:12% 0;
+        }
+        @include bp_slg {
+            padding:120px 0;
+        }
 	}
 	&__spacer__slim {
 		padding:5% 0;
@@ -226,7 +231,10 @@ hr {
 		background-position: center center;
 		background-attachment: fixed;
 		color:$white;
-		position: relative;
+        position: relative;
+        @include bp_xsm {
+            background-attachment: scroll;
+        }
 		&:after {
 			background-color:rgba($black,0.7);
 			position: absolute;
@@ -276,7 +284,10 @@ hr {
 		}
 	}
 	&__slider-arrows {
-		position: relative;
+        position: relative;
+        @include bp_xs {
+            text-align: center;
+        }
 		button {
 			margin-right:5px;
 			&:last-of-type {
@@ -327,33 +338,6 @@ hr {
 	}
 }
 
-@include bp_xs {
-	.section {
-		&__spacer {
-			padding:12% 0;
-		}
-		&__slider-arrows {
-			text-align: center;
-		}
-	}
-}
-
-@include bp_xsm {
-	.section {
-		&__background {
-			background-attachment: scroll;
-		}
-	}
-}
-
-@include bp_slg {
-	.section {
-		&__spacer {
-			padding:120px 0;
-		}
-	}
-}
-
 .main-content {
 	flex: 1 1 auto;
 	flex-shrink: 0;
@@ -377,19 +361,15 @@ hr {
 }
 .container-fluid-edge-space {
 	margin-left:3%;
-	margin-right:3%;
-}
-@include bp_xsm {
-	.container-fluid-edge-space {
-		margin-left:0;
+    margin-right:3%;
+    @include bp_xsm {
+        margin-left:0;
 		margin-right:0;
-	}
-}
-@include bp_md {
-	.container-fluid-edge-space {
-		margin-left:0;
+    }
+    @include bp_md {
+        margin-left:0;
 		margin-right:0;
-	}
+    }
 }
 
 /* ==========================================================================
@@ -1222,7 +1202,7 @@ hr {
 		bottom:0;
 		left:0;
         background-color:$black;
-        padding-top:125px;
+        padding-top:120px;
         @include bp_xsm {
             padding-top:0;
         }
@@ -1465,7 +1445,7 @@ hr {
    Banner
    ========================================================================== */
 .banner {
-	background-attachment: scroll;
+    background-attachment: scroll;
 	.section__title {
 		margin-bottom:0;
 	}
@@ -2595,6 +2575,7 @@ hr {
 		padding:0;
 		@include clearfix;
 		li {
+            margin-bottom: 3px;
 			a {
 				svg {
 					display: inline-block;
@@ -2729,7 +2710,6 @@ hr {
 			    -webkit-column-count: 2;
 			    column-count: 2;
 			    li {
-	  				margin: 0;
 				    -webkit-column-break-inside: avoid;
 				    page-break-inside: avoid;
 				    break-inside: avoid-column;
@@ -2777,7 +2757,6 @@ hr {
 				small {
 					display: block;
 					font-size: 14px;
-					margin-top:-5px;
 					font-size: 80%;
 					color:#bbb;
 				}
@@ -3094,12 +3073,6 @@ hr {
 	    	font-size:14px;
 	    	color:#737373;
 	    	line-height: 20px;
-	    }
-	    p {
-	    	display: none;
-	    }
-	    .users-signin-help {
-	    	display: none;
 	    }
 	}
 }
