@@ -1,2 +1,0 @@
-export PATH=/opt/cpanel/ea-php56/root/usr/bin:/opt/cpanel/ea-php56/root/usr/sbin${PATH:+:${PATH}}
-export MANPATH=/opt/cpanel/ea-php56/root/usr/share/man:${MANPATH}
