@@ -1,38 +1,28 @@
-<div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="hero__link-buttons">
-            <a href="" class="btn btn-primary">Search Oceanfront & Resort Condos</a>
-            <div class="hero__search__links">
-                <ul>
-                    <li>
-                        <a href="">
-                            <svg role="img" title="Address">
-                                <use xlink:href="img/tm-07/icon-pack.svg#mls-address"></use>
-                            </svg>
-                            Search by MLS#/Address
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <svg role="img" title="Subdivision">
-                                <use xlink:href="img/tm-07/icon-pack.svg#subdivision"></use>
-                            </svg>
-                            Search by Residential Subdivisions
-                        </a>
-                    </li>
-                </ul>
+<form id="qs_form" class="form-quicksearch" name="qs_form" method="post" action="/property-search.html">
+    <fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="hero__link-buttons">
+                <a href="" class="btn btn-primary">Search Oceanfront & Resort Condos</a>
+                <select name="data[Listing][property][]" placeholder="Search by Subdivision" class="form-control hidden-xs qs_searchsubs" type="text">
+                    <option value="3565" selected="selected">Assey</option>
+                </select>
             </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-md-8">
-        <div class="row">
-            <div class="col-sm-12 col-md-9 col-lg-8">
-                <div class="hero__quicksearch drop-tree collapse-group">
-                    <button class="collapse-link hidden-sm hidden-md hidden-lg collapsed" data-toggle="collapse" aria-expanded="false" data-target="#main-tree">Quick Search</button>
-                    <div class="collapse" id="main-tree" aria-expanded="false" style="height: 0px;">
-                        <form id="qs_form" class="form-quicksearch" name="qs_form" method="post" action="/property-search.html">
-                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
+        <div class="col-sm-6 col-md-8">
+            <div class="row">
+                <div class="col-sm-12 col-md-9 col-lg-8">
+                    <div class="hero__quicksearch drop-tree collapse-group">
+                        <button class="collapse-link hidden-sm hidden-md hidden-lg collapsed" type="button" data-toggle="collapse" aria-expanded="false" data-target="#main-tree">Quick Search</button>
+                        <div class="collapse" id="main-tree" aria-expanded="false" style="height: 0px;">
                             <div class="row">
+                                <div class="col-sm-6 col-md-6 hidden-sm hidden-md hidden-lg">
+                                    <div class="form-group">
+                                        <select name="data[Listing][property][]" placeholder="Search by Subdivision" class="form-control qs_searchsubs" type="text">
+                                            <option value="3565" selected="selected">Assey</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group form-select">
                                         <select class="form-control" id="qs_propclass" name="data[Listing][class][]">
@@ -47,9 +37,9 @@
                                 </div>
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group form-select">
-                                        <select class="form-control" id="qs_propcity" name="data[Listing][city][]">
-                                            <option value="7,365,10,15,21,22,54,32,33,35,4,1,2,43,5" selected="selected">City</option>
-                                            <option value="7,365,10,15,21,22,54,32,33,35,4,1,2,43,5">Any Grand Strand City</option>
+                                        <select class="form-control" id="qs_proparea" name="data[Listing][area][]">
+                                            <option value="" selected="selected">Area</option>
+                                            <option class="any-city" value="">Any Grand Strand City</option>
                                             <option value="7">Atlantic Beach</option>
                                             <option value="365">Briarcliff Acres</option>
                                             <option value="10">Calabash</option>
@@ -69,22 +59,22 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12 col-md-12 ftr_lot_location" style="display: none;">
+                                <div class="col-sm-12 col-md-12 ftr_lot_location">
                                     <div class="form-group">
-                                    <select class="form-control multi-select placeholder">
-                                            <option value="" disabled selected hidden>Location</option>
+                                        <select class="form-control multi-select placeholder">
+                                            <option value="" disabled selected hidden>Location (Ocean, Waterway, Golf, etc.)</option>
                                         </select>
-                                        <select id="qs_proplocation" name="data[Listing][ftr_lot_location][]" multiple="multiple" class="form-control multi-select" data-placeholder="Location" style="display: none;">
+                                        <select id="qs_proplocation" name="data[Listing][ftr_lot_location][]" multiple="multiple" class="form-control multi-select" data-select-all="false" data-placeholder="Location (Ocean, Waterway, Golf, etc.)" style="display: none;">
                                         </select>
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12 col-md-12 ftr_construction" style="display: none;">
+                                <div class="col-sm-12 col-md-12 ftr_construction">
                                     <div class="form-group">
                                         <select class="form-control multi-select placeholder">
-                                            <option value="" disabled selected hidden>New Construction/Resale? New Construction/Resale?</option>
+                                            <option value="" disabled selected hidden>New Construction/Resale?</option>
                                         </select>
-                                        <select id="qs_propnewConstruction" name="data[Listing][ftr_construction][]" multiple="multiple" class="form-control multi-select" data-placeholder="New Construction/Resale? New Construction/Resale?" style="display: none;">
+                                        <select id="qs_propnewConstruction" name="data[Listing][ftr_construction][]" multiple="multiple" class="form-control multi-select" data-placeholder="New Construction/Resale?" style="display: none;">
                                         </select>
                                     </div>
                                 </div>
@@ -145,30 +135,30 @@
                                     <button class="btn btn-primary" id="qs_submit" disabled>Search</button>
                                 </div>
                             </div>
-                        </form>
-                        <div class="hero__search__links">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <svg role="img" title="Map Search">
-                                            <use xlink:href="img/tm-07/icon-pack.svg#map-search"></use>
-                                        </svg>
-                                        Map Search
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <svg role="img" title="Advanced Search">
-                                            <use xlink:href="img/tm-07/icon-pack.svg#advanced-search"></use>
-                                        </svg>
-                                        Advanced Search
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="hero__search__links">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <svg role="img" title="Map Search">
+                                                <use xlink:href="img/tm-07/icon-pack.svg#map-search"></use>
+                                            </svg>
+                                            Map Search
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <svg role="img" title="Advanced Search">
+                                                <use xlink:href="img/tm-07/icon-pack.svg#advanced-search"></use>
+                                            </svg>
+                                            Advanced Search
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</form>

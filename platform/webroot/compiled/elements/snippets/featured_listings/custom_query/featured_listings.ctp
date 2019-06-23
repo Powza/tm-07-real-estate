@@ -2,7 +2,6 @@
 
 // query conditions
 $fl_cond['conditions'] = array();
-$fl_cond['conditions']['Listing.office_id'] = array('934');
 
 // Auto pull agents
 $agentsArr = array();
@@ -11,6 +10,12 @@ if($settings['SettingRealestate']['featured_listings_type'] == 'a') {
     if(!empty($agentsArr)) {
         $fl_cond['conditions']['Listing.agent_id'] = $agentsArr;
     }
+}
+
+// Auto pull offices
+if($settings['SettingRealestate']['featured_listings_type'] == 'o') {
+    $offices = explode(',', $board['BoardXref']['office_id']);
+    $fl_cond['conditions']['Listing.office_id'] = $offices;
 }
 
 $mlsid = null;

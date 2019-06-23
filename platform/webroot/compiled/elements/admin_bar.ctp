@@ -1,9 +1,21 @@
-<?php if($othAuth->sessionValid() && $othAuth->user('user_group_id') == 1 || $othAuth->user('user_group_id') == 2 ) { ?>
+<?php
+    if ($othAuth->sessionValid()) {
+        $is_admin = false;
+        $is_agent = false;
+        if($othAuth->sessionValid() && $othAuth->user('user_group_id') == 1 || $othAuth->user('user_group_id') == 2) {
+            $is_admin = true;
+        } elseif ($othAuth->sessionValid() && $othAuth->user('user_group_id') == 3 || $othAuth->user('user_group_id') == 4) {
+            $is_agent = true;
+        }
+    }
+?>
+<?php if($is_admin === true || $is_agent === true): ?>
 <?php
     $full_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     $portal_agent = $session->read('AgentPortal.assigned');
     $pg_folder = $this->params['pass'][0];
     $agentPortals = ClassRegistry::init('Agent')->getPortalAgents();
+    $myAgentId = $othAuth->user('agent_id');
 ?>
 <nav class="navbar admin-navbar navbar-default navbar-inverse hidden-xs hidden-sm">
     <div class="container-fluid">
@@ -13,41 +25,65 @@
                 <!-- Admin Dashboard -->
                 <li><a href="/admin/home"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
                 
-
                 <!-- Manage -->
-                <li class="dropdown">
+				<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-files-o" aria-hidden="true"></i> Manage</a>
                     <ul class="dropdown-menu">
+                        <?php if($is_admin === true): ?>
                         <li><a href="/admin/pages">Pages</a></li>
                         <li><a href="/admin/forms">Forms</a></li>
-                        <li><a href="/admin/blogs">Posts</a></li>
+                        <?php endif; ?>
+                        <?php if($is_admin === true || $is_agent === true): ?>
+                    	<li><a href="/admin/blogs">Posts</a></li>
+                        <?php endif; ?>
+                        <?php if($is_admin === true): ?>
                         <li><a href="/admin/menu_lookups">Menus</a></li>
-                        <li><a href="/admin/file_manager">File Manager</a></li>
-                        <li><a href="/admin/subdivisions">Subdivisions</a></li>
+                    	<li><a href="/admin/file_manager">File Manager</a></li>
+                    	<li><a href="/admin/subdivisions">Subdivisions</a></li>
                         <li><a href="/admin/custom_listings">Custom Listings</a></li>
+                        <?php endif; ?>
+                        <?php if($is_admin === true || $is_agent === true): ?>
+                        <li><a href="/admin/agent_testimonials">Testimonials</a></li>
+                        <?php endif; ?>
+                        <?php if($is_admin === true || $is_agent === true): ?>
+                        <li><a href="/admin/contact">Leads</a></li>
+                        <?php endif; ?>
                     </ul>
                 </li>
+
                 
 
                 <!-- New -->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
-                    <ul class="dropdown-menu">
+                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+                  	<ul class="dropdown-menu">
+                        <?php if($is_admin === true): ?>
                         <li><a href="/admin/pages/add">Page</a></li>
                         <li><a href="/admin/forms/add">Form</a></li>
-                        <li><a href="/admin/blogs/add">Post</a></li>
+                        <?php endif; ?>
+                        <?php if($is_admin === true || $is_agent === true): ?>
+                    	<li><a href="/admin/blogs/add">Post</a></li>
+                        <?php endif; ?>
+                        <?php if($is_admin === true): ?>
                         <li><a href="/admin/menu_lookups/add">Menu</a></li>
-                        <li><a href="/admin/subdivisions/add">Subdivision</a></li>
+                    	<li><a href="/admin/subdivisions/add">Subdivision</a></li>
                         <li><a href="/admin/custom_listings/add">Custom Listing</a></li>
-                    </ul>
+                        <?php endif; ?>
+                        <?php if($is_admin === true || $is_agent === true): ?>
+                        <li><a href="/admin/agent_testimonials/add">Testimonial</a></li>
+                        <?php endif; ?>
+                  	</ul>
                 </li>
-                
+
+
+
+                <?php if($is_admin === true): ?>
 
                 <!-- Custom Page -->
                 <?php if(isset($page['Page']) && !empty($page['Page'])): ?>
                 <li><a href="/admin/pages/edit/<?php echo $page['Page']['id']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Page</a></li>
                 <?php endif; ?>
-                
+
 
                 <!-- Contact Page -->
                 <?php if($full_url == FULL_BASE_URL.'/contact.html' || $full_url == FULL_BASE_URL.'/contact'): ?>
@@ -55,7 +91,7 @@
                 <?php endif; ?>
 
 
-                <!-- Blog -->
+                 <!-- Blog -->
                 <?php if($full_url == FULL_BASE_URL.'/blog.html' || $full_url == FULL_BASE_URL.'/blog'): ?>
                 <li><a href="/admin/blog_settings"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Blog</a></li>
                 <?php endif; ?>
@@ -63,7 +99,7 @@
                 <?php if(isset($blog['Blog']) && !empty($blog['Blog'])): ?>
                 <li><a href="/admin/blogs/edit/<?php echo $blog['Blog']['id']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Post</a></li>
                 <?php endif; ?>
-
+                
                 <?php if(isset($category['BlogCategory']) && !empty($category['BlogCategory'])): ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-pencil"></i> Edit Category</a>
@@ -77,7 +113,7 @@
                 <?php if(strpos($_SERVER['REQUEST_URI'], 'tag') !== false):?>
                 <li><a href="/admin/tags"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Tags</a></li>
                 <?php endif; ?>
-                
+
 
                 <!-- Agents -->
                 <?php if($full_url == FULL_BASE_URL.'/agents.html' || $full_url == FULL_BASE_URL.'/agents'): ?>
@@ -127,11 +163,18 @@
                     </ul>
                 </li>
                 <?php endif; } ?>
+
+                <?php endif; ?>
                 
+                
+
+                <?php if($is_admin === true): ?>
 
                 <!-- Listings -->
                 <?php if(strpos($_SERVER['REQUEST_URI'], 'listings') !== false && !strpos($_SERVER['REQUEST_URI'], 'custom_listings') !== false):?>
                 <li><a href="/admin/listing_settings"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Settings</a></li>
+                <?php endif; ?>
+
                 <?php endif; ?>
 
                 <li class="dropdown">
@@ -147,7 +190,9 @@
                         </li>
                     </ul>
                 </li>
-                
+
+
+                <?php if($is_admin === true): ?>
 
                 <!-- Agent Portal -->
                 <?php
@@ -173,7 +218,12 @@
                     </ul>
                 </li>
                 <?php } ?>
+
+                <?php endif; ?>
                 
+
+
+                <?php if($is_admin === true): ?>
 
                 <!-- Design -->
                 <li class="dropdown">
@@ -195,16 +245,21 @@
                         <?php } ?>
                     </ul>
                 </li>
+
+                <?php endif; ?>
                 
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
                 <!-- User -->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $othAuth->user('firstname') .' '. $othAuth->user('lastname'); ?>! <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/logout.html">Logout</a></li>
-                    </ul>
+                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $othAuth->user('firstname') .' '. $othAuth->user('lastname'); ?>! <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                  	<ul class="dropdown-menu">
+                        <?php if(isset($myAgentId) && !empty($myAgentId)): ?>
+                        <li><a href="/admin/agents/edit/<?php echo $myAgentId; ?>">Agent Profile</a></li>
+                        <?php endif; ?>
+        	            <li><a href="/logout.html">Logout</a></li>
+                  	</ul>
                 </li>
 
             </ul>
@@ -232,4 +287,4 @@
 .dropdown-submenu.pull-left { float: none; }
 .dropdown-submenu.pull-left > .dropdown-menu { left: -100%; margin-left: 10px; border-radius: 6px 0 6px 6px; }
 </style>
-<?php } ?>
+<?php endif; ?>
