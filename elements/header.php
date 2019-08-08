@@ -1,11 +1,11 @@
 <script>
 	$(function() {
-		$('.agent-portal').remove();
+		//$('.agent-portal').remove();
 
 		// Header
-		$('.header__contact').append('\
+		$('.header__contact1').append('\
 			<ul>\
-				<li><a href="tel:860-388-7721"><svg role="img" title="Phone"><use xlink:href="img/tm-07/icon-pack.svg#phone"></use></svg><span class="hidden-xs">(860) 388-7721</span></a></li>\
+				<li><a href="tel:860-388-7721" class="btn"><svg role="img" title="Phone"><use xlink:href="img/tm-07/icon-pack.svg#phone"></use></svg><span class="hidden-xs">(860) 388-7721</span></a></li>\
 				<li><a href="/contact" class="btn btn-primary"><svg role="img" title="Email"><use xlink:href="img/tm-07/icon-pack.svg#email"></use></svg><span class="hidden-xs">Email</span></a></li>\
 			</ul>\
 		');
@@ -147,7 +147,7 @@
 						<div class="header__contact header__flex__center">
 							<ul class="agent-portal">
 								<li>
-									<a href="tel:860-388-7721">
+									<a href="tel:860-388-7721" class="btn">
 										<svg role="img" title="phone">
 											<use xlink:href="img/tm-07/icon-pack.svg#phone"></use>
 										</svg>
@@ -162,6 +162,11 @@
 										<span class="hidden-xs">Email</span>
 									</a>
 								</li>
+                <li>
+                  <a href="/" class="agent-photo">
+                    <img src="http://dev109.myrsoldev3.com/img/myrtle-beach-real-estate-agent/gene-carter.jpg">
+                  </a>
+                </li>
 							</ul>
 						</div>
 						<a href="#" class="header__mobile-menu-btn hidden-md hidden-lg"><div class="bar"></div></a>

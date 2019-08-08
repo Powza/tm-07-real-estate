@@ -3,17 +3,14 @@
 // query conditions
 $fl_cond['conditions'] = array();
 
-// Auto pull agents
+// Auto pull offices & agents
 $agentsArr = array();
 if($settings['SettingRealestate']['featured_listings_type'] == 'a') {
     $agentsArr = @unserialize($settings['SettingRealestate']['featured_listings_agents']);
     if(!empty($agentsArr)) {
         $fl_cond['conditions']['Listing.agent_id'] = $agentsArr;
     }
-}
-
-// Auto pull offices
-if($settings['SettingRealestate']['featured_listings_type'] == 'o') {
+} else {
     $offices = explode(',', $board['BoardXref']['office_id']);
     $fl_cond['conditions']['Listing.office_id'] = $offices;
 }
@@ -88,7 +85,7 @@ if(isset($featured_listings) && !empty($featured_listings))
                         <?php if(strpos($fl_img, 'holder.js') !== false) { ?>
                         <div class="prop-img lazy" data-bg="url(//assets.myrsol.com/listing_images/listings-noimage.gif)"></div>
                         <?php } else { ?>
-                        <div class="prop-img lazy" data-bg="url(<?php echo $fl_img; ?>)"></div>
+                        <div class="prop-img lazy" data-bg="url(<?php echo $fl_img; ?>), url(https://assets.myrsol.com/noimage.svg)"></div>
                         <?php } ?>
                         <ul class="prop-meta">
                             <li class="prop-class"><?php echo $class; ?></li>
@@ -117,7 +114,7 @@ if(isset($featured_listings) && !empty($featured_listings))
                             if(!empty($sqft)) {
                                 echo '<li><svg role="img" title="SqFt"><use xlink:href="/img/tm-07/icon-pack.svg#sqft"></use></svg>'.$sqft.' sqft</li>';
                             }
-                            if(strtolower($class) == 'land' || strtolower($class) == 'commercial') {
+                            if(strtolower($class) == 'land' || strtolower($class) == 'commercial/industrial') {
                                 if(!empty($acres)) {
                                     echo '<li><svg role="img" title="Acres"><use xlink:href="/img/tm-07/icon-pack.svg#acres"></use></svg>'.$acres.' acres</li>';
                                 }

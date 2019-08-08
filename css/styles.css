@@ -191,9 +191,13 @@ hr.big-spacer { margin: 40px 0; }
 .header__account ul li a:hover svg { fill: #50c6db; }
 .header__account ul li:last-of-type { margin-right: 0; }
 .header__contact { width: 100%; }
-.header__contact ul { list-style: none; padding: 0; margin: 0 0 0 -30px; float: right; }
-.header__contact ul li { float: left; display: block; }
-.header__contact ul li a { -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; padding: 6px 12px; border: 2px solid transparent; border-radius: 4px; line-height: 1.42857143; font-weight: 700; font-size: inherit; }
+.header__contact ul { list-style: none; padding: 0; margin: 0 0 0 -30px; float: right; display: -webkit-box; display: flex; display: -webkit-flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; align-items: center; -webkit-align-content: center; align-content: center; }
+.header__contact ul li a { -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; -webkit-box-flex: 0; -webkit-flex: 0 0 auto; flex: 0 0 auto; }
+.header__contact ul li a.btn { border: 2px solid transparent; border-radius: 4px; line-height: 1.42857143; font-weight: 700; font-size: inherit; padding: 6px 12px; }
+.header__contact ul li a.agent-photo { margin-left: 10px; }
+@media only screen and (max-width: 992px) { .header__contact ul li a.agent-photo { margin-left: 0; } }
+.header__contact ul li a.agent-photo img { height: 80px; width: auto; position: relative; top: -10px; margin-bottom: -20px; }
+@media only screen and (max-width: 992px) { .header__contact ul li a.agent-photo img { height: 50px; margin: 0; top: 0; } }
 .header__contact ul li a span { margin-left: 8px; }
 .header__contact ul li a svg { display: inline-block; height: 18px; width: 18px; fill: #50c6db; }
 .header__agent { float: right; }

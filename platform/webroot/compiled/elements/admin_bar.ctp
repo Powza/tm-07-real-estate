@@ -206,7 +206,7 @@
                                 <ul class="dropdown-menu">
                                 <?php
                                     foreach($agentPortals as $agentPortal) {
-                                        echo '<li><a href="http://'.$agentPortal['portal_url'].'">'.$agentPortal['name'].'</a></li>';
+                                        echo '<li><a href="'.$agentPortal['portal_url'].'">'.$agentPortal['name'].'</a></li>';
                                     }
                                 ?>
                             </ul>
