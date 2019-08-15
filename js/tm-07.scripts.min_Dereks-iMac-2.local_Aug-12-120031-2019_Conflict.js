@@ -124,9 +124,7 @@ $(function() {
             breakpoint: 1680,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-              rows: 2,
-              slidesPerRow: 1
+              slidesToScroll: 3
             }
           },
           {
@@ -433,15 +431,13 @@ $(function() {
       videoURL: $(videoContainer).data("video-url"),
       containment: videoContainer,
       loop: true,
-      mute: true,
       autoPlay: true,
       showControls: false,
       abundance: 0,
-      useOnMobile: false,
       stopMovieOnBlur: false,
       // startAt: 20,
       // stopAt: 25,
-      playOnlyIfVisible: false,
+      playOnlyIfVisible: true,
       onScreenPercentage: 100
     });
   }

@@ -728,9 +728,6 @@ hr {
           align-items: center;
           align-content: center;
 			li {
-				//float: left;
-        //display: block;
-          
 				a {
 					justify-content: center;
 					display: flex;
@@ -742,10 +739,13 @@ hr {
           &.btn {
             border: 2px solid transparent;
             border-radius: 4px;
-					line-height: 1.42857143;
-					font-weight: 700;
-          font-size: inherit;
-          padding:6px 12px;
+            line-height: 1.42857143;
+            font-weight: 700;
+            font-size: inherit;
+            padding:6px 12px;
+            @include bp_xs {
+              padding: 2px;
+            }
           }
           &.agent-photo {
             margin-left:10px;
@@ -1232,7 +1232,8 @@ hr {
 		top:0;
 		right:0;
 		bottom:0;
-		left:0;
+    left:0;
+    z-index: -1;
         background-color:$black;
         padding-top:120px;
         @include bp_xsm {
