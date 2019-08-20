@@ -26,7 +26,7 @@
                 <li><a href="/admin/home"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
                 
                 <!-- Manage -->
-				<li class="dropdown">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-files-o" aria-hidden="true"></i> Manage</a>
                     <ul class="dropdown-menu">
                         <?php if($is_admin === true): ?>
@@ -34,12 +34,12 @@
                         <li><a href="/admin/forms">Forms</a></li>
                         <?php endif; ?>
                         <?php if($is_admin === true || $is_agent === true): ?>
-                    	<li><a href="/admin/blogs">Posts</a></li>
+                        <li><a href="/admin/blogs">Posts</a></li>
                         <?php endif; ?>
                         <?php if($is_admin === true): ?>
                         <li><a href="/admin/menu_lookups">Menus</a></li>
-                    	<li><a href="/admin/file_manager">File Manager</a></li>
-                    	<li><a href="/admin/subdivisions">Subdivisions</a></li>
+                        <li><a href="/admin/file_manager">File Manager</a></li>
+                        <li><a href="/admin/subdivisions">Subdivisions</a></li>
                         <li><a href="/admin/custom_listings">Custom Listings</a></li>
                         <?php endif; ?>
                         <?php if($is_admin === true || $is_agent === true): ?>
@@ -55,24 +55,24 @@
 
                 <!-- New -->
                 <li class="dropdown">
-                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
-                  	<ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+                    <ul class="dropdown-menu">
                         <?php if($is_admin === true): ?>
                         <li><a href="/admin/pages/add">Page</a></li>
                         <li><a href="/admin/forms/add">Form</a></li>
                         <?php endif; ?>
                         <?php if($is_admin === true || $is_agent === true): ?>
-                    	<li><a href="/admin/blogs/add">Post</a></li>
+                        <li><a href="/admin/blogs/add">Post</a></li>
                         <?php endif; ?>
                         <?php if($is_admin === true): ?>
                         <li><a href="/admin/menu_lookups/add">Menu</a></li>
-                    	<li><a href="/admin/subdivisions/add">Subdivision</a></li>
+                        <li><a href="/admin/subdivisions/add">Subdivision</a></li>
                         <li><a href="/admin/custom_listings/add">Custom Listing</a></li>
                         <?php endif; ?>
                         <?php if($is_admin === true || $is_agent === true): ?>
                         <li><a href="/admin/agent_testimonials/add">Testimonial</a></li>
                         <?php endif; ?>
-                  	</ul>
+                    </ul>
                 </li>
 
 
@@ -177,19 +177,20 @@
 
                 <?php endif; ?>
 
+
+                <?php if(isset($disclaimers[0]['Disclaimer']['body']) && !empty($disclaimers[0]['Disclaimer']['body'])) { ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-area-chart" aria-hidden="true"></i> MLS</a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-header">Last Updated</li>
                         <li class="dropdown-body">
                             <?php
-                            if(isset($disclaimers[0]['Disclaimer']['body']) && !empty($disclaimers[0]['Disclaimer']['body'])) {
                                 echo $time->format('m-d-Y g:ia', $disclaimers[0]['Board']['board_last_updated']);
-                            }
                             ?>
                         </li>
                     </ul>
                 </li>
+                <?php } ?>
 
 
                 <?php if($is_admin === true): ?>
@@ -253,13 +254,13 @@
 
                 <!-- User -->
                 <li class="dropdown">
-                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $othAuth->user('firstname') .' '. $othAuth->user('lastname'); ?>! <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-                  	<ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $othAuth->user('firstname') .' '. $othAuth->user('lastname'); ?>! <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu">
                         <?php if(isset($myAgentId) && !empty($myAgentId)): ?>
                         <li><a href="/admin/agents/edit/<?php echo $myAgentId; ?>">Agent Profile</a></li>
                         <?php endif; ?>
-        	            <li><a href="/logout.html">Logout</a></li>
-                  	</ul>
+                        <li><a href="/logout.html">Logout</a></li>
+                    </ul>
                 </li>
 
             </ul>
