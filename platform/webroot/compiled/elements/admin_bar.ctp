@@ -4,7 +4,7 @@
         $is_agent = false;
         if($othAuth->sessionValid() && $othAuth->user('user_group_id') == 1 || $othAuth->user('user_group_id') == 2) {
             $is_admin = true;
-        } elseif ($othAuth->sessionValid() && $othAuth->user('user_group_id') == 3 || $othAuth->user('user_group_id') == 4) {
+        } elseif ($othAuth->sessionValid() && $othAuth->user('user_group_id') == 4) {
             $is_agent = true;
         }
     }

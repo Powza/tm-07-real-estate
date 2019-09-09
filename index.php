@@ -19,7 +19,7 @@
 <body>
     <?php include('elements/header.php'); ?>
     <section class="section hero">
-        <div class="hero__media" data-media-type="video">
+        <div class="hero__media" data-media-type="image">
         
 
             <!-- data-media-type="image" -->
@@ -34,7 +34,8 @@
 
             <!-- data-media-type="video" -->
             <div class="hero__media__video lazy" data-bg="url(img/tm-07/hero/video/1.jpg)">
-                <div class="hero__video" data-video-url="https://youtu.be/lGEBmI5uYSg"></div>
+                <div class="hero__video" data-video-url="https://youtu.be/Wlb_ZS6AzP8"></div>
+                <!-- <div class="hero__video" data-video-url="https://youtu.be/lGEBmI5uYSg"></div> -->
             </div>
 
         </div>
