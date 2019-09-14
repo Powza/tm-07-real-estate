@@ -1,45 +1,3 @@
-<script>
-	$(function() {
-		$('.agent-portal').remove();
-
-		// Header
-		$('.header__contact').append('\
-			<ul>\
-				<li><a href="tel:860-388-7721" class="btn"><svg role="img" title="Phone"><use xlink:href="img/tm-07/icon-pack.svg#phone"></use></svg><span class="hidden-xs">(860) 388-7721</span></a></li>\
-				<li><a href="/contact" class="btn btn-primary"><svg role="img" title="Email"><use xlink:href="img/tm-07/icon-pack.svg#email"></use></svg><span class="hidden-xs">Email</span></a></li>\
-        <li><a href="/" class="agent-photo"><img src="img/tm-07/office.jpg"></a></li>\
-			</ul>\
-		');
-
-		// Footer
-		$('.footer .contact-info').append('\
-			<address>\
-				<dl class="dl-horizontal">\
-					<dt><svg role="img" title="Address"><use xlink:href="img/tm-07/icon-pack.svg#address"></use></svg></dt>\
-					<dd>37 Chalker Beach RD<br> Old Saybrook, CT 06475</dd>\
-					<dt><svg role="img" title="Phone"><use xlink:href="img/tm-07/icon-pack.svg#phone"></use></svg></dt>\
-					<dd><a href="tel:">Office: (860) 388-7721</a><br><a href="tel:">Cell: (860) 388-7721</a></dd>\
-					<dt><svg role="img" title="Email"><use xlink:href="img/tm-07/icon-pack.svg#email"></use></svg></dt>\
-					<dd><a href="/contact.html">derek@tinyminute.com</a></dd>\
-				</dl>\
-			</address>\
-		');
-
-		// Social
-		$('.footer .social').append('\
-			<ul>\
-				<li><a href="" class="social-facebook">Facebook</a></li>\
-				<li><a href="" class="social-twitter">Twitter</a></li>\
-				<li><a href="" class="social-youtube">YouTube</a></li>\
-				<li><a href="" class="social-linkedin">LinkedIn</a></li>\
-				<li><a href="" class="social-instagram">Instagram</a></li>\
-				<li><a href="" class="social-pinterest">Pinterest</a></li>\
-			</ul>\
-		');
-
-	});
-</script>
-
 <header class="header">
 	<?php include('snippets/admin-bar.php'); ?>
 	<div class="header__meta hidden-xs hidden-sm">
@@ -54,41 +12,41 @@
 								<a href="/contact">Waterfront Properties</a>
 								<ul>
 									<li><a href="/contact">Search</a></li>
-                                    <li><a href="">Header 1</a></li>
-                                    <li><a href="">Header 2</a></li>
-                                    <li><a href="">Header 3</a></li>
-                                    <li><a href="">Header 4</a></li>
-                                    <li><a href="">Header 5</a></li>
-                                    <li><a href="">Header 6</a></li>
-                                    <li><a href="">Header 7</a></li>
-                                    <li><a href="">Header 8</a></li>
-                                    <li><a href="">Header 9</a></li>
-                                    <li><a href="">Header 10</a></li>
-                                    <li><a href="">Header 11</a></li>
-                                    <li><a href="">Header 12</a></li>
-                                    <li><a href="">Header 13</a></li>
-                                    <li><a href="">Header 14</a></li>
-                                    <li><a href="">Header 15</a></li>
-                                    <li><a href="">Header 16</a></li>
-                                    <li><a href="">Header 17</a></li>
-                                    <li><a href="">Header 18</a></li>
-                                    <li><a href="">Header 19</a></li>
-                                    <li><a href="">Header 20</a></li>
-                                    <li><a href="">Header 21</a></li>
-                                    <li><a href="">Header 22</a></li>
-                                    <li><a href="">Header 23</a></li>
-                                    <li><a href="">Header 24</a></li>
-                                    <li><a href="">Header 25</a></li>
-                                    <li><a href="">Header 26</a></li>
-                                    <li><a href="">Header 27</a></li>
-                                    <li><a href="">Header 28</a></li>
-                                    <li><a href="">Header 29</a></li>
-                                    <li><a href="">Header 30</a></li>
+                  <li><a href="">Header 1</a></li>
+                  <li><a href="">Header 2</a></li>
+                  <li><a href="">Header 3</a></li>
+                  <li><a href="">Header 4</a></li>
+                  <li><a href="">Header 5</a></li>
+                  <li><a href="">Header 6</a></li>
+                  <li><a href="">Header 7</a></li>
+                  <li><a href="">Header 8</a></li>
+                  <li><a href="">Header 9</a></li>
+                  <li><a href="">Header 10</a></li>
+                  <li><a href="">Header 11</a></li>
+                  <li><a href="">Header 12</a></li>
+                  <li><a href="">Header 13</a></li>
+                  <li><a href="">Header 14</a></li>
+                  <li><a href="">Header 15</a></li>
+                  <li><a href="">Header 16</a></li>
+                  <li><a href="">Header 17</a></li>
+                  <li><a href="">Header 18</a></li>
+                  <li><a href="">Header 19</a></li>
+                  <li><a href="">Header 20</a></li>
+                  <li><a href="">Header 21</a></li>
+                  <li><a href="">Header 22</a></li>
+                  <li><a href="">Header 23</a></li>
+                  <li><a href="">Header 24</a></li>
+                  <li><a href="">Header 25</a></li>
+                  <li><a href="">Header 26</a></li>
+                  <li><a href="">Header 27</a></li>
+                  <li><a href="">Header 28</a></li>
+                  <li><a href="">Header 29</a></li>
+                  <li><a href="">Header 30</a></li>
 								</ul>
 							</li>
 							<li><a href="/admin/pages/add">Page</a></li>
-	                        <li><a href="/admin/forms/add">Form</a></li>
-	                        <li><a href="/admin/blogs/add">Post</a></li>
+              <li><a href="/admin/forms/add">Form</a></li>
+              <li><a href="/admin/blogs/add">Post</a></li>
 							<li><a href="/contact">Search</a></li>
 						</ul>
 					</li>
@@ -163,11 +121,11 @@
 										<span class="hidden-xs">Email</span>
 									</a>
 								</li>
-                <li>
+                <!-- <li>
                   <a href="/" class="agent-photo">
                     <img src="img/tm-07/office.jpg">
                   </a>
-                </li>
+                </li> -->
 							</ul>
 						</div>
 						<a href="#" class="header__mobile-menu-btn hidden-md hidden-lg"><div class="bar"></div></a>

@@ -158,6 +158,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
+                <a href="" class="polyMapLink hidden-sm hidden-xs" data-toggle="modal" data-target="#areaPolygonMapModal"><img src="img/polygon-map-icon.png"></a>
+                </div>
             </div>
         </div>
     </div>

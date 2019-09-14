@@ -2,8 +2,7 @@
 html, body { height: 100%; }
 
 body { background-color: #fff; font-family: 'Cabin', sans-serif; color: #484848; font-size: 16px; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; min-height: 100%; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-animation-name: initial; -webkit-box-flex: 1; flex: 1 1 auto; flex-shrink: 0; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; }
-body.int { padding-top: 130px; }
-@media only screen and (max-width: 992px) { body { padding-top: 90px !important; } }
+@media only screen and (max-width: 992px) { body { padding-top: 90px; } }
 
 a, button { color: #50c6db; -webkit-transition: 0.2s; transition: 0.2s; }
 a:hover, button:hover { color: #388b99; text-decoration: none; }
@@ -296,7 +295,7 @@ hr.big-spacer { margin: 40px 0; }
 /* ========================================================================== Homepage hero ========================================================================== */
 .hero { position: relative; /* Gene Carter */ }
 .hero__container { width: 100%; position: relative; }
-.hero__media { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; background-color: #484848; padding-top: 120px; }
+.hero__media { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; background-color: #484848; }
 @media only screen and (max-width: 992px) { .hero__media { padding-top: 0; } }
 .hero__media__slider { display: none; overflow: hidden; height: 100%; }
 .hero__media__slider .slick-slider, .hero__media__slider .slick-list, .hero__media__slider .slick-track { height: 100%; }
@@ -305,8 +304,8 @@ hr.big-spacer { margin: 40px 0; }
 .hero__media__video { display: none; background-size: cover; background-position: top center; position: absolute; top: 0; left: 0; bottom: 0; right: 0; overflow: hidden; }
 .hero__media__video .inline-YTPlayer { height: 100% !important; max-width: 100% !important; }
 .hero__media__video .mb_YTPlayer { position: static !important; }
-.hero__content { padding: 150px 0 90px 0; position: relative; z-index: 2; display: -webkit-box; display: flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; min-height: 100vh; height: auto; }
-@media only screen and (max-width: 992px) { .hero__content { padding: 10px 0; min-height: calc(100vh - 90px); } }
+.hero__content { position: relative; z-index: 2; display: -webkit-box; display: flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; padding: 20px 0; }
+@media only screen and (max-width: 992px) { .hero__content { padding: 10px 0; height: auto; } }
 .hero__content__wrap { position: relative; width: 100%; }
 .hero__content__text { text-shadow: 1px 1px 5px rgba(72, 72, 72, 0.3); color: #fff; margin-bottom: 30px; }
 .hero__content__text h3 { margin: 0 0 10px 0; font-size: 72px; color: #fff; line-height: 1; }
@@ -328,16 +327,22 @@ hr.big-spacer { margin: 40px 0; }
 @media only screen and (max-width: 767px) { .hero__search__links ul li a svg { margin-right: 4px; height: 16px; width: 16px; } }
 .hero__search__links ul li a:hover { text-decoration: underline; }
 .hero__search__links ul li:last-of-type { margin-right: 0; }
+.hero .section__slider-dots { margin-top: 0; position: absolute; z-index: 2; bottom: 20px; right: 20px; }
+.hero .section__slider-dots ul li button { border-color: rgba(255, 255, 255, 0.7); }
+.hero .section__slider-dots ul li button:hover { background: rgba(255, 255, 255, 0.5); border-color: rgba(255, 255, 255, 0.5); }
+.hero .section__slider-dots ul li.slick-active button { background: #fff; }
 .hero .section__slider-arrows { position: absolute; bottom: -100px; }
 @media only screen and (min-width: 768px) and (max-width: 992px) { .hero .section__slider-arrows { text-align: left; position: relative; bottom: -20px; } }
 .hero .section__slider-arrows button { outline: none; background: none; padding: 0; border: 0; margin-right: 15px; }
 .hero .section__slider-arrows button:last-of-type { margin-right: 0; }
 .hero .section__slider-arrows button svg { fill: rgba(255, 255, 255, 0.7); height: 30px; width: 30px; }
 .hero .section__slider-arrows button svg:hover { fill: #fff; }
-.hero__callout { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; background: #50c6db; text-align: center; padding: 15px 0; color: #fff; }
+.hero__callout { background: #50c6db; text-align: center; padding: 15px 0; color: #fff; }
 .hero__callout p { margin: 0; }
 .hero__callout p span { font-weight: 700; margin-right: 5px; }
 .hero__callout p .btn { margin-left: 20px; }
+.hero .polyMapLink { display: inline-block; background: #fff; padding: 5px; border-radius: 4px; box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); }
+.hero .polyMapLink img { max-width: 80px; }
 .hero__link-buttons .btn { padding: 0 24px; min-height: 50px; line-height: 20px; display: -webkit-box; display: flex; font-size: 18px; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; text-align: center; border-radius: 4px; box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07); margin-bottom: 10px; }
 
 @media only screen and (max-width: 992px) { .hero__quicksearch form .row { margin-right: -3px; margin-left: -3px; }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Tiny Minute</title>
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/frontend.myrsol.min.css">
@@ -21,7 +21,6 @@
     <section class="section hero">
         <div class="hero__media" data-media-type="image">
         
-
             <!-- data-media-type="image" -->
             <div class="hero__media__slider">
                 <div class="slider">
@@ -39,131 +38,134 @@
             </div>
 
         </div>
-        <div class="hero__container container-fluid container-fluid-fixed">
-            <div class="hero__content">
-                <div class="hero__content__wrap">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="hero__content__text">
-                                <h3>We sell <span>10x more</span><br> than the competition</h3>
-                                <p>Discover your perfect home today!</p>
-                            </div>
-                            <div class="hero__quicksearch">
-                                <form id="qs_form" class="form-quicksearch" name="qs_form" method="post" action="/property-search.html">
-                                    <fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <div class="row">
-                                                <div class="col-sm-3 col-md-4">
-                                                    <div class="form-group">
-                                                        <select class="form-control qs-single-select" id="qs_propclass" data-placeholder="All Property Types" name="data[Listing][class][]">
-                                                            <option value="1">Residential</option><option value="3">Multifamily</option><option value="2">Land</option><option value="4">Commercial Industrial</option><option value="5">Farm</option>
-                                                        </select>
+        <div class="hero__container">
+            <div class="container-fluid container-fluid-fixed">
+                <div class="hero__content">
+                    <div class="hero__content__wrap">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="hero__content__text">
+                                    <h3>We sell <span>10x more</span><br> than the competition</h3>
+                                    <p>Discover your perfect home today!</p>
+                                </div>
+                                <div class="hero__quicksearch">
+                                <?php include('elements/gene-carter-quicksearch1.php'); ?>
+                                    <form id="qs_form" class="form-quicksearch" name="qs_form" method="post" action="/property-search.html">
+                                        <fieldset style="display:none;"><input type="hidden" name="_method" value="POST"></fieldset>
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control qs-single-select" id="qs_propclass" data-placeholder="All Property Types" name="data[Listing][class][]">
+                                                                <option value="1">Residential</option><option value="3">Multifamily</option><option value="2">Land</option><option value="4">Commercial Industrial</option><option value="5">Farm</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3">
-                                                    <div class="form-group form-select">
-                                                        <select class="form-control" id="qs_propcity" name="data[Listing][city][]">
-                                                            <option value="">All Cities</option>
-                                                            <option value="12">Blue Eye</option><option value="5">Branson</option>
-                                                        </select>
+                                                    <div class="col-sm-3 col-md-3">
+                                                        <div class="form-group form-select">
+                                                            <select class="form-control" id="qs_propcity" name="data[Listing][city][]">
+                                                                <option value="">All Cities</option>
+                                                                <option value="12">Blue Eye</option><option value="5">Branson</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="col-sm-3 col-md-3">
-                                                    <div class="form-group">
-                                                        <select class="form-control multi-select placeholder">
-                                                            <option value="" disabled selected hidden>Lot Location</option>
-                                                        </select>
-                                                        <select multiple="multiple" class="form-control multi-select" data-placeholder="Lot Location" style="display: none;">
-                                                            <option value="1">January</option>
-                                                            <option value="12">pending contingent on financing</option>
-                                                            <option value="2">January</option>
-                                                            <option value="13">December</option>
-                                                            <option value="4">January</option>
-                                                            <option value="5">January</option>
-                                                        </select>
+                                                    <div class="col-sm-3 col-md-3">
+                                                        <div class="form-group">
+                                                            <select class="form-control multi-select placeholder">
+                                                                <option value="" disabled selected hidden>Lot Location</option>
+                                                            </select>
+                                                            <select multiple="multiple" class="form-control multi-select" data-placeholder="Lot Location" style="display: none;">
+                                                                <option value="1">January</option>
+                                                                <option value="12">pending contingent on financing</option>
+                                                                <option value="2">January</option>
+                                                                <option value="13">December</option>
+                                                                <option value="4">January</option>
+                                                                <option value="5">January</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="col-sm-3 col-md-2 hidden-xs">
-                                                    <a class="btn btn-secondary collapsed more" role="button" data-toggle="collapse" href="#searchMore" aria-expanded="false" aria-controls="searchMore"></a>
-                                                </div>
-                                                <div class="col-sm-12 col-md-12">
-                                                    <div class="collapse" id="searchMore">
-                                                        <div class="row">
-                                                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                                                <div class="form-group form-input">
-                                                                    <input name="data[Listing][lp]" type="text" value="" pattern="[0-9]*" placeholder="$ Min Price" data-v-min="0" class="form-control" id="ListingLp">
+                                                    <div class="col-sm-3 col-md-2 hidden-xs">
+                                                        <a class="btn btn-secondary collapsed more" role="button" data-toggle="collapse" href="#searchMore" aria-expanded="false" aria-controls="searchMore"></a>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-12">
+                                                        <div class="collapse" id="searchMore">
+                                                            <div class="row">
+                                                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                                    <div class="form-group form-input">
+                                                                        <input name="data[Listing][lp]" type="text" value="" pattern="[0-9]*" placeholder="$ Min Price" data-v-min="0" class="form-control" id="ListingLp">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                                                <div class="form-group form-input">
-                                                                    <input name="data[Listing][hp]" type="text" value="" pattern="[0-9]*" placeholder="$ Max Price" data-v-min="0" class="form-control" id="ListingHp">
+                                                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                                    <div class="form-group form-input">
+                                                                        <input name="data[Listing][hp]" type="text" value="" pattern="[0-9]*" placeholder="$ Max Price" data-v-min="0" class="form-control" id="ListingHp">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                                                <div class="form-group form-select">
-                                                                    <select name="data[Listing][br]" id="qs_beds" class="form-control">
-                                                                    <option value="0">All Beds</option>
-                                                                    <option value="Efficiency">Efficiency</option>
-                                                                    <option value="1">1+</option>
-                                                                    </select>
+                                                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                                    <div class="form-group form-select">
+                                                                        <select name="data[Listing][br]" id="qs_beds" class="form-control">
+                                                                        <option value="0">All Beds</option>
+                                                                        <option value="Efficiency">Efficiency</option>
+                                                                        <option value="1">1+</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                                                                <div class="form-group form-select">
-                                                                    <select name="data[Listing][fba]" id="qs_baths" class="form-control">
-                                                                    <option value="0">All Baths</option>
-                                                                    <option value="1">1+</option>
-                                                                    </select>
+                                                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                                                    <div class="form-group form-select">
+                                                                        <select name="data[Listing][fba]" id="qs_baths" class="form-control">
+                                                                        <option value="0">All Baths</option>
+                                                                        <option value="1">1+</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="row">
-                                                <div class="col-xs-4 hidden-sm hidden-md hidden-lg">
-                                                    <a class="btn btn-secondary collapsed more" role="button" data-toggle="collapse" href="#searchMore" aria-expanded="false" aria-controls="searchMore"></a>
-                                                </div>
-                                                <div class="col-xs-8 col-sm-12 col-md-12">
-                                                    <a href="javascript:void(0);" class="btn btn-primary" onclick="$('#qs_form').submit();">Search</a>
+                                            <div class="col-md-2">
+                                                <div class="row">
+                                                    <div class="col-xs-4 hidden-sm hidden-md hidden-lg">
+                                                        <a class="btn btn-secondary collapsed more" role="button" data-toggle="collapse" href="#searchMore" aria-expanded="false" aria-controls="searchMore"></a>
+                                                    </div>
+                                                    <div class="col-xs-8 col-sm-12 col-md-12">
+                                                        <a href="javascript:void(0);" class="btn btn-primary" onclick="$('#qs_form').submit();">Search</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="hero__search__links">
-                                <ul>
-                                    <li>
-                                        <a href="">
-                                            <svg role="img" title="Subdivision">
-                                                <use xlink:href="img/tm-07/icon-pack.svg#subdivision"></use>
-                                            </svg>
-                                            Subdivision
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <svg role="img" title="Map Search">
-                                                <use xlink:href="img/tm-07/icon-pack.svg#map-search"></use>
-                                            </svg>
-                                            Map Search
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <svg role="img" title="Advanced Search">
-                                                <use xlink:href="img/tm-07/icon-pack.svg#advanced-search"></use>
-                                            </svg>
-                                            Advanced Search
-                                        </a>
-                                    </li>
-                                </ul>
+                                    </form>
+                                </div>
+                                <div class="hero__search__links">
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <svg role="img" title="Subdivision">
+                                                    <use xlink:href="img/tm-07/icon-pack.svg#subdivision"></use>
+                                                </svg>
+                                                Subdivision
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <svg role="img" title="Map Search">
+                                                    <use xlink:href="img/tm-07/icon-pack.svg#map-search"></use>
+                                                </svg>
+                                                Map Search
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <svg role="img" title="Advanced Search">
+                                                    <use xlink:href="img/tm-07/icon-pack.svg#advanced-search"></use>
+                                                </svg>
+                                                Advanced Search
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
