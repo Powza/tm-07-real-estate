@@ -10,6 +10,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBPDiM_mXpTGM2LmGtuA8yYYOigXmlOmuM"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
 <!-- <script src="js/gene_carter_custom/gmaps-markerwithlabel-1.9.1.min.js" type="text/javascript"></script> -->
 <script src="js/gene_carter_custom/area-polygon-map.js" type="text/javascript"></script>
