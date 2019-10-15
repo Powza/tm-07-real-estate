@@ -1,84 +1,84 @@
-<header class="header">
-	<?php include('snippets/admin-bar.php'); ?>
-	<div class="header__meta hidden-xs hidden-sm">
-		<div class="header__container container-fluid container-fluid-edge-space">
-			<div class="header__nav hidden-xs hidden-sm">
-				<ul id="main_navigation" class="sm sm-clean">
-					<li><a href="">Home</a></li>
-					<li>
-						<a href="/contact">Search Properties</a>
-						<ul>
-							<li>
-								<a href="/contact">Waterfront Properties</a>
-								<ul>
-									<li><a href="/contact">Search</a></li>
-                  <li><a href="">Header 1</a></li>
-                  <li><a href="">Header 2</a></li>
-                  <li><a href="">Header 3</a></li>
-                  <li><a href="">Header 4</a></li>
-                  <li><a href="">Header 5</a></li>
-                  <li><a href="">Header 6</a></li>
-                  <li><a href="">Header 7</a></li>
-                  <li><a href="">Header 8</a></li>
-                  <li><a href="">Header 9</a></li>
-                  <li><a href="">Header 10</a></li>
-                  <li><a href="">Header 11</a></li>
-                  <li><a href="">Header 12</a></li>
-                  <li><a href="">Header 13</a></li>
-                  <li><a href="">Header 14</a></li>
-                  <li><a href="">Header 15</a></li>
-                  <li><a href="">Header 16</a></li>
-                  <li><a href="">Header 17</a></li>
-                  <li><a href="">Header 18</a></li>
-                  <li><a href="">Header 19</a></li>
-                  <li><a href="">Header 20</a></li>
-                  <li><a href="">Header 21</a></li>
-                  <li><a href="">Header 22</a></li>
-                  <li><a href="">Header 23</a></li>
-                  <li><a href="">Header 24</a></li>
-                  <li><a href="">Header 25</a></li>
-                  <li><a href="">Header 26</a></li>
-                  <li><a href="">Header 27</a></li>
-                  <li><a href="">Header 28</a></li>
-                  <li><a href="">Header 29</a></li>
-                  <li><a href="">Header 30</a></li>
-								</ul>
-							</li>
-							<li><a href="/admin/pages/add">Page</a></li>
-              <li><a href="/admin/forms/add">Form</a></li>
-              <li><a href="/admin/blogs/add">Post</a></li>
-							<li><a href="/contact">Search</a></li>
-						</ul>
-					</li>
-					<li><a href="/contact">Featured Properties</a></li>
-					<li><a href="/contact">Buyer</a></li>
-					<li><a href="/contact">Seller</a></li>
-					<li><a href="/contact">Blog</a></li>
-					<li><a href="/contact">Contact</a></li>
-				</ul>
-			</div>
-			<div class="header__account">
-				<ul>
-					<li>
-						<a href="/register.html" class="loginreg-modal-open" data-type="reg">
-							<svg role="img" title="Register">
-								<use xlink:href="img/tm-07/icon-pack.svg#register"></use>
-							</svg>
-							Register
-						</a>
-					</li>
-					<li>
-						<a href="/login.html" class="loginreg-modal-open" data-type="log">
-							<svg role="img" title="Signin">
-								<use xlink:href="img/tm-07/icon-pack.svg#signin"></use>
-							</svg>
-							Login
-						</a>
-					</li>
-				</ul>
-			</div>
+<?php include('snippets/admin-bar.php'); ?>
+<div class="header__meta hidden-xs hidden-sm">
+	<div class="header__container container-fluid container-fluid-edge-space">
+		<div class="header__nav hidden-xs hidden-sm">
+			<ul id="main_navigation" class="sm sm-clean">
+				<li><a href="">Home</a></li>
+				<li>
+					<a href="/contact">Search Properties</a>
+					<ul>
+						<li>
+							<a href="/contact">Waterfront Properties</a>
+							<ul>
+								<li><a href="/contact">Search</a></li>
+								<li><a href="">Header 1</a></li>
+								<li><a href="">Header 2</a></li>
+								<li><a href="">Header 3</a></li>
+								<li><a href="">Header 4</a></li>
+								<li><a href="">Header 5</a></li>
+								<li><a href="">Header 6</a></li>
+								<li><a href="">Header 7</a></li>
+								<li><a href="">Header 8</a></li>
+								<li><a href="">Header 9</a></li>
+								<li><a href="">Header 10</a></li>
+								<li><a href="">Header 11</a></li>
+								<li><a href="">Header 12</a></li>
+								<li><a href="">Header 13</a></li>
+								<li><a href="">Header 14</a></li>
+								<li><a href="">Header 15</a></li>
+								<li><a href="">Header 16</a></li>
+								<li><a href="">Header 17</a></li>
+								<li><a href="">Header 18</a></li>
+								<li><a href="">Header 19</a></li>
+								<li><a href="">Header 20</a></li>
+								<li><a href="">Header 21</a></li>
+								<li><a href="">Header 22</a></li>
+								<li><a href="">Header 23</a></li>
+								<li><a href="">Header 24</a></li>
+								<li><a href="">Header 25</a></li>
+								<li><a href="">Header 26</a></li>
+								<li><a href="">Header 27</a></li>
+								<li><a href="">Header 28</a></li>
+								<li><a href="">Header 29</a></li>
+								<li><a href="">Header 30</a></li>
+							</ul>
+						</li>
+						<li><a href="/admin/pages/add">Page</a></li>
+						<li><a href="/admin/forms/add">Form</a></li>
+						<li><a href="/admin/blogs/add">Post</a></li>
+						<li><a href="/contact">Search</a></li>
+					</ul>
+				</li>
+				<li><a href="/contact">Featured Properties</a></li>
+				<li><a href="/contact">Buyer</a></li>
+				<li><a href="/contact">Seller</a></li>
+				<li><a href="/contact">Blog</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="header__account">
+			<ul>
+				<li>
+					<a href="/register.html" class="loginreg-modal-open" data-type="reg">
+						<svg role="img" title="Register">
+							<use xlink:href="img/tm-07/icon-pack.svg#register"></use>
+						</svg>
+						Register
+					</a>
+				</li>
+				<li>
+					<a href="/login.html" class="loginreg-modal-open" data-type="log">
+						<svg role="img" title="Signin">
+							<use xlink:href="img/tm-07/icon-pack.svg#signin"></use>
+						</svg>
+						Login
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
+</div>
+<header class="header">
 	<div class="header__company">
 		<div class="header__container container-fluid container-fluid-edge-space">
 			<div class="header__wrap">
@@ -121,11 +121,11 @@
 										<span class="hidden-xs">Email</span>
 									</a>
 								</li>
-                <!-- <li>
-                  <a href="/" class="agent-photo">
-                    <img src="img/tm-07/office.jpg">
-                  </a>
-                </li> -->
+								<!-- <li>
+								<a href="/" class="agent-photo">
+									<img src="img/tm-07/office.jpg">
+								</a>
+								</li> -->
 							</ul>
 						</div>
 						<a href="#" class="header__mobile-menu-btn hidden-md hidden-lg"><div class="bar"></div></a>

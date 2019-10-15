@@ -14,19 +14,14 @@ body {
 	font-family: 'Cabin', sans-serif;
 	color:$black;
 	font-size:16px;
-	padding-top: 128px;
 	-webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     min-height: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-    -webkit-animation-name: initial;
-    flex: 1 1 auto;
-	flex-shrink: 0;
+	-webkit-animation-name: initial;
+	display: flex;
     flex-direction: column;
-    @include bp_xsm {
-        padding-top:90px;
-    }
 }
 
 a, button {
@@ -212,7 +207,10 @@ hr {
 	&__spacer {
         padding:8% 0;
         @include bp_xs {
-            padding:12% 0;
+            padding:2% 0;
+		}
+		@include bp_sm {
+            padding:4% 0;
         }
         @include bp_slg {
             padding:120px 0;
@@ -338,7 +336,6 @@ hr {
 
 .main-content {
 	flex: 1 1 auto;
-	flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -631,12 +628,15 @@ hr {
    Header
    ========================================================================== */
 .header {
-	position: absolute;
-	z-index: 9;
-	top:0;
-	left:0;
-	right:0;
 	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
+	@include bp_xsm {
+		height: 50px;
+		position: sticky;
+		top:0;
+		left:0;
+		right:0;
+		z-index: 999;
+	}
 	a {
 		text-decoration: none;
 		color:$black;
@@ -645,17 +645,23 @@ hr {
 		}
 	}
 	&__meta {
+		position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
 		transition: 0.3s;
-		position: relative;
 		@include clearfix;
 		background:$white;
 		border-bottom: 1px solid $grey;
 		z-index: 9;
+		a {
+			text-decoration: none;
+			color:$black;
+			&:hover {
+				color:$primary-color;
+			}
+		}
 		&.headroom--not-top {
-			position: fixed;
-			top:0;
-			left:0;
-			right:0;
 			box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 		}
 		&.headroom--not-top.headroom--unpinned {
@@ -717,52 +723,78 @@ hr {
 			list-style: none;
 			padding:0;
 			margin:0 0 0 -30px;
-      float: right;
-      display: flex;
-          display: -webkit-flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          align-content: center;
+			float: right;
+			display: flex;
+			display: -webkit-flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
 			li {
+				@include bp_xsm {
+					margin-right:5px;
+					&:last-of-type {
+						margin-right:0;
+						margin-left:5px;
+					}
+				}
 				a {
 					justify-content: center;
 					display: flex;
-          align-items:center;
-          flex:0 0 auto;
-					
-					
-					
-          &.btn {
-            border: 2px solid transparent;
-            border-radius: 4px;
-            line-height: 1.42857143;
-            font-weight: 700;
-            font-size: inherit;
-            padding:6px 12px;
-            @include bp_xs {
-              padding: 2px;
-            }
-          }
-          &.agent-photo {
-            margin-left:10px;
-            @include bp_xsm {
-              margin-left:0;
-            }
-            img {
-              height: 80px;
-              width: auto;
-              position: relative;
-              top: -10px;
-              margin-bottom: -20px;
-              @include bp_xsm {
-                height:50px;
-                margin:0;
-                top:0;
-              }
-            }
-          }
+					align-items:center;
+					flex:0 0 auto;
+					@include bp_xsm {
+						border:0;
+						line-height: 40px;
+						height: 40px;
+						padding:4px 6px;
+						img, svg {
+							height: 26px;
+							width: 26px;
+							fill:$primary-color;
+						}
+					}
+					&.btn {
+						border: 2px solid transparent;
+						border-radius: 4px;
+						line-height: 1.42857143;
+						font-weight: 700;
+						font-size: inherit;
+						padding:6px 12px;
+						@include bp_xs {
+						padding: 2px;
+
+						}
+						@include bp_xsm {
+							background: none !important;
+							color:$black;
+							svg {
+								fill:$primary-color;
+							}
+							&:hover {
+								color:$primary-color;
+							}
+						}
+					}
+					&.agent-photo {
+						margin-left:10px;
+						@include bp_xsm {
+							margin-left:0;
+						}
+						img {
+							height: 80px;
+							width: auto;
+							position: relative;
+							top: -10px;
+							margin-bottom: -20px;
+							@include bp_xsm {
+								height:50px;
+								margin:0;
+								top:0;
+							}
+						}
+					}
 					span {
 						margin-left:8px;
 					}
@@ -849,6 +881,9 @@ hr {
 	&__flex {
 		display: flex;
 		min-height: 50px;
+		@include bp_xsm {
+			min-height: initial;
+		}
 	}
 	&__flex__center {
 		align-self: center;
@@ -856,30 +891,41 @@ hr {
 	&__wrap {
 		padding:15px 0;
 		@include clearfix;
+		@include bp_xsm {
+			padding:5px 0;
+		}
 	}
 	&__logo {
 		width: 100%;
+		@include bp_xsm {
+			margin-right:-15px;
+		}
 		a {
 			color:$white;
 			display: inline-block;
 			max-height: 60px;
 		}
-		img {
-    		max-height: 60px;
-		}
-		img[src$=".svg"] {
+		img, img[src$=".svg"] {
 			max-height: 60px;
 			width: 100%;
 			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 				max-height: 100%;
 				height: auto;
 			}
+			@include bp_xsm {
+				max-height: 40px;
+				height: auto;
+			}
 		}
 		@-moz-document url-prefix() {
 			img, img[src$=".svg"] {
 				height: 60px;
+				@include bp_xsm {
+					height: 40px;
+				}
 			}
 		}
+		
     }
     @include bp_xsm {
         .mls-search {
@@ -1157,63 +1203,6 @@ hr {
 		}
 	}
 }
-@include bp_xsm {
-	.header {
-		height: 50px;
-		position: fixed;
-		z-index: 999;
-		&__wrap {
-			padding:5px 0;
-		}
-		&__flex {
-			min-height: initial;
-		}
-		&__logo {
-			margin-right:-15px;
-			img, img[src$=".svg"]  {
-				max-height: 40px;
-				height: auto;
-			}
-			@-moz-document url-prefix() {
-				img, img[src$=".svg"] {
-					height: 40px;
-				}
-			}
-		}
-		&__contact {
-			ul {
-				li {
-					margin-right:5px;
-					a {
-						border:0;
-						line-height: 40px;
-						height: 40px;
-						padding:4px 6px;
-						img, svg {
-							height: 26px;
-							width: 26px;
-							fill:$primary-color;
-						}
-						&.btn {
-							background: none !important;
-							color:$black;
-							svg {
-								fill:$primary-color;
-							}
-							&:hover {
-								color:$primary-color;
-							}
-						}
-					}
-					&:last-of-type {
-						margin-right:0;
-						margin-left:5px;
-					}
-				}
-			}
-		}
-	}
-}
 
 
 /* ==========================================================================
@@ -1221,9 +1210,28 @@ hr {
    ========================================================================== */
 .hero {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    justify-content: space-between;
+	align-content: stretch;
+	min-height: calc(100vh - 128px);
+	@include bp_xsm {
+		min-height: calc(100vh - 50px);
+	}
 	&__container {
 		width:100%;
+		height: 100%;
 		position: relative;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		flex: 1 1 auto;
+		.container-fluid {
+			height: 100%;
+			width: 100%;
+		}
 	}
 	&__media {
 		position: absolute;
@@ -1285,9 +1293,9 @@ hr {
 	    justify-content: center;
 	    align-items: center;
 		padding: 20px 0;
-		min-height: calc(100vh - 194px);
+		height: 100%;
         @include bp_xsm {
-            padding:10px 0;
+            padding:50px 0 10px 0;
             height:auto;
         }
   		&__wrap {
@@ -1440,6 +1448,21 @@ hr {
 		}
     }
 
+	.tooltip {
+		font-family: inherit;
+		font-weight: 700;
+		font-size: 14px;
+		&.in {
+			opacity: 1;
+		}
+		.tooltip-arrow {
+			border-top-color: $white;
+		}
+		.tooltip-inner {
+			color:$black;
+			background-color: $white;
+		}
+	}
     /* Gene Carter */
     .polyMapLink {
       display: inline-block;
@@ -1447,8 +1470,17 @@ hr {
       padding:5px;
       border-radius: 4px;
       box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
+	  transition: 0.2s;
       img {
+        border-radius: 4px;
         max-width: 80px;
+        transition: 0.2s;
+      }
+      &:hover {
+        padding: 0;
+        img {
+          max-width: 90px;
+        }
       }
     }
     &__link-buttons {
@@ -1528,6 +1560,9 @@ hr {
     background-attachment: scroll;
 	.section__title {
 		margin-bottom:0;
+		@include bp_xsm {
+			padding-top: 40px;
+		}
 	}
 	h1 {
 		margin:0;
@@ -1672,7 +1707,7 @@ hr {
 		}
 		ul {
 			list-style: none;
-			margin:0;
+			margin:10px 0 0 0;
 			padding:0;
 			@include clearfix;
 			li {
@@ -1684,7 +1719,7 @@ hr {
 			    -webkit-box-align: center;
 			    -ms-flex-align: center;
                 align-items: center;
-                padding:10px 10px 10px 0;
+                padding:0 10px 10px 0;
 				svg {
 				    display: inline-block;
 				    height: 18px;
@@ -2139,21 +2174,21 @@ hr {
 			}
 		}
 	}
-	&__agentid, &__agents {
-		.agent-slider {
-			.agent-wrap {
-                margin-bottom: 10px;
-			}
-			.agent-content {
+	&__agents {
+		.slick-slide {
+			padding-bottom: 10px;
+		}
+		.agent {
+			&__content {
 				font-size: 14px;
 				background: $grey;
 				.btn {
 					padding:3px 8px;
 				}
             }
-            .section__slider-arrows {
-                margin-top:20px;
-            }
+		}
+		.section__slider-arrows {
+			margin-top:20px;
 		}
     }
 	&__featured-listing {
@@ -2470,13 +2505,8 @@ hr {
 
 /* ==========================================================================
    Agent slider
-   ========================================================================== */
+========================================================================== */
 .agent-slider {
-	.agent {
-		outline: none;
-		padding-left:15px;
-        padding-right:15px;
-	}
 	.slider-wrap {
 		display: none;
 		&.slick-initialized {
@@ -2484,15 +2514,31 @@ hr {
 		    opacity:1;
 		    transition:opacity .3s ease-out;
 		}
-    }
-	.agent-wrap {
-		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
+	}
+	.agent {
+		outline: none;
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.slick-track {
+		display: flex !important;
 		margin:0 0 30px 0;
+	}
+	.slick-slide {
+		height: inherit !important;
+	}
+}
+.agent {
+	&__wrap {
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.07);
 		border-radius: 4px;
 		overflow: hidden;
-        background:$white;
+		background:$white;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
-	.agent-pic {
+	&__pic {
 		position: relative;
 		overflow: hidden;
 		a {
@@ -2511,19 +2557,16 @@ hr {
                 border-radius: 50%;
                 border-top-color: $black;
                 @include animation(spin 1s ease-in-out infinite);
-            }
-            @include keyframes(spin) {
-                to { -webkit-transform: translate(-50%, -50%) rotate(360deg); }
-            }
+			}
 			&:hover {
 				color:$primary-color;
-				.agent-img {
+				.agent__img {
 					transform: scale(1.05);
 				}
 			}
 		}
 	}
-	.agent-img {
+	&__img {
 		padding-bottom:110%;
 		transition:0.3s;
 		background-size: cover;
@@ -2540,19 +2583,23 @@ hr {
 			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,.75) 100%);
 		}
 	}
-	.agent-meta {
+	&__meta {
 		position: absolute;
 		bottom:20px;
 		left:20px;
 		color:$white;
-		.agent-name {
+		.agent__name {
 			font-size: 20px;
 			font-weight: 700;
 		}
 	}
-	.agent-content {
+	&__content {
 		padding:20px;
-        @include clearfix;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
 		ul {
 			list-style: none;
 			margin:0 0 10px 0;
@@ -2576,6 +2623,31 @@ hr {
 						color:$primary-color;
 					}
 				}
+			}
+		}
+	}
+	&__bottom {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: center;
+		align-items: flex-start;
+		.agent-contact {
+			color:$black;
+			text-decoration: none;
+			align-items:center;
+			display: flex;
+			align-self: center;
+			svg {
+				display: inline-block;
+				height: 18px;
+				width: 18px;
+				fill: $primary-color;
+				margin-right: 8px;
+			}
+			&:hover {
+				color:$primary-color;
 			}
 		}
 	}
@@ -2681,6 +2753,7 @@ hr {
 	background-attachment: scroll;
 	color:$white;
 	position: relative;
+	margin-top: auto;
 	&:after {
 		background-color:rgba($black,0.9);
 	}
@@ -3379,3 +3452,123 @@ hr {
         }
 	}
 }
+
+
+
+/* Area Polygon Map */
+.area-polygon-map-marker {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3px 4px;
+  border-radius: 2px;
+  color: #555;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  max-width: 100px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+}
+#areaPolygonMapModal {
+	overflow: visible !important;
+	padding-right:0 !important;
+	.modal-dialog {
+	  width: calc(100% - 120px);
+	  max-width: 100%;
+	  margin: 60px auto;
+	  padding: 0;
+	  height: calc(100% - 120px);
+	  @include bp_xsm {
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+	  }
+	}
+	.modal-content {
+	  height: 100%;
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-orient: vertical;
+	  -webkit-box-direction: normal;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
+	  width: 100%;
+	  border: 0;
+	  background: none;
+	}
+	.modal-header {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-align: start;
+	  -ms-flex-align: start;
+	  align-items: flex-start;
+	  -webkit-box-pack: justify;
+	  -ms-flex-pack: justify;
+	  justify-content: space-between;
+	  padding: 1rem;
+	  border-bottom: 1px solid #e9ecef;
+	  border-top-left-radius: 0.3rem;
+	  border-top-right-radius: 0.3rem;
+	}
+	.btn-close-map-top, .btn-close-map-bottom {
+		position: absolute;
+		outline: none;
+		background: #ff8e2b;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+		z-index: 1;
+		border: 0;
+		color: #fff;
+		&:hover,
+		&:focus {
+			background: #333;
+		}
+	}
+	.btn-close-map-top {
+	  top: 10px;
+	  right: 10px;
+	  border-radius: 2px;
+	  padding: 5px;
+	  height: 40px;
+	  width: 40px;
+	  font-size: 18px;
+	}
+	.btn-close-map-bottom {
+		bottom: 24px;
+		right: 60px;
+		border-radius: 2px;
+		padding: 5px 10px;
+		height: 40px;
+		font-size: 18px;
+	}
+	.modal-body {
+	  position: relative;
+	  position: relative;
+	  -webkit-box-flex: 1;
+	  -ms-flex: 1 1 auto;
+	  flex: 1 1 auto;
+	  padding: 0;
+	  border-radius: 4px;
+	  overflow: hidden;
+	  #areaPolygonMap {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+    	left: 0;
+	  }
+	}
+	.modal-footer {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+	  align-items: center;
+	  -webkit-box-pack: end;
+	  -ms-flex-pack: end;
+	  justify-content: flex-end;
+	  padding: 1rem;
+	  border-top: 1px solid #e9ecef;
+	}
+  }

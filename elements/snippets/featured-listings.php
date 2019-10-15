@@ -1,5 +1,5 @@
 <div class="properties-slider featured-listings-slider property-slider">
-    <div class="row slider-wrap" data-slick='{"rows": 2}'>
+    <div class="row slider-wrap">
         <div class="item">
             <div class="prop-wrap">
                 <div class="prop-pic">

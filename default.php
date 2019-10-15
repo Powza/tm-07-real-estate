@@ -17,34 +17,36 @@
     <script type="text/javascript" src="js/frontend.myrsol.min.js"></script>
 </head>
 <body class="int">
-    <?php include('elements/header.php'); ?>
-    <section class="section banner section__spacer__slim section__background" style="background-image: url('img/tm-07/banner-int.jpg');">
-        <div class="wrap-inner">
-            <div class="section__title container-fluid container-fluid-fixed">
-                <h1>We are the best real estate business ever</h1>
-            </div>
-        </div>
-    </section>
-    <main class="section main-content section__spacer">
-        <div class="container-fluid container-fluid-fixed">
-            <div class="agent-listing">
-                <div class="agent-listing__pic" style="background-image:url('/img/tm-07/hero/slider/4.jpg');">
-                </div>
-                <div class="agent-listing__info">
-                    <div class="agent-listing__name" data-agent-id="123">John Smith</div>
-                    <div class="agent-listing__title">Realtor</div>
+    <div class="wrap__site">
+        <?php include('elements/header.php'); ?>
+        <section class="section banner section__spacer__slim section__background" style="background-image: url('img/tm-07/banner-int.jpg');">
+            <div class="wrap-inner">
+                <div class="section__title container-fluid container-fluid-fixed">
+                    <h1>We are the best real estate business ever</h1>
                 </div>
             </div>
-            <div class="content-main">
-                <p class="lead">Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut</p>
-                <p>Eaque ipsa quae ab illo inventore <a href="">veritatis et quasi architecto beatae vitae</a> dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nam ac elit a ante commodo tristique.</p>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nam ac elit a ante commodo tristique.</p>
-                <h2>Title Header 2</h2>
-                <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.</p>
-                <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
-            </div>
-        </div>
-    </main>
+        </section>
+        <main class="section main-content section__spacer">
+            <!-- <div class="container-fluid container-fluid-fixed">
+                <div class="agent-listing">
+                    <div class="agent-listing__pic" style="background-image:url('/img/tm-07/hero/slider/4.jpg');">
+                    </div>
+                    <div class="agent-listing__info">
+                        <div class="agent-listing__name" data-agent-id="123">John Smith</div>
+                        <div class="agent-listing__title">Realtor</div>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <p class="lead">Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut</p>
+                    <p>Eaque ipsa quae ab illo inventore <a href="">veritatis et quasi architecto beatae vitae</a> dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nam ac elit a ante commodo tristique.</p>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nam ac elit a ante commodo tristique.</p>
+                    <h2>Title Header 2</h2>
+                    <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.</p>
+                    <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+                </div>
+            </div> -->
+        </main>
+    </div>
     <?php include('elements/footer.php'); ?>
 </body>
 </html>

@@ -153,13 +153,21 @@
                                             Advanced Search
                                         </a>
                                     </li>
+                                    <li class="hidden-md hidden-lg">
+                                        <a href="" data-toggle="modal" data-target="#areaPolygonMapModal">
+                                            <svg role="img" title="Polygon">
+                                                <use xlink:href="img/tm-07/icon-pack.svg#polygon"></use>
+                                            </svg>
+                                            Area Map
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
-                <a href="" class="polyMapLink hidden-sm hidden-xs" data-toggle="modal" data-target="#areaPolygonMapModal"><img src="img/polygon-map-icon.png"></a>
+                    <a href="" class="polyMapLink hidden-sm hidden-xs" data-toggle="modal" data-target="#areaPolygonMapModal"><img data-toggle="tooltip" data-placement="top" title="Area Map" src="img/polygon-map-icon.png"></a>
                 </div>
             </div>
         </div>
