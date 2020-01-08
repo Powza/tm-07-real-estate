@@ -1,22 +1,38 @@
-<?php if($othAuth->sessionValid()) {  ?>
+<?php
+	if($othAuth->sessionValid()) {  
+	$profile_counts = $this->requestAction('/snippets/profile_block');
+	$ss_count = 0;
+	$fav_count = 0;
+	if(isset($profile_counts) && !empty($profile_counts))
+	{
+	    $ss_count = $profile_counts['ss_count'];
+	    $fav_count = $profile_counts['fav_count'];
+	}
+?>
 
 <ul>
-    <?php if($othAuth->sessionValid() && ($othAuth->group('level') == 100 || $othAuth->group('level') == 200 || $othAuth->group('level') == 250)) { ?>
-    <li class="account-admin">
-    	<a href="/admin/home" title="Website Administration Panel">
-    		<svg role="img" title="Admin">
-				<use xlink:href="/img/tm-07/icon-pack.svg#admin"></use>
+    <li>
+    	<a href="/savedsearches.html" title="Saved Searches">
+    		<svg role="img" title="Saved Searches">
+				<use xlink:href="/img/tm-07/icon-pack.svg#saved-searches"></use>
 			</svg>
-    		Admin
-    	</a>
-    </li>
-    <?php } ?>
+	    	Saved Searches <?php if($ss_count != 0 && !empty($ss_count)) { echo '('.$ss_count.')'; } ?>
+	    </a>
+	</li>
+    <li>
+    	<a href="/favorites.html" title="Favorites">
+    		<svg role="img" title="Favorites">
+				<use xlink:href="/img/tm-07/icon-pack.svg#favorites"></use>
+			</svg>
+	    	Favorites <?php if($fav_count != 0 && !empty($fav_count)) { echo '('.$fav_count.')'; } ?>
+	    </a>
+	</li>
     <li>
     	<a href="/profile.html" title="My Profile">
     		<svg role="img" title="Profile">
 				<use xlink:href="/img/tm-07/icon-pack.svg#profile"></use>
 			</svg>
-	    	My Account
+	    	My Profile
 	    </a>
 	</li>
     <li>

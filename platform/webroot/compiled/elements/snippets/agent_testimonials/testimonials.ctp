@@ -6,7 +6,7 @@ $fl_cond['conditions']['AgentTestimonial.active'] = 1;
 
 $agentTestimonials = $this->requestAction('/snippets/get_testimonials', array(
   'named' => $fl_cond,
-  'limit' => 12,
+  'limit' => 8,
 ));
 
 $total_testimonials = 0;
@@ -24,7 +24,9 @@ if(isset($agentTestimonials) && !empty($agentTestimonials))
             $agentName = $testimonial['Agent']['firstname'].' '. $testimonial['Agent']['lastname'];
         ?>
         <blockquote>
-            <p><?php echo $testimonial['AgentTestimonial']['body']; ?></p>
+            <div class="testimonials__body">
+                <p><?php echo $testimonial['AgentTestimonial']['body']; ?></p>
+            </div>
             <footer>
                 <strong><?php echo $testimonial['AgentTestimonial']['name']; ?></strong><br>
                 <small>

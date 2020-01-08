@@ -185,14 +185,15 @@
         </div>
       </div>
       <section class="section hero__callout hidden-xs">
-        <p><span>New Listing 5/20/2018</span> 7288 Catena Ln, Myrtle Beach, SC 29572&nbsp; / &nbsp;<strong>3</strong> Bed, <strong>3</strong> Bath, <strong>3700</strong> SqFt <a class="btn btn__light__outline">View
+        <p><span>New Listing 5/20/2018</span> 7288 Catena Ln, Myrtle Beach, SC 29572&nbsp; / &nbsp;<strong>3</strong> Bed, <strong>3</strong> Bath, <strong>3700</strong> SqFt <a
+            class="btn btn__light__outline btn__outline">View
             Listing</a></p>
       </section>
     </section>
     <section class="section section__background__color__grey section__spacer">
       <div class="section__title container-fluid container-fluid-edge-space">
         <h2>Featured Listings</h2>
-        <a class="btn btn__secondary__outline section__title__link" href="">View All</a>
+        <a class="btn btn__secondary__outline btn__outline section__title__link" href="">View All</a>
       </div>
       <div class="container-fluid container-fluid-edge-space">
         <?php include('elements/snippets/featured-listings.php'); ?>
@@ -202,10 +203,10 @@
       </div>
       <div class="section__title container-fluid container-fluid-edge-space">
         <h2>Newly Added</h2>
-        <a class="btn btn__secondary__outline section__title__link" href="">View All</a>
+        <a class="btn btn__secondary__outline btn__outline section__title__link" href="">View All</a>
       </div>
       <div class="container-fluid container-fluid-edge-space">
-        <?php include('elements/snippets/new-listings.php'); ?>
+        <?php include('elements/snippets/featured-listings.php'); ?>
       </div>
     </section>
     <main class="section main-content section__spacer">
@@ -266,7 +267,7 @@
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <ul class="section__links">
-                <li><a href="" class="btn btn-lg btn__light__outline">My Home Worth</a></li>
+                <li><a href="" class="btn btn-lg btn__light__outline btn__outline">My Home Worth</a></li>
                 <li><a href="" class="btn btn-lg btn__primary">Find My New Home</a></li>
               </ul>
             </div>
@@ -277,7 +278,7 @@
     <section class="section section__background__color__grey section__spacer">
       <div class="section__title container-fluid container-fluid-edge-space">
         <h2>Meet Our Team</h2>
-        <a class="btn btn__secondary__outline section__title__link" href="">View All</a>
+        <a class="btn btn__secondary__outline btn__outline section__title__link" href="">View All</a>
       </div>
       <div class="container-fluid container-fluid-edge-space">
         <div class="agent-slider" data-agent-primary="123" data-agent-sort="random1">
@@ -298,7 +299,7 @@
                 </div>
                 <h3>Map Search</h3>
                 <p>Search by map to find homes for sale and houses for sale by location.</p>
-                <a class="btn btn__light__outline" href="">View Map</a>
+                <a class="btn btn__light__outline btn__outline" href="">View Map</a>
               </div>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
@@ -310,7 +311,7 @@
                 </div>
                 <h3>Latest Listings</h3>
                 <p>View all the newest homes and properties recently posted on our site.</p>
-                <a class="btn btn__light__outline" href="">See Latest</a>
+                <a class="btn btn__light__outline btn__outline" href="">See Latest</a>
               </div>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
@@ -322,7 +323,7 @@
                 </div>
                 <h3>Listings Alerts</h3>
                 <p>Receive email updates when listings fall within your saved search criteria.</p>
-                <a class="btn btn__light__outline" href="">Subscribe</a>
+                <a class="btn btn__light__outline btn__outline" href="">Subscribe</a>
               </div>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3">
@@ -334,7 +335,7 @@
                 </div>
                 <h3>Search MLS</h3>
                 <p>Find the perfect home using our detailed property search options.</p>
-                <a class="btn btn__light__outline" href="">Detailed Search</a>
+                <a class="btn btn__light__outline btn__outline" href="">Detailed Search</a>
               </div>
             </div>
           </div>
@@ -345,12 +346,8 @@
       <div class="section__title container-fluid container-fluid-fixed">
         <h2>Testimonials</h2>
       </div>
-      <div class="container-fluid container-fluid-fixed">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <?php include('elements/snippets/testimonials.php'); ?>
-          </div>
-        </div>
+      <div class="container-fluid container-fluid-edge-space">
+        <?php include('elements/snippets/testimonials.php'); ?>
       </div>
     </section>
   </div>

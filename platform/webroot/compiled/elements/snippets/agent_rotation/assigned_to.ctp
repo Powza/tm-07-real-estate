@@ -41,7 +41,7 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
 				<ul>\
 					<?php if(!empty($agent_extract['Agent']['office_phone']) && empty($agent_extract['Agent']['cell_phone']) || !empty($agent_extract['Agent']['office_phone']) && !empty($agent_extract['Agent']['cell_phone'])) { ?>
                     <li>\
-                    	<a href="tel:<?php echo $agent_extract['Agent']['office_phone']; ?>">\
+                    	<a href="tel:<?php echo $agent_extract['Agent']['office_phone']; ?>" class="btn">\
 	                    	<svg role="img" title="Phone">\
 	                            <use xlink:href="/img/tm-07/icon-pack.svg#phone"></use>\
 	                        </svg>\
@@ -51,7 +51,7 @@ if(isset($assigned_agent_snippet) && !empty($assigned_agent_snippet))
                     <?php } ?>
                     <?php if(empty($agent_extract['Agent']['office_phone']) && !empty($agent_extract['Agent']['cell_phone'])) { ?>
                    	<li>\
-                   		<a href="tel:<?php echo $agent_extract['Agent']['cell_phone']; ?>">\
+                   		<a href="tel:<?php echo $agent_extract['Agent']['cell_phone']; ?>" class="btn">\
                    			<svg role="img" title="Phone">\
 	                            <use xlink:href="/img/tm-07/icon-pack.svg#phone"></use>\
 	                        </svg>\

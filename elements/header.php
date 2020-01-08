@@ -33,11 +33,17 @@
       <ul>
         <li>
           <a href="/register.html" class="loginreg-modal-open" data-type="reg">
+            <svg role="img" title="Register">
+              <use xlink:href="/img/tm-07/icon-pack.svg#register"></use>
+            </svg>
             Register
           </a>
         </li>
         <li>
           <a href="/login.html" class="loginreg-modal-open" data-type="log">
+            <svg role="img" title="Signin">
+              <use xlink:href="/img/tm-07/icon-pack.svg#signin"></use>
+            </svg>
             Login
           </a>
         </li>

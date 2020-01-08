@@ -3,9 +3,10 @@
 // query conditions
 
 $fl_cond['conditions'] = array();
+$fl_cond['conditions']['Listing.listing_date <='] = date('Y-m-d');
 
 $mlsid = null;
-$fields = array('remarks,address_num,address_direction,address_street,asking_price,zip,city,state,beds,sqft,fullbaths,subdivision');
+$fields = array('remarks,address_num,address_direction,address_street,acres,asking_price,zip,city,state,beds,sqft,fullbaths,subdivision');
 $limit = 1;
 
 $featured_listings = $this->requestAction('/snippets/featured_listings_custom_query', array(
@@ -47,12 +48,17 @@ if(isset($featured_listings) && !empty($featured_listings))
     if (!empty($listing['Listing']['sqft'])) {
       $sqft = '<strong>'.$listing['Listing']['sqft'].'</strong> SqFt';
     }
-        if (!empty($listing['Listing']['beds']) || !empty($listing['Listing']['fullbaths']) || !empty($listing['Listing']['sqft'])) {
-            $seperator = ' / ';
-        }
+    if (!empty($listing['Listing']['beds']) || !empty($listing['Listing']['fullbaths']) || !empty($listing['Listing']['sqft']) || !empty($listing['Listing']['acres']) && $listing['Listing']['acres'] != 0) {
+        $seperator = ' / ';
+    }
+    if(strtolower($listing['Listing']['class']) == 'land' || strtolower($listing['Listing']['class']) == 'commercial/industrial') {
+      if(!empty($listing['Listing']['acres']) && $listing['Listing']['acres'] != 0) {
+        $acres = '<strong>'.$listing['Listing']['acres'].'</strong> Acres';
+      }
+    }
     ?>
     <p>
-        <span>New Listing <?php echo date("m/d/Y", strtotime($listing['Listing']['listing_date'])); ?></span> <?php echo $short_address; ?>, <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip; ?> <?php echo $seperator; ?> <?php echo $beds; ?> <?php echo $fullbaths; ?> <?php echo $sqft; ?> <a href="<?php echo $prop_url; ?>" class="btn btn__light__outline">View Listing</a>
+        <span>New Listing <?php echo date("m/d/Y", strtotime($listing['Listing']['listing_date'])); ?></span> <?php echo $short_address; ?>, <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip; ?> <?php echo $seperator; ?> <?php echo $beds; ?> <?php echo $fullbaths; ?> <?php echo $sqft; ?> <?php echo $acres; ?> <a href="<?php echo $prop_url; ?>" class="btn btn__outline btn__light__outline">View Listing</a>
     </p>
 
 <?php

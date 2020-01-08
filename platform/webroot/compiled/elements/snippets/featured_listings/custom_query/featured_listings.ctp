@@ -1,7 +1,10 @@
 <?php
 
+$solds_arr = Configure::read('Board.sold_statuses');
+
 // query conditions
 $fl_cond['conditions'] = array();
+$fl_cond['conditions']['Listing.listing_date <='] = date('Y-m-d');
 
 // Auto pull offices & agents
 $agentsArr = array();
@@ -60,6 +63,11 @@ if(isset($featured_listings) && !empty($featured_listings))
                 $prop_url = $html->url(array('controller' => 'listings', 'action'=>'view', Inflector::slug(strtolower($listing['Listing']['class'])), $listing['Listing']['mlsid']));
             }
 
+            $is_sold = false;
+            if(!empty($solds_arr) && in_array($listing['Listing']['status_id'], $solds_arr)) {
+                $is_sold = true;
+            }
+
             $price = $property->propprice($listing['Listing']['asking_price']);
             $status = $listing['Listing']['status'];
             $status_class = 'status-'.Inflector::slug(strtolower($listing['Listing']['status_id']));
@@ -76,53 +84,80 @@ if(isset($featured_listings) && !empty($featured_listings))
             $fullbaths = $listing['Listing']['fullbaths'];
             $sqft = $listing['Listing']['sqft'];
             $acres = $listing['Listing']['acres'];
+
+            // Days on site
+            $dateoflisting = $listing['Listing']['listing_date'];
+            $datetime1 = new DateTime($dateoflisting);
+            $datetime2 = new DateTime(date('Y-m-d'));
+            $interval = $datetime1->diff($datetime2);
+            $daysOnSite = null;
+            if ($interval->format('%a') == '0') {
+                $daysOnSite = 'Listed Today';
+            } else {
+                $daysOnSite = $interval->format('%a Days Listed');
+            }
             
         ?>
         <div class="item">
-            <div class="prop-wrap">
-                <div class="prop-pic">
+            <div class="prop__wrap">
+                <div class="prop__pic">
                     <a href="<?php echo $prop_url; ?>">
                         <?php if(strpos($fl_img, 'holder.js') !== false) { ?>
-                        <div class="prop-img lazy" data-bg="url(//assets.myrsol.com/listing_images/listings-noimage.gif)"></div>
+                        <div class="prop__img lazy" data-src="//assets.myrsol.com/listing_images/listings-noimage.gif"></div>
                         <?php } else { ?>
-                        <div class="prop-img lazy" data-bg="url(<?php echo $fl_img; ?>), url(https://assets.myrsol.com/noimage.svg)"></div>
+                        <div class="prop__img lazy" data-src="<?php echo $fl_img; ?>"></div>
                         <?php } ?>
-                        <ul class="prop-meta">
-                            <li class="prop-class"><?php echo $class; ?></li>
-                            <?php if($status_id != '0') { ?>
-                                <li class="prop-status <?php echo $status_class; ?>"><?php echo ucwords(strtolower($status)); ?></li>
-                            <?php } ?>
-                        </ul>
-                        <div class="prop-bottom">
-                            <div class="prop-price"><?php echo $price; ?></div>
+                        <div class="prop__meta">
+                            <ul>
+                                <li class="prop__class"><?php echo $class; ?></li>
+                                <?php
+                                    if($is_sold == false) {
+                                        ?>
+                                        <?php if($status_id != '0') { ?>
+                                            <li class="prop__status <?php echo $status_class; ?>"><?php echo ucwords(strtolower($status)); ?></li>
+                                        <?php } ?>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <li class="prop__status sold <?php echo $status_class; ?>"><?php echo ucwords(strtolower($status)); ?></li>
+                                        <?php
+                                    }
+                                ?>
+                            </ul>
+                        </div>
+                        <div class="prop__bottom">
+                            <div class="prop__price"><?php echo $price; ?></div>
+                            <div class="prop__daymls">
+				                <time class="prop__days" datetime="<?php echo date('Y-m-d', strtotime($listing['Listing']['listing_date'])); ?>"><?php echo $daysOnSite; ?></time><br>
+				                <span class="prop__mls">MLS # <?php echo $mlsNum; ?></span>
+				            </div>
                         </div>
                     </a>
                 </div>
-                <div class="prop-content">
-                    <div class="prop-address">
-                        <div class="prop-street"><?php echo $short_address; ?></div>
-                        <span class="prop-city"><?php echo $city; ?></span>, <span class="prop-state"><?php echo $state; ?></span> <span class="prop-zip"><?php echo $zip; ?></span>
+                <div class="prop__content">
+                    <div class="prop__address">
+                        <div class="prop__street"><?php echo $short_address; ?></div>
+                        <span class="prop__city"><?php echo $city; ?></span>, <span class="prop__state"><?php echo $state; ?></span> <span class="prop__zip"><?php echo $zip; ?></span>
                     </div>
-                    <ul class="prop-common">
+                    <ul class="prop__common">
                         <?php
                             if(!empty($beds)) {
-                                echo '<li><svg role="img" title="Beds"><use xlink:href="/img/tm-07/icon-pack.svg#beds"></use></svg>'.$beds.' bd</li>';
+                                echo '<li><svg role="img" title="Beds"><use xlink:href="/img/tm-07/icon-pack.svg#beds"></use></svg><strong>'.$beds.'</strong> bed</li>';
                             }
                             if(!empty($fullbaths)) {
-                                echo '<li><svg role="img" title="Baths"><use xlink:href="/img/tm-07/icon-pack.svg#baths"></use></svg>'.$fullbaths.' ba</li>';
+                                echo '<li><svg role="img" title="Baths"><use xlink:href="/img/tm-07/icon-pack.svg#baths"></use></svg><strong>'.$fullbaths.'</strong> bath</li>';
                             }
                             if(!empty($sqft)) {
-                                echo '<li><svg role="img" title="SqFt"><use xlink:href="/img/tm-07/icon-pack.svg#sqft"></use></svg>'.$sqft.' sqft</li>';
+                                echo '<li><svg role="img" title="SqFt"><use xlink:href="/img/tm-07/icon-pack.svg#sqft"></use></svg><strong>'.$sqft.'</strong> sqft</li>';
                             }
                             if(strtolower($class) == 'land' || strtolower($class) == 'commercial/industrial') {
                                 if(!empty($acres)) {
-                                    echo '<li><svg role="img" title="Acres"><use xlink:href="/img/tm-07/icon-pack.svg#acres"></use></svg>'.$acres.' acres</li>';
+                                    echo '<li><svg role="img" title="Acres"><use xlink:href="/img/tm-07/icon-pack.svg#acres"></use></svg><strong>'.$acres.'</strong> acres</li>';
                                 }
                             }
                         ?>
                     </ul>
-                    <span class="prop-mls">MLS # <?php echo $mlsNum; ?><br><small><time datetime="<?php echo date('Y-m-d', strtotime($listing['Listing']['listing_date'])); ?>"><?php echo date('m/d/Y', strtotime($listing['Listing']['listing_date'])); ?></time></small></span>
-                    <a href="<?php echo $prop_url; ?>" class="btn btn__primary__outline">View Listing</a>
+                    <a href="<?php echo $prop_url; ?>" class="btn btn__primary prop__link">View Listing <i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
         </div>
